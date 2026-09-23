@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kaleido Jewellery | Waterproof &amp; Tarnish-Free Everyday Fine Jewelry</title>
+<!-- Google Fonts for Editorial Luxury & Playful Aesthetics -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Reenie+Beanie&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#FCD34D',
+              mustard: '#F3B749',
+              pink: '#F3A4C8',
+              bubblePink: '#F288BA',
+              blueBanner: '#5296EE',
+              babyBlue: '#84BAF8',
+              lavender: '#DEC3FA',
+              lightLavender: '#F2E8FA',
+              skyReview: '#5A94EA',
+              lightYellow: '#FEF08A'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            bubble: ['"Fredoka One"', 'cursive'],
+            script: ['"Reenie Beanie"', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Styles: Typography, Watermark, 3D Bubbles -->
+<style data-purpose="typography">
+    .font-brand-script {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+    }
+    .bubble-3d-pink {
+      font-family: 'Fredoka One', cursive;
+      color: #FF70A6;
+      text-shadow: 
+        0 2px 0 #ff4387,
+        0 4px 0 #e62067,
+        0 6px 1px rgba(0,0,0,0.1),
+        0 0 10px rgba(255,160,195,0.8),
+        inset 0 2px 3px rgba(255,255,255,0.8);
+      letter-spacing: 0.05em;
+    }
+    .bubble-3d-blue {
+      font-family: 'Fredoka One', cursive;
+      color: #5FA5F9;
+      text-shadow: 
+        0 2px 0 #3b82f6,
+        0 4px 0 #1d4ed8,
+        0 6px 1px rgba(0,0,0,0.1),
+        0 0 10px rgba(147,197,253,0.8),
+        inset 0 2px 3px rgba(255,255,255,0.9);
+      letter-spacing: 0.04em;
+    }
+  </style>
+<style data-purpose="animations-and-effects">
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: 200%;
+      animation: marquee 25s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+    .watermark-bg {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: rgba(230, 230, 230, 0.45);
+      user-select: none;
+      pointer-events: none;
+    }
+    .scrollbar-none::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-none {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased overflow-x-hidden relative">
+<!-- BEGIN: FloatingOffersButton -->
+<!-- Floating sticky offer pill on bottom right -->
+<aside aria-label="Special Offers" class="fixed right-0 top-3/4 -translate-y-1/2 z-50 transform origin-right rotate-90 translate-x-3">
+<button class="bg-[#e498c8] hover:bg-[#db83bc] text-white text-xs font-bold py-1.5 px-4 rounded-t-lg shadow-md tracking-wider uppercase transition flex items-center gap-1.5">
+<span>OFFERS</span>
+<span class="text-sm">🎁</span>
+</button>
+</aside>
+<!-- END: FloatingOffersButton -->
+<!-- BEGIN: AnnouncementBar -->
+<!-- Topmost lilac & secondary yellow promo bars -->
+<header class="w-full">
+<div class="bg-[#ebd9f7] text-[#4a2e5d] text-[11px] md:text-xs font-semibold py-1.5 text-center tracking-wide flex items-center justify-center gap-1">
+<span>Now shipping internationally</span>
+<span class="text-sm">🌍</span>
+</div>
+<!-- Secondary Switchable Ticker Bar -->
+<div class="bg-[#FBE580] text-gray-900 text-xs py-1.5 px-4 flex justify-center items-center gap-3 font-medium">
+<span>Ready to take your shine for a swim? 🏊‍♀️ ✨</span>
+<label class="relative inline-flex items-center cursor-pointer select-none">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-gray-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-white/80"></div>
+</label>
+</div>
+<!-- Main Navigation Header -->
+<nav class="border-b border-gray-100 bg-white sticky top-0 z-40 px-4 md:px-12 py-3 flex items-center justify-between shadow-[0_1px_3px_rgba(0,0,0,0.02)]">
+<!-- Brand Logo -->
+<a class="text-2xl md:text-3xl font-serif italic tracking-tight text-black font-extrabold flex items-center" href="#">
+        Kaleido
+      </a>
+<!-- Desktop Navigation Links -->
+<ul class="hidden lg:flex items-center space-x-7 text-[13px] font-medium text-gray-700">
+<li><a class="hover:text-black transition" href="#">New In</a></li>
+<li><a class="hover:text-black transition" href="#">Waterproof</a></li>
+<li><a class="hover:text-black transition" href="#">Earrings</a></li>
+<li><a class="hover:text-black transition" href="#">Necklaces</a></li>
+<li><a class="hover:text-black transition" href="#">Bracelets</a></li>
+<li><a class="hover:text-black transition" href="#">Rings</a></li>
+<li><a class="hover:text-black transition" href="#">Collections</a></li>
+</ul>
+<!-- Header Action Utilities -->
+<div class="flex items-center space-x-4 text-gray-700">
+<button aria-label="Search" class="p-1 hover:text-black transition">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<button aria-label="Wishlist" class="p-1 hover:text-black transition hidden sm:inline-block">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<button aria-label="Account" class="p-1 hover:text-black transition">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<button aria-label="Shopping Cart" class="p-1 hover:text-black transition relative">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span class="absolute -top-1 -right-1 bg-brand-mustard text-black text-[9px] font-bold rounded-full h-4 w-4 flex items-center justify-center">0</span>
+</button>
+</div>
+</nav>
+</header>
+<!-- END: AnnouncementBar -->
+<main>
+<!-- BEGIN: HeroBanner -->
+<!-- Large lifestyle visual with overlaid signature title -->
+<section class="relative w-full h-[540px] md:h-[680px] bg-stone-100 overflow-hidden" data-purpose="hero-banner">
+<!-- Background Collage Image -->
+<div class="absolute inset-0 grid grid-cols-1 md:grid-cols-2 h-full">
+<!-- Model Portrait with Jewelry -->
+<div class="relative h-full overflow-hidden">
+<img alt="Kaleido Jewelry Model Editorial" class="w-full h-full object-cover object-center scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjdfwjczSCOZ9nfFfeOe0rNlfTI4CYbcPIma3jT3M2hdY2H85S96PQtJ1mP28X1z0rsrD8UvUUVV4iVKQk-iNBC6yscBQBpmbnFl-fVAFZeGtwFP4rT-LpsLYvLLIa9g__O0_TZFaBteN9qvJpe4JcUIJENxNxheRclupbgOf0knl2SQnNV3hcEWY1R9O1DshX9Wob3KT0KkVtjpUuc3Md9bd_ERu51-Sxb-JX7zgttWQxbGRICUUTkQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+</div>
+<!-- Ice cream jewelry pop aesthetic styling -->
+<div class="relative h-full hidden md:block overflow-hidden bg-[#e0d6c9]">
+<img alt="Creative Jewelry Still Life with Popsicle Stick" class="w-full h-full object-cover object-center filter saturate-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNPsDjsPgkn1fVt8iFieDbeblNd362QnZa_Igmgm8qsJKVqqeV8pu17rnOnLYYlB5egCoFYNp0oPXsEi1lnLU17UXhOXmvt9XBddKPJM2FJzx8X04F0jOj6VYfRv8KCS2kBYuWkl2Mbd6Yt9YUrvSjeoKqcZIpYqqCeikILClHOXtdJo6nSu8mXjj4PtioDlMqGsaabLoyhcfoMrCcjy9zchtD-DwgjQ6xXpo6mFSw4Goo2E8w0aJTqg"/>
+<div class="absolute inset-0 bg-[#ffd1dc]/10 mix-blend-multiply"></div>
+</div>
+</div>
+<!-- Overlaid Giant Signature Kaleido Wordmark -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<h1 class="text-white text-7xl sm:text-9xl md:text-[160px] font-serif italic font-bold tracking-tight drop-shadow-[0_10px_25px_rgba(0,0,0,0.35)] opacity-95 select-none">
+          Kaleido
+        </h1>
+</div>
+</section>
+<!-- END: HeroBanner -->
+<!-- BEGIN: BirthdaySalePromo -->
+<!-- Playful Sky & 3D Typography Birthday Sale Banner -->
+<section class="relative bg-gradient-to-b from-[#bce2fd] via-[#f7d9e8] to-[#ffecba] py-14 px-4 sm:px-8 md:px-16 overflow-hidden" data-purpose="promo-banner">
+<!-- Decorative cloud & pastel flower details -->
+<div class="absolute top-6 left-10 text-white/80 select-none text-5xl">☁️</div>
+<div class="absolute bottom-4 right-12 text-white/70 select-none text-6xl">🌸</div>
+<div class="absolute top-1/2 -left-6 text-white/50 select-none text-8xl">✨</div>
+<div class="max-w-6xl mx-auto relative z-10 flex flex-col items-center text-center">
+<!-- Main Dual Headline -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-8 items-center w-full mb-8">
+<!-- Left: Birthday Sale Bubble -->
+<div class="flex flex-col items-center md:items-end pr-0 md:pr-4">
+<h2 class="bubble-3d-blue text-5xl sm:text-6xl md:text-7xl font-extrabold uppercase leading-none tracking-normal">
+              Birthday<br/>Sale
+            </h2>
+</div>
+<!-- Right: Buy 2 Free 1 Bubble -->
+<div class="flex flex-col items-center md:items-start pl-0 md:pr-4">
+<h2 class="bubble-3d-pink text-5xl sm:text-7xl md:text-8xl font-black uppercase leading-none tracking-tight">
+              Buy 2<br/>Free 1
+            </h2>
+</div>
+</div>
+<!-- Cutout Editorial Center Gallery Strip -->
+<div class="flex items-center justify-center gap-3 sm:gap-4 my-2 max-w-xl w-full">
+<div class="w-1/3 aspect-[3/4] rounded-2xl overflow-hidden shadow-xl border-2 border-white/60 bg-white">
+<img alt="Earrings styling" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQdxkXQkOHh5DukFylIVcpLeC_WlxJnii65XyRbbuamJY5Mcq9ubXNxebHxxhd0JJgpHEMMxpambl2ZprMRCm1EfCjntWV7h77nnabbLi6mCaAesDOhxp-WW2xEmPRdigtVLDH-Ked1wVN78yUcA8iZtFDQhWM1c84plqwaz0X-JFtgWYmHpzt4LgVcQZttD5juQ44WCwQ8Vy3GVzPvAIfdaHh_-BJj7UFdNGePZ6SsTP7PBed6RIF_w"/>
+</div>
+<div class="w-1/3 aspect-[3/4] rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white transform -translate-y-2 scale-105">
+<img alt="Model smiling with rings" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCQcH9446YGozIz9OILdYtJM6OTMZBc2iWSPycYTGEMnzs0E2aqfACcFxtCw5WPJWHNbyQwrljitcaA2HdiXFKbKB0pQ3qzAnQdMOEGw6zlwS-WtEZsiz6irMa0BW-KPgZP-3z13JpwHChWoxz_gpQ6U6kBJgphoPf4K_tXH1ohfYMZP0kH0-7ymHwkwmHCDViX1pv9jcKiH-TFfGFCkp7wgzOU4ltZPyan7Uj1chqGoO04pZldR5kfw"/>
+</div>
+<div class="w-1/3 aspect-[3/4] rounded-2xl overflow-hidden shadow-xl border-2 border-white/60 bg-white">
+<img alt="Dainty waterproof necklaces" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo1LvWoa2UNk475AVn0G7VDZ2VDmFGCXG5JxCdSUledPE8I2JT0jVtkpncKn3QO1jJeYrfPkx6IUfryOe0Lzmfw3cZOsC0U09yuGaF6LsnfCZfe8JXzo-NGdHB79l-o-v7TmcdmUgP0cRTmsQHaY_RYTiO1YdoY4kUnPLzmyBXP39T1wYgnJ8XmKO7F3tEGZBSLbJf0_RcLhYTMXMDIDP3RnDRVCmA-bj9NpHcon8Z0ih5obxBTU4gkQ"/>
+</div>
+</div>
+<!-- Storewide text & Shop CTA -->
+<div class="mt-6 flex flex-col items-center">
+<p class="text-pink-600 font-extrabold text-2xl sm:text-3xl tracking-wide uppercase">
+            Storewide
+          </p>
+<span class="text-gray-700 text-xs font-semibold tracking-wider -mt-1 mb-4">*Exclusions Apply</span>
+<a class="inline-block bg-[#F8C84A] hover:bg-[#ebbb3f] text-gray-900 font-bold px-10 py-2.5 rounded-sm shadow-md transition duration-200 text-sm tracking-wide" href="#">
+            Shop All
+          </a>
+</div>
+</div>
+</section>
+<!-- END: BirthdaySalePromo -->
+<!-- BEGIN: CategoryTilesStrip -->
+<!-- 6 visual circular-cornered category cards -->
+<section class="py-8 px-4 max-w-7xl mx-auto" data-purpose="category-navigation">
+<div class="grid grid-cols-3 sm:grid-cols-6 gap-3 sm:gap-4">
+<!-- Tile 1: Earrings -->
+<a class="group flex flex-col items-center relative rounded-lg overflow-hidden aspect-[4/5] bg-gray-100 shadow-sm hover:shadow transition" href="#">
+<img alt="Earrings" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNJI_0cL4-iR1Wl8wqA1n8Nim-evgMhU4CUCkE9Fzt696QXtLwFu0Gi-2Qevq2zlM3Mvr6EBMuxH2CdjCXkQbOEC6370j_1eNkbEO7Mf0So6AuisVcbixtVa--XmJ1oDT9zoWq_my1JGLjR3sKHpa0jMkd1h1ej9KiLgROKlBI8YktVMJ1GspHJFJSNoIhK3uRr0lB_k1h9jJkgg5fhR3fzDI6nyMwzBRGhpO_aq8EP7IMsJJX-rvsTg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<span class="absolute bottom-2.5 left-2.5 text-white font-medium text-xs md:text-sm tracking-wide">Earrings</span>
+</a>
+<!-- Tile 2: Necklaces -->
+<a class="group flex flex-col items-center relative rounded-lg overflow-hidden aspect-[4/5] bg-gray-100 shadow-sm hover:shadow transition" href="#">
+<img alt="Necklaces" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBArrSh6gLS8EvZCpoEfUxQwaXncZFGsesUkTJ4u_tj01EmpJcnPb1akQnO5Up6RHJuqLnQ12g8LEAsSzX0xRiNvLOyuULoyd-XJ7PUoHTGkO2-6DzGyLdwGUXPYbbXBZtfhK_VYP4DZBJzcw7hGjMSG83jkryFu7GXlCaBiUQe92Dmz78kmjtWAYKPImHiRWL8POji6wpQdNjq3g4hxOxpbG0VgkVc-j8ul88ZY-wcv-6ziMO0H5mtzQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<span class="absolute bottom-2.5 left-2.5 text-white font-medium text-xs md:text-sm tracking-wide">Necklaces</span>
+</a>
+<!-- Tile 3: Rings -->
+<a class="group flex flex-col items-center relative rounded-lg overflow-hidden aspect-[4/5] bg-gray-100 shadow-sm hover:shadow transition" href="#">
+<img alt="Rings" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmbO7oxf7TOEDYTIIyCVy2_nNDSIK93PPlUM_4ZWORLZCgVo3YDRzOq5_32tHFhsms-o9kZml1AHSGxRrgT1C9HwRcgvwLnVuAPfCros5qg9txnacXk3QyvjMbFdCEVB_QJZhkjMS6-yVc-1VBm4QO5lQ3zg_OGYWnNC2ImOES8eWSobC6PYuNCYXDXkR2yBX9Q6mzDFZpEXisvKKCBYZBLzvRZvpcNF7ChEyWInV8BV239ODkTmlzqg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<span class="absolute bottom-2.5 left-2.5 text-white font-medium text-xs md:text-sm tracking-wide">Rings</span>
+</a>
+<!-- Tile 4: Bracelets -->
+<a class="group flex flex-col items-center relative rounded-lg overflow-hidden aspect-[4/5] bg-gray-100 shadow-sm hover:shadow transition" href="#">
+<img alt="Bracelets" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqb280O5gUbaBxFOzvhcnh9hKGwe_vFgjrVgEYhPxgsVAhAxjuyTv2gqs0XhQTRWyzcv3ykGpkPtqNWTxmz4-L3IRiluAfndceLHZaUdkLk6mIlPVNlXmpQi1_w5ZkISEMvBK-K3v23a819IarPk1TOmPSYje2wqH7fflwe9U9tB5QIdL45Zmpd_ZB_RZ5wQ_-nHWl59vUshP9bpCRtVkRA11bUsCTKqK_T4Gl9YUPa-QeN7nbBkK-Pg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<span class="absolute bottom-2.5 left-2.5 text-white font-medium text-xs md:text-sm tracking-wide">Bracelets</span>
+</a>
+<!-- Tile 5: Birthstones -->
+<a class="group flex flex-col items-center relative rounded-lg overflow-hidden aspect-[4/5] bg-gray-100 shadow-sm hover:shadow transition" href="#">
+<img alt="Birthstones" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfp3hNUnwp-48BF5oYaDSsi5JkwLZglRK2XT8y9iKoW7W753e8FfRnRE40y5Uexriy_EL_vzHrNRevfcBcRcDV1WZQkvysEBMQpMugWtBMlttmQ1IfG_AAZB2x40PRNKDxTJcCe-ZBNwVYNsmKrBMpuNy60rgAcX-yy0daBG-6k0vlpWb_GiWVVTipuahwKdP94T4yA9woChlnKeCjxtFWrq0O9NJfN8BBQolypand46dZrjg7IveItw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<span class="absolute bottom-2.5 left-2.5 text-white font-medium text-xs md:text-sm tracking-wide">Birthstones</span>
+</a>
+<!-- Tile 6: Initials -->
+<a class="group flex flex-col items-center relative rounded-lg overflow-hidden aspect-[4/5] bg-gray-100 shadow-sm hover:shadow transition" href="#">
+<img alt="Initials" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGIVrVdYskfG-NYCmQqp4vJ0Q_n2ZR0WIpJ1fmcJ2X-um1aD4PGVU8cF90A7OVfqRY5_ZIzVULZ71L9g1mhnkZzSB9R2RN_2jpRQvnXx-iCPawVHyBseRGeByKfR7unC2K7IffU5a0ykUC7OOjoYbTOUT2_ZNaor1-AUhohZ8l8Bzur39J416FB1BKmd7Lw5HRUF5cjOHq9zPHWI8ox4w7TMP0azjyW-sU_q0PFqUAuB-XTrqFkLwfAw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<span class="absolute bottom-2.5 left-2.5 text-white font-medium text-xs md:text-sm tracking-wide">Initials</span>
+</a>
+</div>
+</section>
+<!-- END: CategoryTilesStrip -->
+<!-- BEGIN: ProductGridRow1 -->
+<!-- Row 1: Bracelets and Heart Rings with Color Swatches -->
+<section class="py-10 px-4 max-w-7xl mx-auto" data-purpose="product-row-1">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+<!-- Product 1 -->
+<article class="flex flex-col text-left group">
+<div class="aspect-square w-full bg-[#f8f8f8] rounded-sm relative flex items-center justify-center p-6 mb-3 overflow-hidden">
+<img alt="Concetto Floral Tennis Bracelet in Silver" class="object-contain max-h-48 group-hover:scale-105 transition duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArF8Rq1duGiu328s0kUOzVQAKWwnGFSTWPwTW46ytypQ4p5ne-7N9W1YVcAmAekpRNPiVj9I8j8tLUf2ye1ifx48YSjIRtvmGt7p4-fz6CzJS5nOQydyVxh5LBHsorT8Rk0RdfHoyrpSoa1f22bbx1cwlXX_qw7GekTw9mhyOjY9PRjncXERi3beMGL1TUaNCO4BsU6vdzuUHAGJQjnHn-ZHEYEElsNMS3Cr4R7jnkrU3WkXsQ6_K8sQ"/>
+</div>
+<div class="flex items-center space-x-1.5 mb-1.5">
+<span class="w-3 h-3 rounded-full bg-stone-300 border border-gray-400 inline-block cursor-pointer"></span>
+<span class="w-3 h-3 rounded-full bg-amber-200 border border-gray-300 inline-block cursor-pointer"></span>
+</div>
+<h3 class="text-xs md:text-sm font-medium text-gray-800 line-clamp-1">Concetto Floral Tennis Bracelet in Silver</h3>
+<p class="text-xs text-gray-600 mt-1 font-semibold">Rs. 3,100.00 INR</p>
+</article>
+<!-- Product 2 -->
+<article class="flex flex-col text-left group">
+<div class="aspect-square w-full bg-[#f8f8f8] rounded-sm relative flex items-center justify-center p-6 mb-3 overflow-hidden">
+<img alt="Concetto Floral Tennis Bracelet in Gold" class="object-contain max-h-48 group-hover:scale-105 transition duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRV2Ppn-nkigjhTqY4iWU0fxfL0G-t65Bqhm_jzQMq28V9R5nN9JpDRlAAeRVvrRCs8oVtA13J4DTSx_aewQoz7B1RzdqZV9aOk0l6LDDa0JT07mZEyOGWWP1L5W8qYH2qjL4oNyX8iFSM2I-PBduUsws15eH-3_FIKh5V7q35Ykx1LikvUdW3xhGeUpAM6JBG_LzmonSu7NEPo-yHiFe7wZlmeCciOz0CDRHUsLvn0VMmIy72QtBicg"/>
+</div>
+<div class="flex items-center space-x-1.5 mb-1.5">
+<span class="w-3 h-3 rounded-full bg-amber-300 border border-amber-500 inline-block cursor-pointer"></span>
+<span class="w-3 h-3 rounded-full bg-stone-300 border border-gray-300 inline-block cursor-pointer"></span>
+</div>
+<h3 class="text-xs md:text-sm font-medium text-gray-800 line-clamp-1">Concetto Floral Tennis Bracelet in Gold</h3>
+<p class="text-xs text-gray-600 mt-1 font-semibold">Rs. 3,100.00 INR</p>
+</article>
+<!-- Product 3 -->
+<article class="flex flex-col text-left group">
+<div class="aspect-square w-full bg-[#f8f8f8] rounded-sm relative flex items-center justify-center p-6 mb-3 overflow-hidden">
+<img alt="Selena Heart Ring in Silver" class="object-contain max-h-48 group-hover:scale-105 transition duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATVDDg0NEC2wMYcTtDIVX7Hpfy5y65Cb6qB6q7ZTP1qhp9s3vwjpGLaF0bDD_pDtKogkWWBm1uumbwhfbKVf9p28x7mvwJ70g3SKuuUam-_u-_B4lEjrGy6BsaRNwJh9XR6gnqjFLxPQPux-iCtL4PtmQox4Gp08I9FmPQBZ6peaviWwpEhKKWtLNdlQCp6im6TFMqChz4BMDUBC0AmSuVqvGglsDBrnE_NT4GratazMgBPEtY_hWCfw"/>
+</div>
+<div class="flex items-center space-x-1.5 mb-1.5">
+<span class="w-3 h-3 rounded-full bg-stone-300 border border-gray-400 inline-block cursor-pointer"></span>
+<span class="w-3 h-3 rounded-full bg-amber-200 border border-gray-300 inline-block cursor-pointer"></span>
+</div>
+<h3 class="text-xs md:text-sm font-medium text-gray-800 line-clamp-1">Selena Heart Ring in Silver</h3>
+<p class="text-xs text-gray-600 mt-1 font-semibold">Rs. 2,000.00 INR</p>
+</article>
+<!-- Product 4 -->
+<article class="flex flex-col text-left group">
+<div class="aspect-square w-full bg-[#f8f8f8] rounded-sm relative flex items-center justify-center p-6 mb-3 overflow-hidden">
+<img alt="Selena Heart Ring in Gold" class="object-contain max-h-48 group-hover:scale-105 transition duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5HHIagfmjUO83iQ9NOKlzq2c-i5KzF8ieJBI0EYB7zy05ltI41yUxEWo7g7u5w0rgNmRf_1Kyej93JMq4_ELwuCbRqJoQ8F6YsmW_OzkqXtnu8vUaRpZBTnkJ1RBnh_Tao2ZyqdWScQ1ssOOnYeWqpJdOFgYHLlv-5E2Fo9nyypCbaAzzN_lQhJ0OFmuXdUSv_tiVE5MB8eM1zQ3swR9cF4ucR97WOSetVP0RKvj-V4OSKGPgMGKFDg"/>
+</div>
+<div class="flex items-center space-x-1.5 mb-1.5">
+<span class="w-3 h-3 rounded-full bg-stone-300 border border-gray-300 inline-block cursor-pointer"></span>
+<span class="w-3 h-3 rounded-full bg-amber-400 border border-amber-600 inline-block cursor-pointer"></span>
+</div>
+<h3 class="text-xs md:text-sm font-medium text-gray-800 line-clamp-1">Selena Heart Ring in Gold</h3>
+<p class="text-xs text-gray-600 mt-1 font-semibold">Rs. 2,000.00 INR</p>
+</article>
+</div>
+</section>
+<!-- END: ProductGridRow1 -->
+<!-- BEGIN: DualEditorialPromo -->
+<!-- Made to Stack & Gym Ready Looks Split Banners -->
+<section class="w-full my-6 grid grid-cols-1 md:grid-cols-2" data-purpose="editorial-split-banners">
+<!-- Left: Made To Stack -->
+<div class="relative bg-[#E8E1D9] h-[340px] sm:h-[400px] flex flex-col justify-center items-center text-center p-8 overflow-hidden">
+<div class="absolute inset-0 opacity-20 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+<h2 class="text-4xl sm:text-5xl font-bold text-white tracking-normal font-sans drop-shadow-sm mb-2">
+          Made To Stack
+        </h2>
+<p class="text-xs sm:text-sm text-white/90 font-medium tracking-wide mb-6">
+          wear one, stack a few, make it yours
+        </p>
+<a class="bg-[#EEBF65] hover:bg-[#e2b050] text-gray-900 text-xs sm:text-sm font-semibold py-2.5 px-8 rounded-sm shadow-sm transition" href="#">
+          Shop Bracelets
+        </a>
+</div>
+<!-- Right: Gym Ready Looks -->
+<div class="relative bg-[#DDD9D8] h-[340px] sm:h-[400px] flex flex-col justify-center items-center text-center p-8 overflow-hidden">
+<div class="absolute inset-0 opacity-20 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+<h2 class="text-4xl sm:text-5xl font-bold text-white tracking-normal font-sans drop-shadow-sm mb-2">
+          Gym Ready<br/>Looks
+        </h2>
+<p class="text-xs sm:text-sm text-white/90 font-medium tracking-wide mb-6">
+          easy pieces that look just as good post-workout
+        </p>
+<a class="bg-[#E49BD8] hover:bg-[#d987cc] text-white text-xs sm:text-sm font-semibold py-2.5 px-8 rounded-sm shadow-sm transition" href="#">
+          Shop The Look
+        </a>
+</div>
+</section>
+<!-- END: DualEditorialPromo -->
+<!-- BEGIN: ProductGridRow2 -->
+<!-- Row 2: Bestseller & Waterproof Tennis Bracelets -->
+<section class="py-10 px-4 max-w-7xl mx-auto" data-purpose="product-row-2">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+<!-- Product 1 -->
+<article class="flex flex-col text-left group">
+<div class="aspect-square w-full bg-[#f8f8f8] rounded-sm relative flex items-center justify-center p-6 mb-3 overflow-hidden">
+<!-- Badges -->
+<div class="absolute top-2.5 left-2.5 flex flex-wrap gap-1 text-[10px] text-gray-600 font-medium">
+<span>Bestseller</span>
+<span>•</span>
+<span>Waterproof</span>
+</div>
+<img alt="Alisha Tennis Bracelet in Silver - 3mm" class="object-contain max-h-48 group-hover:scale-105 transition duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATMvWOcBN9Knl-0l7XVPkq_AiGS4jcuexiPDSSd6txMvBbFlOUhGLWR35nE3gDdf4RBScN1CALmw3XlCvU3O58br_e9VKTJyP-gmM7bDjzH21AyJpPmtEgYVrSKBl8NtTrIPWK12RKZIwwQej13ghrI5fQsyfXRqNlCzry-knoSooCLaAXBYVdUn0OLcoDMvfLtOkSK_r2KtwWS6EydXrPquzmzI0z_zjjhqp6kTe-9UrKhj8En_osDw"/>
+</div>
+<div class="flex items-center space-x-1.5 mb-1.5">
+<span class="w-3 h-3 rounded-full bg-stone-300 border border-gray-400 inline-block cursor-pointer"></span>
+<span class="w-3 h-3 rounded-full bg-amber-300 border border-gray-300 inline-block cursor-pointer"></span>
+</div>
+<h3 class="text-xs md:text-sm font-medium text-gray-800 line-clamp-1">Alisha Tennis Bracelet in Silver - 3mm</h3>
+<p class="text-xs text-gray-600 mt-1 font-semibold">Rs. 2,800.00 INR</p>
+</article>
+<!-- Product 2 -->
+<article class="flex flex-col text-left group">
+<div class="aspect-square w-full bg-[#f8f8f8] rounded-sm relative flex items-center justify-center p-6 mb-3 overflow-hidden">
+<div class="absolute top-2.5 left-2.5 flex flex-wrap gap-1 text-[10px] text-gray-600 font-medium">
+<span>Bestseller</span>
+<span>•</span>
+<span>Waterproof</span>
+</div>
+<img alt="Alisha Tennis Bracelet in Gold - 3mm" class="object-contain max-h-48 group-hover:scale-105 transition duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvN8xtNs2Bnj70PD7If-LIyiSLuiyCpySFe--CkQ5N313AvBASbT3UBshxhiXipCGSLevcyJmm61GMGEIfyUi3h0GNQqPXoHNbQIZx-mlemOOTwxtAk6_mlF2ZjRPknhNvXMS1WeN8eYviacDo8XMo3kzNtQd5xCM5joShwb9qrq4H8ZzgTqpdcDhg8h5SjCDPsDNjlmkJ5ge7hlCumAkGtuaH4sPAf25LYxJk28xVfX9hDjiXrzrcIA"/>
+</div>
+<div class="flex items-center space-x-1.5 mb-1.5">
+<span class="w-3 h-3 rounded-full bg-stone-300 border border-gray-300 inline-block cursor-pointer"></span>
+<span class="w-3 h-3 rounded-full bg-amber-400 border border-amber-600 inline-block cursor-pointer"></span>
+</div>
+<h3 class="text-xs md:text-sm font-medium text-gray-800 line-clamp-1">Alisha Tennis Bracelet in Gold - 3mm</h3>
+<p class="text-xs text-gray-600 mt-1 font-semibold">Rs. 2,800.00 INR</p>
+</article>
+<!-- Product 3 -->
+<article class="flex flex-col text-left group">
+<div class="aspect-square w-full bg-[#f8f8f8] rounded-sm relative flex items-center justify-center p-6 mb-3 overflow-hidden">
+<div class="absolute top-2.5 left-2.5 flex flex-wrap gap-1 text-[10px] text-gray-600 font-medium">
+<span>Bestseller</span>
+<span>•</span>
+<span>Waterproof</span>
+</div>
+<img alt="Alisha Tennis Bracelet in Gold - 1.5mm" class="object-contain max-h-48 group-hover:scale-105 transition duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC56QRVxMZCsHKAI9SeZjKtGk_d79GpXp6DIxrqwQY1xwz6lALloW3sbPg0L0swcKQI4oGnfj6GX1MaURxqCuuJzaPf5I03QbBajg6wfQFB-X0ZjuvTYxNGiph2kNJa3zemKug_aJVCkAONDn7N9iCuBESH-emvDJa7px11e18SMT1mZolrqJBU0DgXIq2AZ1VLGxWMtxgc0U9eAUYYSMvo_oomAmsNTHV3v4dulB9dL7i_8SMf8QHcew"/>
+</div>
+<div class="flex items-center space-x-1.5 mb-1.5">
+<span class="w-3 h-3 rounded-full bg-amber-400 border border-amber-600 inline-block cursor-pointer"></span>
+</div>
+<h3 class="text-xs md:text-sm font-medium text-gray-800 line-clamp-1">Alisha Tennis Bracelet in Gold - 1.5mm</h3>
+<p class="text-xs text-gray-600 mt-1 font-semibold">Rs. 2,200.00 INR</p>
+</article>
+<!-- Product 4 -->
+<article class="flex flex-col text-left group">
+<div class="aspect-square w-full bg-[#f8f8f8] rounded-sm relative flex items-center justify-center p-6 mb-3 overflow-hidden">
+<div class="absolute top-2.5 left-2.5 flex flex-wrap gap-1 text-[10px] text-gray-600 font-medium">
+<span>Bestseller</span>
+<span>•</span>
+<span>Waterproof</span>
+</div>
+<img alt="Concetto Floral Tennis Bracelet in Silver - 1.5mm" class="object-contain max-h-48 group-hover:scale-105 transition duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXT-UmiTfGauVwOONEJD0ghbIWIDrkcj0WlAo5jJL9_8Ywy_ZlAa7O1VNo3ai3RnjihY68AFSalHJxbWtQtXHP90zQZN6NL4HR3I5YuczxlUN3JvxwOj7H7woAMeGuOiyg_OBxFGcevT2QwfvD5-PbAznAGuJTFjeIf_-CtgJAkRaFa8gmCpxRG2JVhVARFsKXL5saFC8Q2k1w0nLcB8P3CujMzt9TbhVaRe6uG8_sxvIX1aLUlWPrjg"/>
+</div>
+<div class="flex items-center space-x-1.5 mb-1.5">
+<span class="w-3 h-3 rounded-full bg-stone-300 border border-gray-400 inline-block cursor-pointer"></span>
+<span class="w-3 h-3 rounded-full bg-amber-300 border border-gray-300 inline-block cursor-pointer"></span>
+</div>
+<h3 class="text-xs md:text-sm font-medium text-gray-800 line-clamp-1">Concetto Floral Tennis Bracelet in Silver - 1.5mm</h3>
+<p class="text-xs text-gray-600 mt-1 font-semibold">Rs. 2,200.00 INR</p>
+</article>
+</div>
+</section>
+<!-- END: ProductGridRow2 -->
+<!-- BEGIN: BrandStoryTrio -->
+<!-- 3-Column Lifestyle & In-Store Features with watermark background -->
+<section class="relative py-16 px-4 max-w-7xl mx-auto overflow-hidden" data-purpose="brand-story">
+<!-- Watermark Signature Backdrop -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 watermark-bg text-[140px] sm:text-[220px] font-serif italic -z-10 leading-none">
+        Kaleido
+      </div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+<!-- Feature 1: Discover Kaleido -->
+<div class="flex flex-col">
+<div class="w-full aspect-[4/5] rounded-sm overflow-hidden bg-stone-100 mb-3">
+<img alt="Model wearing delicate piercing earrings" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGU6K8dfkXHBUkhpDdsbble3tLEU1mefpVzJElbCGIDpgEuJum7zIRlbZHeqLF2ces18KTY_FFMqyntKlUQwPFklgU_MROPKIFd0AUf8fre59mi8UgC0JlW94SJuma0QlvqI3tpIjsg7PR0DeeBdjM0HWucidsrEsvDt0Ve2ZPUGkDIAY4iUHUwVReQFr6ageDps2oTCH0oROdy-dH3nOhy3PUqO2VWUcTIPoVA3MtjKWZ7l2KsGB-MA"/>
+</div>
+<h3 class="font-bold text-sm text-gray-900">Discover Kaleido</h3>
+<p class="text-xs text-gray-500 mt-0.5">Learn what makes Kaleido jewellery unique</p>
+</div>
+<!-- Feature 2: Join Club Kaleido -->
+<div class="flex flex-col">
+<div class="w-full aspect-[4/5] rounded-sm overflow-hidden bg-stone-100 mb-3">
+<img alt="Model wearing swimsuit holding shell with jewelry" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnVV0hHF4YVe0gbjtxsPX5mxR8nvTW0MQPYjlxxZzIPJUG15wOtNtg6rpq29kZ6ED-SNf0G_ZFmWw-1fnZ_VGl-zu2tGFyaCBns_PcwDzwhYLnMlta0S30TGfZComMo6RoTw5TNLwH2TNHe6_BuID7kWeSbovRONsPjoIAyUpH4zbTmKwn2g7wegrm-RpkC4twTeaypOXH57hbn-uArjUazEgMNw9xQfdgpJ2Kd6o063Z--9qsmZbIig"/>
+</div>
+<h3 class="font-bold text-sm text-gray-900">Join Club Kaleido</h3>
+<p class="text-xs text-gray-500 mt-0.5">Enjoy special discounts and rewards</p>
+</div>
+<!-- Feature 3: Experience In-Store -->
+<div class="flex flex-col">
+<div class="w-full aspect-[4/5] rounded-sm overflow-hidden bg-stone-100 mb-3">
+<img alt="Pastel jewelry showroom boutique interior" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS_O2SXO-pkGnhw1Jnt7iQjhuD39FSWUZ_rOQLOK2ZEjZxvOH5Hv3zcfGOcegozmVMWl0t_-ZaERi4asYKePTjQ3gh4vi58Yfl20ScXVFr_KRTW9Bd8MUxRybz_JJawVQ8E-VW_obvkDW4XYI662fIAL8Uy0921U0JhVx6rb8gW7eIpLqrYWRlCsEdym19DSYA_JbTRY_wFxR8P2wZxCqwtT3DO23tqOhh_XRkq2mZv4Kcr_9SlzFiDg"/>
+</div>
+<h3 class="font-bold text-sm text-gray-900">Experience In-Store</h3>
+<p class="text-xs text-gray-500 mt-0.5">Find the perfect piece in person</p>
+</div>
+</div>
+</section>
+<!-- END: BrandStoryTrio -->
+<!-- BEGIN: SocialProofReviews -->
+<!-- 5,000+ Reviews Section: Split Image & Reviews Carousel -->
+<section class="w-full grid grid-cols-1 lg:grid-cols-12 bg-white" data-purpose="social-proof-reviews">
+<!-- Left: Photo with Bold Typography -->
+<div class="lg:col-span-5 relative min-h-[380px] lg:min-h-[460px] bg-stone-200">
+<img alt="Hand with stacked silver and gold bracelets" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdECHkwWvgXwY5v6cvgQHLG9Z2bqB2A3KmiuCTy668VW-5gZSdar65EPY-5yAFrafmbj80gnaCuxgYXkOWnxflyCFKY-rBRzUEJLW7UoFOPmbbS5eeg_Ppss7sSGTLcS3vszNHc-DG4IDC5GeTR3XRgNnoRAEgij8bFw0uGW-_h1D7kTyCN8QsGSJ5Y8L0xqTv0uBIJNK-hCJYZbLcgFTLphkwdWX2i2xT8rCCrd6l_yx-1N9qgfUAXA"/>
+<div class="absolute inset-0 bg-black/30 flex items-center justify-center p-8 text-center">
+<h2 class="text-white text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
+            Over 5,000+<br/>5-star<br/>reviews
+          </h2>
+</div>
+</div>
+<!-- Right: Sky Blue Reviews Slider -->
+<div class="lg:col-span-7 bg-[#5495EB] p-8 md:p-12 flex flex-col justify-center">
+<!-- Review Cards Row -->
+<div class="flex gap-4 overflow-x-auto scrollbar-none pb-4">
+<!-- Card 1 -->
+<div class="bg-white rounded-lg p-6 min-w-[260px] sm:min-w-[290px] flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex text-amber-400 text-xs mb-2">★★★★★</div>
+<h4 class="font-bold text-sm text-gray-900 mb-2">Riley L.</h4>
+<p class="text-xs text-gray-600 leading-relaxed">
+                "I bought the birthstone necklace for my daughter's birthday and she absolutely loved it! The stone sparkles beautifully and adds a soft touch to her daily outfit. A thoughtful piece at a very good price."
+              </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white rounded-lg p-6 min-w-[260px] sm:min-w-[290px] flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex text-amber-400 text-xs mb-2">★★★★★</div>
+<h4 class="font-bold text-sm text-gray-900 mb-2">Rui Qi C.</h4>
+<p class="text-xs text-gray-600 leading-relaxed">
+                "The tennis bracelet I got was perfect! It is sparkly and goes well with everything I wear. The price is so affordable too!?"
+              </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white rounded-lg p-6 min-w-[260px] sm:min-w-[290px] flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex text-amber-400 text-xs mb-2">★★★★★</div>
+<h4 class="font-bold text-sm text-gray-900 mb-2">Jiaxin G.</h4>
+<p class="text-xs text-gray-600 leading-relaxed">
+                "I bought the star layered bracelet and it has been my everyday staple! Doesn't tarnish in the shower, super chic."
+              </p>
+</div>
+</div>
+</div>
+<!-- Navigation Arrow Buttons -->
+<div class="flex items-center space-x-2 mt-4">
+<button aria-label="Previous review" class="w-8 h-8 rounded-full bg-white/20 hover:bg-white text-white hover:text-gray-900 flex items-center justify-center text-xs transition">
+            ←
+          </button>
+<button aria-label="Next review" class="w-8 h-8 rounded-full bg-white/20 hover:bg-white text-white hover:text-gray-900 flex items-center justify-center text-xs transition">
+            →
+          </button>
+</div>
+</div>
+</section>
+<!-- END: SocialProofReviews -->
+<!-- BEGIN: FeaturedProductsSection -->
+<!-- Featured Products Grid with "Shop Now" Header Link -->
+<section class="py-14 px-4 max-w-7xl mx-auto" data-purpose="featured-products">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">Featured Products</h2>
+<a class="text-xs md:text-sm font-semibold text-gray-700 hover:text-black flex items-center gap-1 group" href="#">
+          Shop Now <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+<!-- Product 1 -->
+<article class="flex flex-col text-left group">
+<div class="aspect-square w-full bg-[#f8f8f8] rounded-sm relative flex items-center justify-center p-6 mb-3 overflow-hidden">
+<div class="absolute top-2.5 left-2.5 flex flex-wrap gap-1 text-[10px] text-gray-600 font-medium">
+<span>New</span>
+<span>•</span>
+<span>Waterproof</span>
+</div>
+<img alt="Kelsey Star Layered Bracelet in Silver" class="object-contain max-h-48 group-hover:scale-105 transition duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPqkP3YOqz2bTg2kpQ-3TeryDk6lqm418zpkK5v4FnoJfHIq5Nmnh_R68KM2ISx3rZAMH3nU6Y32_CKe0gk3d5z2erN6lZF6H5B1-d1Eu8768u9xZM_5btVLciPZLXpRlWjduvMdaZ-lzUKRTVbLYFuHjYqKkNM8ePaG51SHl-kBDGvcb2wAe62QH8S6MM-odDw6si0Y7lUBOxLp0QC-2ncKheEmKa7pe3dtdXp1WoRJm_pnzTHxi9Og"/>
+</div>
+<div class="flex items-center space-x-1.5 mb-1.5">
+<span class="w-3 h-3 rounded-full bg-stone-300 border border-gray-400 inline-block cursor-pointer"></span>
+<span class="w-3 h-3 rounded-full bg-amber-300 border border-gray-300 inline-block cursor-pointer"></span>
+</div>
+<h3 class="text-xs md:text-sm font-medium text-gray-800 line-clamp-1">Kelsey Star Layered Bracelet in Silver</h3>
+<p class="text-xs text-gray-600 mt-1 font-semibold">Rs. 2,300.00 INR</p>
+</article>
+<!-- Product 2 -->
+<article class="flex flex-col text-left group">
+<div class="aspect-square w-full bg-[#f8f8f8] rounded-sm relative flex items-center justify-center p-6 mb-3 overflow-hidden">
+<div class="absolute top-2.5 left-2.5 flex flex-wrap gap-1 text-[10px] text-gray-600 font-medium">
+<span>New</span>
+<span>•</span>
+<span>Waterproof</span>
+</div>
+<img alt="Kelsey Star Layered Bracelet in Gold" class="object-contain max-h-48 group-hover:scale-105 transition duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3yRkp1PdXltnsLd-MUsOrS7-fydGR4RlUPLkkzeAhmDorz1vPQVGNtq0gOj4vfUbkxFLlLz9JfTI0e8E7ebikGFKOWPxOoZ7DTjqiM22w9grA5b-sMexG-qPsrJMP4f9QTz5YvTYRkyN97iiBAoO0RFLgE_99-Pj2G9hMsutww9KL-1uAGWkzYfTTtT47R47RO8vOpMLrDq_im7mrWRj8L8mCMpHtxODn0RYz0yGRMC623o9Wy3AgLA"/>
+</div>
+<div class="flex items-center space-x-1.5 mb-1.5">
+<span class="w-3 h-3 rounded-full bg-amber-400 border border-amber-600 inline-block cursor-pointer"></span>
+<span class="w-3 h-3 rounded-full bg-stone-300 border border-gray-300 inline-block cursor-pointer"></span>
+</div>
+<h3 class="text-xs md:text-sm font-medium text-gray-800 line-clamp-1">Kelsey Star Layered Bracelet in Gold</h3>
+<p class="text-xs text-gray-600 mt-1 font-semibold">Rs. 2,300.00 INR</p>
+</article>
+<!-- Product 3 -->
+<article class="flex flex-col text-left group">
+<div class="aspect-square w-full bg-[#f8f8f8] rounded-sm relative flex items-center justify-center p-6 mb-3 overflow-hidden">
+<div class="absolute top-2.5 left-2.5 flex flex-wrap gap-1 text-[10px] text-gray-600 font-medium">
+<span>New</span>
+<span>•</span>
+<span>Waterproof</span>
+</div>
+<img alt="Concetto Floral Tennis Bracelet in Silver" class="object-contain max-h-48 group-hover:scale-105 transition duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIcPprznmWmsSPih7bG7aB40ORoHTNBwlZap3fVZevbKCQ8NGphHMsi7Y014MyxdF69s4hWR6fzST3qlGP_zRjIq5mbuAdpJE1iDoaaP9eig7KdkEyVT39mcK44bF-_gngiWVN5MqlaeD3p91ag2zkXehcf5aZuGK1tcii6wQMs5srJpwIIwaj-aKSmLXGb-uFxAl9ydO0BNWCNtj52144DZxIolIN0GL5kLoADCVAJYVq-zaEEJ7vMg"/>
+</div>
+<div class="flex items-center space-x-1.5 mb-1.5">
+<span class="w-3 h-3 rounded-full bg-stone-300 border border-gray-400 inline-block cursor-pointer"></span>
+<span class="w-3 h-3 rounded-full bg-amber-300 border border-gray-300 inline-block cursor-pointer"></span>
+</div>
+<h3 class="text-xs md:text-sm font-medium text-gray-800 line-clamp-1">Concetto Floral Tennis Bracelet in Silver</h3>
+<p class="text-xs text-gray-600 mt-1 font-semibold">Rs. 3,100.00 INR</p>
+</article>
+<!-- Product 4 -->
+<article class="flex flex-col text-left group">
+<div class="aspect-square w-full bg-[#f8f8f8] rounded-sm relative flex items-center justify-center p-6 mb-3 overflow-hidden">
+<div class="absolute top-2.5 left-2.5 flex flex-wrap gap-1 text-[10px] text-gray-600 font-medium">
+<span>New</span>
+<span>•</span>
+<span>Waterproof</span>
+</div>
+<img alt="Concetto Floral Tennis Bracelet in Gold" class="object-contain max-h-48 group-hover:scale-105 transition duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0r1nouHk5UNi5OUT57BR6n6waxLmtb0_eiouChfcDoxVQfurHM2aCKhxsFF-8rsxZTHwO9IunqNIXsGj94Oe22qiZIswxZQ8Iq0afZb4QqJsFmy1Zdne5ilGawjCJAxM9Ju5xAYSWX87WW9nG-ZQ7U5p9HEogCyXDcBfCo2H2WiciIpejVl632qDdRbxIn7oHtusC04qq0cH2wLpFXus2yV0q2QbdXYczuNkh2gDlRBntYHwBvVsMpw"/>
+</div>
+<div class="flex items-center space-x-1.5 mb-1.5">
+<span class="w-3 h-3 rounded-full bg-amber-400 border border-amber-600 inline-block cursor-pointer"></span>
+<span class="w-3 h-3 rounded-full bg-stone-300 border border-gray-300 inline-block cursor-pointer"></span>
+</div>
+<h3 class="text-xs md:text-sm font-medium text-gray-800 line-clamp-1">Concetto Floral Tennis Bracelet in Gold</h3>
+<p class="text-xs text-gray-600 mt-1 font-semibold">Rs. 3,100.00 INR</p>
+</article>
+</div>
+</section>
+<!-- END: FeaturedProductsSection -->
+<!-- BEGIN: ValuePropositionMarquee -->
+<!-- Sky Blue Continuous Ticker Strip -->
+<section class="bg-[#5294ea] text-white py-3 overflow-hidden whitespace-nowrap select-none" data-purpose="marquee-ticker">
+<div class="animate-marquee text-xs md:text-sm font-medium tracking-wide">
+<span class="mx-6 flex items-center gap-2">✨ Fun &amp; Accessible Style</span>
+<span class="mx-6 flex items-center gap-2">☔ Built To Last, Rain or Shine</span>
+<span class="mx-6 flex items-center gap-2">🌿 Sensitive Skin Friendly</span>
+<span class="mx-6 flex items-center gap-2">✨ Fun &amp; Accessible Style</span>
+<span class="mx-6 flex items-center gap-2">☔ Built To Last, Rain or Shine</span>
+<span class="mx-6 flex items-center gap-2">🌿 Sensitive Skin Friendly</span>
+<span class="mx-6 flex items-center gap-2">✨ Fun &amp; Accessible Style</span>
+<span class="mx-6 flex items-center gap-2">☔ Built To Last, Rain or Shine</span>
+<span class="mx-6 flex items-center gap-2">🌿 Sensitive Skin Friendly</span>
+<span class="mx-6 flex items-center gap-2">✨ Fun &amp; Accessible Style</span>
+<span class="mx-6 flex items-center gap-2">☔ Built To Last, Rain or Shine</span>
+<span class="mx-6 flex items-center gap-2">🌿 Sensitive Skin Friendly</span>
+</div>
+</section>
+<!-- END: ValuePropositionMarquee -->
+</main>
+<!-- BEGIN: Footer -->
+<!-- Newsletter & Multi-column Links with Instagram Photos & Watermark -->
+<footer class="pt-16 pb-10 px-4 md:px-12 bg-white relative overflow-hidden" data-purpose="footer">
+<!-- Newsletter Section -->
+<div class="max-w-7xl mx-auto pb-14 border-b border-gray-100 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-6">
+<h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight leading-snug">
+          Unlock exclusive perks, new arrivals &amp; styling tips straight to your inbox.
+        </h2>
+</div>
+<div class="lg:col-span-6 flex flex-col items-start lg:items-end w-full">
+<form class="flex w-full max-w-md gap-2" onsubmit="event.preventDefault();">
+<input class="flex-1 text-xs border border-gray-300 rounded-sm px-3.5 py-2.5 focus:ring-1 focus:ring-gray-800 focus:outline-none placeholder-gray-400" placeholder="Enter your email" required="" type="email"/>
+<button class="bg-[#FBC64D] hover:bg-[#eeb940] text-gray-900 text-xs font-bold px-6 py-2.5 rounded-sm transition tracking-wider" type="submit">
+            Submit
+          </button>
+</form>
+<!-- Social Icons -->
+<div class="mt-4 flex flex-col items-start lg:items-start w-full max-w-md">
+<span class="text-[11px] text-gray-500 font-medium mb-2">Follow us</span>
+<div class="flex items-center space-x-3 text-gray-800">
+<!-- Facebook -->
+<a aria-label="Facebook" class="hover:text-black" href="#">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.6 5H18V0h-3.808C10.597 0 9 1.583 9 4.615V8z"></path></svg>
+</a>
+<!-- Instagram -->
+<a aria-label="Instagram" class="hover:text-black" href="#">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Navigation Directory & Instagram Preview -->
+<div class="max-w-7xl mx-auto py-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-start relative z-10">
+<!-- Column 1: About -->
+<div>
+<h3 class="text-xs font-bold text-gray-900 mb-3 tracking-wide">About</h3>
+<ul class="space-y-2 text-xs text-gray-500">
+<li><a class="hover:text-black transition" href="#">Our Story</a></li>
+<li><a class="hover:text-black transition" href="#">Our Stores</a></li>
+</ul>
+</div>
+<!-- Column 2: Community -->
+<div>
+<h3 class="text-xs font-bold text-gray-900 mb-3 tracking-wide">Community</h3>
+<ul class="space-y-2 text-xs text-gray-500">
+<li><a class="hover:text-black transition" href="#">Club Kaleido - Membership</a></li>
+<li><a class="hover:text-black transition" href="#">Blog</a></li>
+</ul>
+</div>
+<!-- Column 3: Support -->
+<div>
+<h3 class="text-xs font-bold text-gray-900 mb-3 tracking-wide">Support</h3>
+<ul class="space-y-2 text-xs text-gray-500">
+<li><a class="hover:text-black transition" href="#">FAQs</a></li>
+<li><a class="hover:text-black transition" href="#">Shipping &amp; Delivery</a></li>
+<li><a class="hover:text-black transition" href="#">Piercing Studio</a></li>
+<li><a class="hover:text-black transition" href="#">Size Guide</a></li>
+<li><a class="hover:text-black transition" href="#">Care Guide</a></li>
+<li><a class="hover:text-black transition" href="#">Contact Us</a></li>
+</ul>
+</div>
+<!-- Column 4 & 5: Visual Feed Tiles -->
+<div class="col-span-2 flex gap-3 justify-start sm:justify-end">
+<div class="w-32 sm:w-36 aspect-square rounded-sm overflow-hidden bg-stone-100 shadow-sm">
+<img alt="Jewelry on summer watermelon editorial" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7CohFa6SKMbaz_pJhJfZyIb3a06IwacpHsyElwDLuNIrt8j0-haMvYhxzaky2N3s7nUUg3X1d62wYpWMdcOJvuenul-w5hRvgfdBStAgLSnlKIK-jId5-be7dR5tqrfADHrDR-Bp-t0bs7O5jRDAIRgIq-cm76yj9XUwbWaBBu5L2aNKB6BN2x7Z-TgGwMqbtzBJ5Mov357BuApeFou10-_cO-s6Q1wmxCmimVGVLDXijOZ2l3Et72g"/>
+</div>
+<div class="w-32 sm:w-36 aspect-square rounded-sm overflow-hidden bg-stone-100 shadow-sm">
+<img alt="Wrist wearing stacked silver waterproof bracelets" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAfZDD-GSgDPcZkj5pPktsh2oQDjTnCezW2Wurg9lNSg2n0PV8QQUMYFmgwChBrrKnJaZPoP8kGqDX2cDPSuW0LpZWSmP35SNm91KbuH1ds3x3jHJIXT-F9RLCYNJctNcNl2uLVuZImt1_v4M_3vsN7sJ4tk9BtRV2d-xO5YvKcrpYn3syxAdaVFRdCQBZoImQd1NgIeNqyaAbuhaVVR01zliUl76BoEKpN8ySXGLw8RmzqTvKpY7RFA"/>
+</div>
+</div>
+</div>
+<!-- Giant Signature Watermark on Bottom -->
+<div class="max-w-7xl mx-auto -mt-6 mb-4 select-none pointer-events-none">
+<span class="watermark-bg text-[110px] sm:text-[180px] md:text-[230px] font-serif italic block text-left leading-none tracking-tight">
+        Kaleido
+      </span>
+</div>
+<!-- Copyright and Legal Terms -->
+<div class="max-w-7xl mx-auto pt-4 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-400 border-t border-gray-100">
+<p>© 2026 Kaleido. All Rights Reserved.</p>
+<div class="flex space-x-3 mt-2 sm:mt-0">
+<a class="hover:underline" href="#">Privacy Policy</a>
+<span>|</span>
+<a class="hover:underline" href="#">Terms &amp; Conditions</a>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+</body></html>

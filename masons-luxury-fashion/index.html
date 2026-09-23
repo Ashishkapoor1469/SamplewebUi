@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mason's Official Store | Italian Fashion Since 1974</title>
+<!-- Tailwind CSS CDN with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              charcoal: '#1c1b1b',
+              beige: '#f7f6f2',
+              sand: '#edebe4',
+              accentRed: '#e44c34',
+              muted: '#737373',
+              border: '#e5e5e5',
+            }
+          },
+          fontFamily: {
+            sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+            serif: ['Didot', 'Bodoni MT', 'Cinzel', 'serif'],
+            cursive: ['Brush Script MT', 'Dancing Script', 'Caveat', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+<!-- Typography & Global Utility Styles -->
+<style data-purpose="typography">
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+    .font-script {
+      font-family: 'Caveat', cursive;
+    }
+    .font-editorial {
+      font-family: 'Playfair Display', serif;
+    }
+    .letter-spacing-wide {
+      letter-spacing: 0.18em;
+    }
+    .letter-spacing-ultra {
+      letter-spacing: 0.25em;
+    }
+  </style>
+<!-- Component Layout Custom Adjustments -->
+<style data-purpose="custom-layout">
+    /* Custom thin scrollbar */
+    ::-webkit-scrollbar {
+      height: 4px;
+      width: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #c2c2c2;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .product-img-aspect {
+      aspect-ratio: 3 / 4;
+    }
+    .archive-cell-aspect {
+      aspect-ratio: 4 / 5;
+    }
+  </style>
+</head>
+<body class="bg-white text-zinc-900 font-sans antialiased selection:bg-zinc-800 selection:text-white">
+<!-- BEGIN: AnnouncementBar -->
+<aside class="w-full bg-[#faf9f7] border-b border-[#e9e8e3] text-[10px] text-zinc-600 uppercase font-medium py-1.5 px-6" data-purpose="announcement-bar">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between tracking-widest">
+<div class="flex items-center space-x-2">
+<span>US DUTIES INCLUDED</span>
+</div>
+<!-- Center Monogram -->
+<div class="flex items-center justify-center font-serif text-sm tracking-normal text-zinc-800 italic font-semibold">
+<span>M</span>
+</div>
+<!-- Country / Currency Selector -->
+<div class="flex items-center space-x-1 cursor-pointer hover:text-black transition-colors">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-600 mr-0.5"></span>
+<span>USD / EN</span>
+<svg class="w-2.5 h-2.5 ml-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</div>
+</aside>
+<!-- END: AnnouncementBar -->
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-zinc-100 transition-all duration-200" data-purpose="primary-navigation">
+<div class="max-w-[1440px] mx-auto px-6 py-4 flex items-center justify-between">
+<!-- Primary Navigation Left -->
+<nav class="hidden lg:flex items-center space-x-6 text-[11px] font-medium tracking-widest text-zinc-700 uppercase">
+<a class="hover:text-black transition-colors" href="#men-fw26">FALL 2026 MEN</a>
+<a class="hover:text-black transition-colors" href="#women-fw26">FALL 2026 WOMEN</a>
+<a class="hover:text-black transition-colors" href="#summer-men">SUMMER 2026 MEN</a>
+<a class="hover:text-black text-zinc-500 transition-colors" href="#sale">SALE 2026 WOMEN</a>
+<a class="hover:text-black transition-colors" href="#accessories">ACCESSORIES</a>
+<a class="hover:text-black transition-colors" href="#our-story">OUR STORY</a>
+</nav>
+<!-- Centered Brand Logo -->
+<div class="flex flex-col items-center">
+<a class="inline-block text-center group" href="#">
+<span class="text-2xl font-bold tracking-[0.28em] uppercase font-sans leading-none block text-black">MASON'S</span>
+<span class="text-[8px] tracking-[0.3em] text-zinc-400 block mt-1 uppercase font-medium">EST. 1974</span>
+</a>
+</div>
+<!-- Secondary Utility Nav Right -->
+<div class="flex items-center space-x-6 text-[11px] font-medium tracking-widest text-zinc-700 uppercase">
+<button class="hidden sm:inline-flex items-center hover:text-black transition-colors">
+          SEARCH
+        </button>
+<a class="hidden md:inline-block hover:text-black transition-colors" href="#blog">BLOG</a>
+<a class="hover:text-black transition-colors" href="#account">ACCOUNT</a>
+<a class="hover:text-black transition-colors flex items-center gap-1 font-semibold" href="#cart">
+          CART (0)
+        </a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<main>
+<!-- BEGIN: HeroSection -->
+<section class="relative w-full h-[82vh] min-h-[580px] bg-zinc-900 overflow-hidden" data-purpose="hero-banner">
+<!-- Background Lifestyle Imagery with overlay -->
+<img alt="Mason's FW26 Campaign in Beverly Hills / California palm backdrop" class="w-full h-full object-cover object-top filter brightness-[0.92] contrast-[1.02]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxP79x8oU-vC7PtPeMuXQ91NNEsszyWUnErtymJod2sjsicpdROroO3R7yRkIzhwIu9rJF3_PzNMNXWmvxeAaCsK-ofKhJGJli4tE4PEHDyMiQoJE7t09r6d4aRPSh8MLZfakWhAXjQABJgJmSKtJB9wmXhwyI4oDGX-Hw4RuXVk5JTSH4p4u5VnTqAg0eaciBZvs3knkdxjrEVJwsufMcL2kw6l6jfO5-Foh6J2OsyBCe0zsIGm5DKg"/>
+<!-- Gradient overlay for legibility -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent"></div>
+<!-- Bottom Overlaid Editorial Slogan & Collection Selector -->
+<div class="absolute inset-x-0 bottom-0 px-8 py-8 md:py-10 max-w-[1440px] mx-auto flex flex-col md:flex-row md:items-end justify-between gap-6 text-white">
+<!-- Tagline -->
+<p class="text-xs md:text-sm tracking-wide text-zinc-200 font-light italic font-editorial max-w-md">
+          Discover the new collection: artisanal passion since 1974
+        </p>
+<!-- FW26 CTA Badge Box -->
+<div class="flex items-center space-x-3 self-end md:self-auto bg-black/40 backdrop-blur-md border border-white/20 px-5 py-3 rounded-none">
+<span class="text-xs tracking-widest font-bold uppercase mr-2 text-white">MASON'S FW26</span>
+<a class="px-5 py-1.5 text-[10px] tracking-[0.2em] font-medium uppercase border border-white/70 hover:bg-white hover:text-black transition-all duration-300" href="#men-fw26">
+            MEN
+          </a>
+<a class="px-5 py-1.5 text-[10px] tracking-[0.2em] font-medium uppercase border border-white/70 hover:bg-white hover:text-black transition-all duration-300" href="#women-fw26">
+            WOMEN
+          </a>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: SplitPreviewSection -->
+<section class="w-full border-b border-zinc-200 bg-[#fbfbf9]" data-purpose="campaign-preview">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 min-h-[640px]">
+<!-- Left Photography Column -->
+<div class="lg:col-span-6 relative h-[480px] lg:h-auto overflow-hidden">
+<img alt="Mason's FW26 Preview - Tailored urban outerwear walking down palm avenue" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM2W0CtU-hJnaA1r9gC1gXL9I_anat9YI-QuIy7GGTXg4KHO_oEEtxvhiz24zFqCO7VJy2X31VGWE_E9elhQFUB0pBQ8LV8aa7dl99JB46I7QeiQWl3R3qqob8LYFFMct74g6FfffEfE9uFvRDVvOBh1Dcbvsh4di2MihEqjFQORmpUmdvOwYhySGXMHfeSEMrUk-C4mKZcrJRymWYnJ7Ey3YUjBGNho92SY0IpYwVxfR42t8Bbl33aA"/>
+</div>
+<!-- Right Editorial Column -->
+<div class="lg:col-span-6 flex flex-col justify-center px-8 md:px-16 lg:px-24 py-16 bg-white">
+<span class="text-[10px] tracking-[0.25em] text-zinc-400 font-bold uppercase mb-3">FALL WINTER 2026</span>
+<h2 class="text-xl md:text-2xl font-bold tracking-[0.16em] uppercase text-zinc-900 mb-6 font-sans">
+            MASON'S FW26 PREVIEW
+          </h2>
+<p class="text-xs md:text-sm text-zinc-600 leading-relaxed font-light mb-8 max-w-lg">
+            The Mason's Fall Winter 2026 men's and women's collection redefines the seasonal wardrobe with chinos, cargo pants, denim, blazers, and outerwear with a tailored character. Designed for the city, travel, and leisure, it combines refined fabrics, contemporary fits, and distinctive details.
+          </p>
+<!-- Category Pill CTAs -->
+<div class="flex items-center space-x-3">
+<a class="bg-black hover:bg-zinc-800 text-white text-[11px] font-medium tracking-[0.2em] uppercase px-8 py-3 transition-colors duration-200" href="#men-fw26">
+              MEN
+            </a>
+<a class="bg-black hover:bg-zinc-800 text-white text-[11px] font-medium tracking-[0.2em] uppercase px-8 py-3 transition-colors duration-200" href="#women-fw26">
+              WOMEN
+            </a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: SplitPreviewSection -->
+<!-- BEGIN: ModelsFitGuideSection -->
+<section class="max-w-[1440px] mx-auto px-6 py-16 border-b border-zinc-200" data-purpose="models-fit-guide">
+<!-- Section Headers -->
+<div class="flex items-center justify-between border-b border-zinc-200 pb-3 mb-10 text-[11px] tracking-[0.2em] uppercase text-zinc-500 font-semibold">
+<div class="flex items-center space-x-1">
+<span class="w-1.5 h-1.5 bg-black rounded-full inline-block mr-1"></span>
+<span>MODELS</span>
+</div>
+<div>
+<span>OUR BEST SELLERS</span>
+</div>
+</div>
+<!-- Fit Guide 3-Column Display -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left: Milano Editorial Description -->
+<div class="lg:col-span-3 pr-4 pt-4">
+<h3 class="text-lg font-bold tracking-widest uppercase mb-4 text-black">MILANO</h3>
+<p class="text-xs text-zinc-600 leading-relaxed font-light mb-6">
+            The <strong>Mason's Men's Milano Pants</strong> are the extra slim chinos of the Mason's family: two distinct versions in construction, one clean-cut and recognizable fit. The <strong>Milano Style</strong> has a clean and sartorial profile, while the <strong>Milano Jogger</strong> brings the same line onto a more contemporary and comfortable construction. The models are available in stretch gabardine and velvet, with a palette ranging from neutrals such as taupe, biscuit and grey to deeper shades such as midnight blue, forest green and dark red.
+          </p>
+<a class="inline-block border border-zinc-900 text-zinc-900 hover:bg-black hover:text-white px-5 py-2.5 text-[10px] tracking-[0.2em] uppercase font-medium transition-colors" href="#milano">
+            DISCOVER THE MODEL
+          </a>
+</div>
+<!-- Center: Editorial Tall Lifestyle Image -->
+<div class="lg:col-span-5 relative group overflow-hidden bg-zinc-100">
+<img alt="Milano Extra Slim Fit model walking in urban center" class="w-full h-[580px] object-cover object-top transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI8n3E7WpmzjYn4MOxdaSXQIqcV2ixaL2NRgKkxb5pFoVm-zVgcceco2sOHaKOPn9TFJwhRrZnvpb6ko7o6rlTybqHTM1lRhEx_5KBX7PXmG9fZX_TApyXYVJOBB0sdgx76urd3ZAskrubrqXFWu5tTgAjaXUt8eqG2YVCOUqMyUzVJZcNkWl8v_zOMIfvixNt2V4rSZ0BSVpM8Gf_RXZJ6dV26t_Gd3NpTfuJFTuDYgplHhhz9GyOnA"/>
+<div class="absolute inset-0 bg-black/20 flex flex-col items-center justify-end p-8 text-center text-white">
+<span class="text-xs uppercase tracking-[0.3em] font-semibold text-white/90">MILANO</span>
+<p class="font-editorial text-2xl md:text-3xl italic mt-1 font-light tracking-wide text-white">The Extra Slim Fit</p>
+</div>
+</div>
+<!-- Right: Technical Fit Diagram List -->
+<div class="lg:col-span-4 pl-0 lg:pl-6">
+<div class="grid grid-cols-2 gap-6">
+<!-- Men Cuts Column -->
+<div>
+<h4 class="text-[11px] font-bold tracking-[0.2em] uppercase pb-2 mb-4 border-b border-zinc-200 text-center text-zinc-800">MEN</h4>
+<div class="space-y-6">
+<!-- Fit item 1 -->
+<div class="text-center group cursor-pointer">
+<div class="h-24 w-full flex items-center justify-center bg-zinc-50 border border-zinc-100 p-2 mb-1.5 transition-colors group-hover:border-zinc-400">
+<!-- Technical trouser silhouette sketch -->
+<svg class="h-20 text-zinc-700 stroke-current fill-none stroke-[1.2]" viewbox="0 0 100 160">
+<path d="M30,10 L70,10 L74,40 L70,150 L52,150 L50,60 L48,150 L30,150 L26,40 Z"></path>
+<line stroke-dasharray="2,2" x1="40" x2="40" y1="10" y2="40"></line>
+<line stroke-dasharray="2,2" x1="60" x2="60" y1="10" y2="40"></line>
+</svg>
+</div>
+<span class="text-[10px] font-bold tracking-widest text-zinc-900 group-hover:text-black">MILANO</span>
+<span class="block text-[8px] text-zinc-400 uppercase">Extra Slim</span>
+</div>
+<!-- Fit item 2 -->
+<div class="text-center group cursor-pointer">
+<div class="h-24 w-full flex items-center justify-center bg-zinc-50 border border-zinc-100 p-2 mb-1.5 transition-colors group-hover:border-zinc-400">
+<svg class="h-20 text-zinc-500 stroke-current fill-none stroke-[1.2]" viewbox="0 0 100 160">
+<path d="M28,10 L72,10 L76,45 L72,150 L53,150 L50,55 L47,150 L28,150 L24,45 Z"></path>
+</svg>
+</div>
+<span class="text-[10px] font-medium tracking-widest text-zinc-600 group-hover:text-black">NEW YORK</span>
+<span class="block text-[8px] text-zinc-400 uppercase">Regular Slim</span>
+</div>
+<!-- Fit item 3 -->
+<div class="text-center group cursor-pointer">
+<div class="h-24 w-full flex items-center justify-center bg-zinc-50 border border-zinc-100 p-2 mb-1.5 transition-colors group-hover:border-zinc-400">
+<svg class="h-20 text-zinc-500 stroke-current fill-none stroke-[1.2]" viewbox="0 0 100 160">
+<path d="M28,10 L72,10 L78,45 L75,150 L54,150 L50,50 L46,150 L25,150 L22,45 Z"></path>
+</svg>
+</div>
+<span class="text-[10px] font-medium tracking-widest text-zinc-600 group-hover:text-black">TORINO</span>
+<span class="block text-[8px] text-zinc-400 uppercase">Straight Cut</span>
+</div>
+<!-- Fit item 4 -->
+<div class="text-center group cursor-pointer">
+<div class="h-24 w-full flex items-center justify-center bg-zinc-50 border border-zinc-100 p-2 mb-1.5 transition-colors group-hover:border-zinc-400">
+<svg class="h-20 text-zinc-500 stroke-current fill-none stroke-[1.2]" viewbox="0 0 100 160">
+<path d="M27,10 L73,10 L82,50 L77,150 L54,150 L50,55 L46,150 L23,150 L18,50 Z"></path>
+</svg>
+</div>
+<span class="text-[10px] font-medium tracking-widest text-zinc-600 group-hover:text-black">CHILE</span>
+<span class="block text-[8px] text-zinc-400 uppercase">Cargo Fit</span>
+</div>
+</div>
+</div>
+<!-- Women Cuts Column -->
+<div>
+<h4 class="text-[11px] font-bold tracking-[0.2em] uppercase pb-2 mb-4 border-b border-zinc-200 text-center text-zinc-800">WOMEN</h4>
+<div class="space-y-6">
+<!-- Fit item 1 -->
+<div class="text-center group cursor-pointer">
+<div class="h-24 w-full flex items-center justify-center bg-zinc-50 border border-zinc-100 p-2 mb-1.5 transition-colors group-hover:border-zinc-400">
+<svg class="h-20 text-zinc-500 stroke-current fill-none stroke-[1.2]" viewbox="0 0 100 160">
+<path d="M30,12 L70,12 L78,48 L68,150 L52,150 L50,55 L48,150 L32,150 L22,48 Z"></path>
+</svg>
+</div>
+<span class="text-[10px] font-medium tracking-widest text-zinc-700 group-hover:text-black">NEW YORK CARROT</span>
+<span class="block text-[8px] text-zinc-400 uppercase">High Waist Tapered</span>
+</div>
+<!-- Fit item 2 -->
+<div class="text-center group cursor-pointer">
+<div class="h-24 w-full flex items-center justify-center bg-zinc-50 border border-zinc-100 p-2 mb-1.5 transition-colors group-hover:border-zinc-400">
+<svg class="h-20 text-zinc-500 stroke-current fill-none stroke-[1.2]" viewbox="0 0 100 160">
+<path d="M32,12 L68,12 L72,45 L69,150 L52,150 L50,50 L48,150 L31,150 L28,45 Z"></path>
+</svg>
+</div>
+<span class="text-[10px] font-medium tracking-widest text-zinc-700 group-hover:text-black">NEW YORK</span>
+<span class="block text-[8px] text-zinc-400 uppercase">Slim Straight</span>
+</div>
+<!-- Fit item 3 -->
+<div class="text-center group cursor-pointer">
+<div class="h-24 w-full flex items-center justify-center bg-zinc-50 border border-zinc-100 p-2 mb-1.5 transition-colors group-hover:border-zinc-400">
+<svg class="h-20 text-zinc-500 stroke-current fill-none stroke-[1.2]" viewbox="0 0 100 160">
+<path d="M30,12 L70,12 L80,50 L74,150 L53,150 L50,52 L47,150 L26,150 L20,50 Z"></path>
+</svg>
+</div>
+<span class="text-[10px] font-medium tracking-widest text-zinc-700 group-hover:text-black">EASY</span>
+<span class="block text-[8px] text-zinc-400 uppercase">Relaxed Fit</span>
+</div>
+<!-- Fit item 4 -->
+<div class="text-center group cursor-pointer">
+<div class="h-24 w-full flex items-center justify-center bg-zinc-50 border border-zinc-100 p-2 mb-1.5 transition-colors group-hover:border-zinc-400">
+<svg class="h-20 text-zinc-500 stroke-current fill-none stroke-[1.2]" viewbox="0 0 100 160">
+<path d="M30,12 L70,12 L84,55 L82,150 L54,150 L50,50 L46,150 L18,150 L16,55 Z"></path>
+</svg>
+</div>
+<span class="text-[10px] font-medium tracking-widest text-zinc-700 group-hover:text-black">ADVANCED WOMEN</span>
+<span class="block text-[8px] text-zinc-400 uppercase">Wide Flare</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ModelsFitGuideSection -->
+<!-- BEGIN: MenCollectionCarousel -->
+<section class="max-w-[1440px] mx-auto px-6 py-12 border-b border-zinc-200" data-purpose="product-collection-men" id="men-fw26">
+<div class="flex items-center justify-between text-[11px] font-medium tracking-[0.2em] uppercase text-zinc-500 mb-2">
+<span class="text-zinc-900 font-semibold">MEN FW26</span>
+<span>LATEST ARRIVALS</span>
+</div>
+<div class="flex items-center justify-between pb-4 border-b border-zinc-200 mb-6">
+<h2 class="text-sm md:text-base font-bold tracking-[0.16em] uppercase text-black">
+          DISCOVER THE NEW COLLECTION
+        </h2>
+<button class="text-xs uppercase tracking-widest text-zinc-800 hover:text-black font-semibold flex items-center space-x-1">
+<span>NEXT</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<!-- 6-Product Carousel Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<!-- Product 1 -->
+<article class="group cursor-pointer">
+<div class="product-img-aspect bg-[#f4f4f4] mb-3 overflow-hidden relative">
+<img alt="HARRIS Prince of Wales 5-Pocket" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp9xE82_FWlUDIQMrBaePUqNAgswPXCkpw56J7LvErVYlYdbWdd3fJBRa8GKFtcRmjFJGkpH7HmAYvWRwkLHXm97uOUWl4kM8x1ais3E5TRfmbwylHpu0lUPzAyYc6LWGQVPetYC2DPSH9qQDy477iBbLQKDgHYvw7ki4JXn7iDoY6Fu6jxLBofk_HjznCHhUorg5E2O2bbfEepY97iLfgASi3CMQZLnqrD5BlBFP-aKs2bdhDuuUAlQ"/>
+<span class="absolute top-2 left-2 bg-white/90 text-[8px] font-bold uppercase tracking-widest px-1.5 py-0.5">NEW</span>
+</div>
+<h3 class="text-[11px] font-bold tracking-widest uppercase text-black">HARRIS</h3>
+<p class="text-[10px] text-zinc-500 font-light truncate mt-0.5">Harris men's 5-pocket pants in Prince of Wales</p>
+<p class="text-xs font-medium text-zinc-900 mt-1">$356.00</p>
+</article>
+<!-- Product 2 -->
+<article class="group cursor-pointer">
+<div class="product-img-aspect bg-[#f4f4f4] mb-3 overflow-hidden relative">
+<img alt="HARRIS Camouflage Print" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3jeU6xnFaNEmjs6jFBnuthYSRK9Cpr65skNBTnWO4sQsmkl5kpMFTIbJH8vo1KOLgNO_PLFyRTUqIU2SaUvgV3bNkyaURExUV3WfErQGH6t5OxW9u8sAlB7F-1S_MnAliDkwMJ9NxLIBkcTOq-rVp0kGXpBCdHN8tT3mINn41iBnQqoZqT7oygjAJpYMvXt2ojHCJ4FmTU8nI6ipij45Auat2ut4mFjzgWhIOfu4NtLtHZC5aitFqNg"/>
+</div>
+<h3 class="text-[11px] font-bold tracking-widest uppercase text-black">HARRIS</h3>
+<p class="text-[10px] text-zinc-500 font-light truncate mt-0.5">Harris men's 5-pocket pants in camouflage p...</p>
+<p class="text-xs font-medium text-zinc-900 mt-1">$356.00</p>
+</article>
+<!-- Product 3 -->
+<article class="group cursor-pointer">
+<div class="product-img-aspect bg-[#f4f4f4] mb-3 overflow-hidden relative">
+<img alt="HARRIS REGULAR Camouflage" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0S7wRqwve9wI5QCp7H8Y_2n4bCh1o-fv5OTEwukktdhl8bnSpPJWneiIkfYx4TlNrQop5_DTRdAFd92gQltPAIlFpRoKh2xyjJdUfObf0_Z9uKAlL9l-fBLlVsuZpRjj2zBc5BDhGLnZj9R_I-I8eFlIH8MXCAm44YuSjHRI2VyKYp4P5Q-_QPz_jhFDvFn-yJrde22nbcQxGK7Kgd1UFZxKUwAsS66M6Ud8qidALf49NQgztkhJJXA"/>
+</div>
+<h3 class="text-[11px] font-bold tracking-widest uppercase text-black">HARRIS REGULAR</h3>
+<p class="text-[10px] text-zinc-500 font-light truncate mt-0.5">Harris men's 5-pocket pants in camouflage p...</p>
+<p class="text-xs font-medium text-zinc-900 mt-1">$379.00</p>
+</article>
+<!-- Product 4 -->
+<article class="group cursor-pointer">
+<div class="product-img-aspect bg-[#f4f4f4] mb-3 overflow-hidden relative">
+<img alt="HARRIS REGULAR Prince of Wales" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABTugTs2uvmStPJrPRX837bMFffDG9sqcvmpCohrjraPxws-0W9BKEU3XefUE9j2pfRpVyEDneXjy06GAKY-A6pRLlFnbJwKStnxpJHei0qX1IUZqmPtVRDUcEoyMWPQqLGqa6PzBwZU9f8h-XkxH5wq8OYbn9xU8ByQhNYgCPIB-ycnIZOGb6dKaxYUpv8qF-y255LgZIq1cw_JsmyPlK7djhBNWyefcVRc5JBfrUhQrwIX_OUx2dFw"/>
+</div>
+<h3 class="text-[11px] font-bold tracking-widest uppercase text-black">HARRIS REGULAR</h3>
+<p class="text-[10px] text-zinc-500 font-light truncate mt-0.5">Harris Men's 5-Pocket Pants in Prince of Wal...</p>
+<p class="text-xs font-medium text-zinc-900 mt-1">$379.00</p>
+</article>
+<!-- Product 5 -->
+<article class="group cursor-pointer">
+<div class="product-img-aspect bg-[#f4f4f4] mb-3 overflow-hidden relative">
+<img alt="HARRIS CARROT Stretch Techno" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5kEKwbyUGlkLlUfyQbWEWbsCI9fIOnVUiowyhGmeWLgdyDyinzJvJJcx9aoeYlSnDXGhnoajSDA2fuV8Rnr0_dzR4Tig12GkUVV2yhIZWkVNFknED_H7Dps_DiQ6BebJa7g3RgiEqM99ApkmibABKchYUkN8ci3M01L8nVZK2Dfr2wHmad5oHQHDUU95kz_ryqHlcZlcPS2s1eb52YNmYV-vmM5HxWs_NdjJu-K_6u9PqpwSBOc89MQ"/>
+</div>
+<h3 class="text-[11px] font-bold tracking-widest uppercase text-black">HARRIS CARROT</h3>
+<p class="text-[10px] text-zinc-500 font-light truncate mt-0.5">Harris Men's 5-Pocket Pants in Stretch Techn...</p>
+<p class="text-xs font-medium text-zinc-900 mt-1">$379.00</p>
+</article>
+<!-- Product 6 -->
+<article class="group cursor-pointer">
+<div class="product-img-aspect bg-[#f4f4f4] mb-3 overflow-hidden relative">
+<img alt="HARRIS CARROT Gabardine" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhg8CEm7u-hknTyDDPWRB4tyoH9gIZSfC8aN-toF_mXp4Fna4PXpA4p8V9k5DYoKP91k_7YwZZ8Cj-Vmw-6gBkTNEvKAKGXg15UwoN8b1tSugE0sBNzM-0q99nbm3JSX6MouufNWc0g_ftHTBvQ08D2v6H-8-FsdagBdVs-i4dxcVrZJ0SOA8YUjqJPI0z1xj2BTDf-vu9daTTLjnrkuvXe6ghp6gzLe5ZSQQo7EZ-p7njxwo146f0Vg"/>
+</div>
+<h3 class="text-[11px] font-bold tracking-widest uppercase text-black">HARRIS CARROT</h3>
+<p class="text-[10px] text-zinc-500 font-light truncate mt-0.5">Harris men's 5-pocket pants in stretch gab...</p>
+<p class="text-xs font-medium text-zinc-900 mt-1">$379.00</p>
+</article>
+</div>
+</section>
+<!-- END: MenCollectionCarousel -->
+<!-- BEGIN: WomenCollectionCarousel -->
+<section class="max-w-[1440px] mx-auto px-6 py-12 border-b border-zinc-200" data-purpose="product-collection-women" id="women-fw26">
+<div class="flex items-center justify-between text-[11px] font-medium tracking-[0.2em] uppercase text-zinc-500 mb-2">
+<span class="text-zinc-900 font-semibold">WOMEN FW26</span>
+<span>LATEST ARRIVALS</span>
+</div>
+<div class="flex items-center justify-between pb-4 border-b border-zinc-200 mb-6">
+<h2 class="text-sm md:text-base font-bold tracking-[0.16em] uppercase text-black">
+          DISCOVER THE NEW COLLECTION
+        </h2>
+<button class="text-xs uppercase tracking-widest text-zinc-800 hover:text-black font-semibold flex items-center space-x-1">
+<span>NEXT</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<!-- 6-Product Carousel Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<!-- Product 1 -->
+<article class="group cursor-pointer">
+<div class="product-img-aspect bg-[#f4f4f4] mb-3 overflow-hidden relative">
+<img alt="VERONIQUE Twill Chino" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjxXsHwd2uIJWQa-VCTleUkkCe75Eft-n9Pu8F2-9yzH3AfduGnoj9UY_VJ8c-bd9qJt13CNySO2DEHndd970lugoJc5S3-CdIsExP_Xm0XL3H0BvAPtBY-VvFe2n2eXmFkjWmu3jUHCDv1XrNCBdHt-k7gVXs_dSVLgGdu_jY5EcKyL6z7eRehlAY3LaCayFXpcA_QjsYN5Ilkd7zFq4wTl7DChzJROFQQGMqAtjmSgYXQEWwwoC0gQ"/>
+</div>
+<h3 class="text-[11px] font-bold tracking-widest uppercase text-black">VERONIQUE</h3>
+<p class="text-[10px] text-zinc-500 font-light truncate mt-0.5">Veronique women's chino pants in twill with b...</p>
+<p class="text-xs font-medium text-zinc-900 mt-1">$415.00</p>
+</article>
+<!-- Product 2 -->
+<article class="group cursor-pointer">
+<div class="product-img-aspect bg-[#f4f4f4] mb-3 overflow-hidden relative">
+<img alt="VENICE Twill Chino" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_VnOy1RGh1hr7k82RZlhFU5-68hiPKJxzjIfsWXQ1J1mX7zWm3Iny648oS9v3gL14mAe3awXoVFW6z_6A0rC1R20z6KF5uN9Rr0EYoirn4NgW-Ed_TLw2rtoWrCJNylXqD5XmXBdJYBrQiQmKzeQQmMlhRbsq9lehOfFSB6EZGxGASiH8h4xDtfrFOrXfJ5M4N9wrJ49OtTTuJg5WUYwIMxAFKMaNWf8Wcv9KYXWTgQwQDBGLkln8PA"/>
+</div>
+<h3 class="text-[11px] font-bold tracking-widest uppercase text-black">VENICE</h3>
+<p class="text-[10px] text-zinc-500 font-light truncate mt-0.5">Venice women's chino pants in twill with belt...</p>
+<p class="text-xs font-medium text-zinc-900 mt-1">$415.00</p>
+</article>
+<!-- Product 3 -->
+<article class="group cursor-pointer">
+<div class="product-img-aspect bg-[#f4f4f4] mb-3 overflow-hidden relative">
+<img alt="LEONIE Wool Coat" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxQX49penCj1EUDVNT0HhvFQfIiH_hXI0NmcjAK0W6cgE09eoPR6-lVRlGjXWZOtM9sEYOHOUV8py5kdQdo0G-wiT8YoHVJoypsvQp7S3ND3xy2RRzvOmGM3Ac6armPudseJC81UxWrGxe_6mqCoYtYq2fIlGV89_dC9YdG19P-fOU2ZpWeU1bAgZ4wdzW7Ao62eimoxGrdVluPupr3IQ_oFb6g7vVbusIrfjWeE9KTYXBnNx0yDcwSQ"/>
+</div>
+<h3 class="text-[11px] font-bold tracking-widest uppercase text-black">LEONIE</h3>
+<p class="text-[10px] text-zinc-500 font-light truncate mt-0.5">Leonie women's coat in soft wool cloth</p>
+<p class="text-xs font-medium text-zinc-900 mt-1">$629.00</p>
+</article>
+<!-- Product 4: With Color Swatches -->
+<article class="group cursor-pointer">
+<div class="product-img-aspect bg-[#f4f4f4] mb-3 overflow-hidden relative">
+<img alt="LEONIE Coat Camel" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnuglBAB03_hpWXMD4Z3t3FTJ-X64SBQzx5o1jLXqCmfDzWJsht5-iRK_xzdMA4A5VR-OhpVAM8vrg4_xF4r-bQ3hoKCG34zB6ukflfs9ZZhJyUhowdkJ17NmKDyCnhA-qCsOz8_7hOtEun21h5IiLJzKp07Z6lFqlzoJ5TwOcdMZ6te9fUA5e3AiyNkaJnS35Wj9PwNh9l3GiAvPyNHAo-1ekR6XxE7zvEXKCaSzpC2QXAx12Id1-tQ"/>
+</div>
+<h3 class="text-[11px] font-bold tracking-widest uppercase text-black">LEONIE</h3>
+<p class="text-[10px] text-zinc-500 font-light truncate mt-0.5">Leonie women's coat in soft wool cloth</p>
+<div class="flex items-center space-x-1 mt-1">
+<span class="w-2.5 h-2.5 bg-[#4a4038] inline-block border border-white rounded-none"></span>
+<span class="w-2.5 h-2.5 bg-[#bf8255] inline-block border border-white rounded-none"></span>
+<span class="text-[10px] font-medium text-zinc-900 ml-1">$629.00</span>
+</div>
+</article>
+<!-- Product 5 -->
+<article class="group cursor-pointer">
+<div class="product-img-aspect bg-[#f4f4f4] mb-3 overflow-hidden relative">
+<img alt="VIVIENNE CITY Chino" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsPWFtC1BaOAiw0p4L8Tf-zC239ctqdgoaOR4_2bZX2o_6sOS9Yssa3XKp07ZSJ08_zVVACU5rPfC890fa1hcYX-1mpwFYjHjhjJ2CZX7kMzPbD_0wukRoErXK_TK6i1Q7HQ4MxE6mTEgpta1PPOQtifKsyVNMbMt6hg1EJGr2Sv0wf0x6xlI8_RhFQVYAldIH93I8RfdaIlZTTpFuSwfOmMkp-0o4cxxOO_OGCtHI8KoUJDjKakllIQ"/>
+</div>
+<h3 class="text-[11px] font-bold tracking-widest uppercase text-black">VIVIENNE CITY</h3>
+<p class="text-[10px] text-zinc-500 font-light truncate mt-0.5">Vivienne City Women's Chino Trousers in Bull...</p>
+<div class="flex items-center space-x-1 mt-1">
+<span class="w-2.5 h-2.5 bg-[#822b2b] inline-block border border-white rounded-none"></span>
+<span class="text-[10px] font-medium text-zinc-900 ml-1">$415.00</span>
+</div>
+</article>
+<!-- Product 6 -->
+<article class="group cursor-pointer">
+<div class="product-img-aspect bg-[#f4f4f4] mb-3 overflow-hidden relative">
+<img alt="DALLAS WIDE Chino" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvSMiNzhR6ZFaEAZImKzhrssJUmSHdRWnFfsL0V_VWOil48dksro9GpbeKqpJxiTlk9IJa2ZBqgVkJFjPzKHi9KR7K9Sps98OzyF9OX_32xD_rB7UJiEXlj0pV0pJLAVMpZoBaebTkA7widyG_QySUsGbXULkZ7m59yJqQQ3cFoRIZ3bR-JiChgwZyqc7GcqYmU4d-2-dP9rzSLzOMpPkQcKNhRxfvEgkv2i87Depek0zlznlFQ9xqNg"/>
+</div>
+<h3 class="text-[11px] font-bold tracking-widest uppercase text-black">DALLAS WIDE</h3>
+<p class="text-[10px] text-zinc-500 font-light truncate mt-0.5">Dallas Wide Women's Chino Trousers</p>
+<p class="text-xs font-medium text-zinc-900 mt-1">$398.00</p>
+</article>
+</div>
+</section>
+<!-- END: WomenCollectionCarousel -->
+<!-- BEGIN: AccessoriesGrid -->
+<section class="max-w-[1440px] mx-auto px-6 py-12 border-b border-zinc-200" data-purpose="accessories-collection" id="accessories">
+<div class="flex items-center justify-end pb-3 mb-6">
+<button class="text-xs uppercase tracking-widest text-zinc-800 hover:text-black font-semibold flex items-center space-x-1">
+<span>NEXT</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<!-- Accessory 1 -->
+<article class="group cursor-pointer">
+<div class="product-img-aspect bg-[#f4f4f4] mb-3 overflow-hidden flex items-center justify-center p-4">
+<div class="border-2 border-emerald-900 p-4 text-center bg-[#faf8f2] w-full h-full flex flex-col items-center justify-between">
+<span class="text-[8px] uppercase tracking-widest text-zinc-600">FORTE DEI MARMI</span>
+<div class="text-center">
+<svg class="w-8 h-8 mx-auto text-emerald-800" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg>
+<p class="font-bold tracking-widest text-[10px] mt-1">MASON'S</p>
+</div>
+<span class="text-[7px] text-zinc-400">MADE IN ITALY</span>
+</div>
+</div>
+<h3 class="text-[11px] font-bold tracking-widest uppercase text-black">Beach Towel</h3>
+<p class="text-xs font-medium text-zinc-900 mt-1">$90.48</p>
+</article>
+<!-- Accessory 2 -->
+<article class="group cursor-pointer">
+<div class="product-img-aspect bg-[#f4f4f4] mb-3 overflow-hidden flex items-center justify-center p-3">
+<img alt="Handmade Leather Belt with Studs" class="w-full h-full object-contain group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPPp-7o55jTQ7r2ihodxQyU3mktvXmhQ9ZLC_Zz3oGampzZYv33pBPboqpUZvR9n9sTiT0Gic5Rig4D4ADhEC1jr0lRfmhGeEy5kmlbWHrtfJsm4IBgsTnkAHiT73eC7lymm-8OvZmKoAtQrDMFKpHeojZ84SBPvL3jryIAXVKuRgN-0_o9owsfiVFACyEZhiefaK8SU4gYp3aTTItdQ1yE3Og3tsS9bBOQrBVuSBQPa2MY7MQlvu9wA"/>
+</div>
+<h3 class="text-[11px] font-bold tracking-widest uppercase text-black truncate">Handmade Leather Belt with Studs</h3>
+<p class="text-xs font-medium text-zinc-900 mt-1">$147.75</p>
+</article>
+<!-- Accessory 3 -->
+<article class="group cursor-pointer">
+<div class="product-img-aspect bg-[#f4f4f4] mb-3 overflow-hidden flex items-center justify-center p-3">
+<img alt="Handmade Leather Olive Belt" class="w-full h-full object-contain group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWcNS3UQ7S__vUQUZkyDx7haqQKofniUL-A8tmSONR2L3C5TN0OxQ2ssueTaODZGHP5WhxVWaU_JL3QLioy4fDHbxhzd7K7gnsJnt3wpqRt4OJX0AMTodiLLobZM9CvzcXwspSTdtLQPo9QO-zBHQcYrz8fa0zRdKK7smBXBC4RO6yv6yIF7A2MA41dOoc411zQ1W_RoMhW3kWW2WTEL_QvbjsOfrHzb34rJaeaLvtqA6fA6K3IBz99w"/>
+</div>
+<h3 class="text-[11px] font-bold tracking-widest uppercase text-black truncate">Handmade Leather Belt with Studs</h3>
+<p class="text-xs font-medium text-zinc-900 mt-1">$147.75</p>
+</article>
+<!-- Accessory 4 -->
+<article class="group cursor-pointer">
+<div class="product-img-aspect bg-[#f4f4f4] mb-3 overflow-hidden flex items-center justify-center p-3">
+<img alt="Handmade Dark Leather Belt" class="w-full h-full object-contain group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyuxrRJUSGyiwV5MHEGD-Vc637EtZYbEEy1IpS1LRjoP8etVL_xC2LBwl7Xo58zYxcBEiM_4DUOWiK6jZBGexki6TbRLI1vmXddcGCojM2x0ybyYrh1fsyCLW6Jp6s1LS3cwERa4MdeJBQMP-O2z4IJH-kJmTPBf92GocwuzuOIbUh_3PrNeqdemYY_x6WYftiSrQWGbGgYP4LhCAhS-jJl9vUvpckkOm8roQE97mVF3KylrUGUns5vQ"/>
+</div>
+<h3 class="text-[11px] font-bold tracking-widest uppercase text-black truncate">Handmade Leather Belt with Studs</h3>
+<p class="text-xs font-medium text-zinc-900 mt-1">$147.75</p>
+</article>
+<!-- Accessory 5 -->
+<article class="group cursor-pointer">
+<div class="product-img-aspect bg-[#f4f4f4] mb-3 overflow-hidden flex items-center justify-center p-2">
+<img alt="MASON'S BAG M74 Canvas Tote" class="w-full h-full object-contain group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB7SjWDW_tS-Ci2CDCvMeYrfPtHHa-KYXMhIxtO0ix5F9w2AHLtDiHiN6I0ghIb97y1lQ3XZwbKD7xMlrHQXOTwK5308T2liBHcvB-d3-ly8naUGOoA3cDPBRLKFju67WCZBO9qenuuPbkgBwMclAhPTIIetcaw-ukj59f11jKVq_rU98_KD-YtxCE1fTCQtqH1whW7Hwd4K1bL8IZF6Mr89nwW73XQZp-e7wd4vpcbuGAVEC1XJg_sw"/>
+</div>
+<h3 class="text-[11px] font-bold tracking-widest uppercase text-black">MASON'S BAG M74</h3>
+<p class="text-[10px] text-zinc-500 font-light truncate mt-0.5">Mason's Bag M74 unisex bag in oxford canvas</p>
+<p class="text-xs font-medium text-zinc-900 mt-1">$286.00</p>
+</article>
+<!-- Accessory 6 -->
+<article class="group cursor-pointer">
+<div class="product-img-aspect bg-[#f4f4f4] mb-3 overflow-hidden">
+<img alt="Mason's Resort Dress" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIRT-adLNRxw9Sm5Poa-XzYXBWL9CkNU0-OWAdEjblyHSOMfKAP3hgNOxAxO90BxFa1_w6ZlslurfYhCFvJEDlf7O4KRzlKGmx2klLzbNUzQSI-xeudw6TZYBOsul-Sw2y8qTXpPp7wCOAo47jftxvTCkASRnDJ3KU1hslm7vyGOEPRvZ9MvSlB-wo2gi0sZYrZllTk527RruJK3l4ssL8kOWJJBRVsAYnrUG9yUedpTgIVu6-kZFtmQ"/>
+</div>
+<h3 class="text-[11px] font-bold tracking-widest uppercase text-black truncate">Mason's bag unisex bag in cotton will</h3>
+<p class="text-xs font-medium text-zinc-900 mt-1">$106.30</p>
+</article>
+</div>
+</section>
+<!-- END: AccessoriesGrid -->
+<!-- BEGIN: ArchiveSection -->
+<section class="w-full bg-[#eeeae3] py-20 px-4 md:px-8 relative overflow-hidden border-b border-zinc-300" data-purpose="archive-gallery">
+<div class="max-w-[1360px] mx-auto relative">
+<!-- Archival Items Grid (5 cols x 3 rows = 15 pieces laid on craft backing) -->
+<div class="grid grid-cols-3 md:grid-cols-5 gap-3 md:gap-5">
+<!-- Row 1 -->
+<div class="archive-cell-aspect bg-[#ded8cc] p-2 shadow-inner border border-[#cfc8b9]">
+<img alt="Archive Pant" class="w-full h-full object-cover mix-blend-multiply opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNNENJGJrl5rUtdPh6TrK1I2qjcerGH2_nBR2WzmLSNHYQbc-uxh23dJt-nDN4gusznrL331-GBuRPaiUykV7ars27SgShNtjFVVHDWA2Vh11Zg8F77BVseoalg-UmXx7ax_W_DGVu8KI43b9QHIFolj4ZdoELoWLG-PCemVUwBnay09AxI56iqBhEBkZqNWMexV0MfnRgImcCmItAITsxhww6hSaGVo-ACszoJM5-1duGT9S_8w5DFA"/>
+</div>
+<div class="archive-cell-aspect bg-[#ded8cc] p-2 shadow-inner border border-[#cfc8b9]">
+<img alt="Archive Safari Jacket" class="w-full h-full object-cover mix-blend-multiply opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoCauhRRyo1gCedoQcpXBQBDMgL_FJmP0ecmrwiW2clNwk4x03cE_GKkNNWebS8wKVjR3-Ak33FIL8rBVNBMy00HDQ-ZxXl7geWPbzrNuuTlijmUeJPbNZSQHGeuEmFDIuk_s0n5JP9X_he4vJVujI7mgk-Mh_qhWvBxaeIjCbrYvOSk_4NczecS17lQoHOKDvuEfARQjyZO4b_ZG2JilKUFAIIiiUiv0C3oKRcpqYUULXNbZEYkling"/>
+</div>
+<div class="archive-cell-aspect bg-[#ded8cc] p-2 shadow-inner border border-[#cfc8b9]">
+<img alt="Archive Field Trouser" class="w-full h-full object-cover mix-blend-multiply opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUtnEs0z9vkNZJkmr_MKHKTgKJ9pjBbgb52NUD-LnXQjVJVNaREkCEEkBZ4qT211JqPmTP62CGlp4K3iirKZ6xpNLfPvToAvlQgIEPt-vs99BzyFs4q55Qh4XP0SB8BwOcpDFPSljnea_p8z2FcH9FTZBfL11E_R38osozG5mJxVfMf17Uusmw8A4yrpzamp_toI8oDFVKHA3NvLO1p7IdZ3FiIoph4bkdeS7Jh-jYyuG3WkWliNB2ZA"/>
+</div>
+<div class="archive-cell-aspect bg-[#ded8cc] p-2 shadow-inner border border-[#cfc8b9]">
+<img alt="Archive Khaki Jacket" class="w-full h-full object-cover mix-blend-multiply opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPLJNXlwFWFSmtOoEHc8DECHTFtgNye4dsBa2dxLbaaJFJHJOOyGA31Wumzj_ZHV4xDP5Vy_34sJ7zGcpmbmGX7lzMbzHDJ8x-OnriBNALnB5zT7u0HaMLNFtQ6G-1uIU-s2uQWM_A2haGOTk4zNxJH6neltkHq9uk50Iol5XR4hoDRjtQ3Ek_H9IsxUWFxYWlebR2zrk-jnb8l5b1fTiaFZaaQ5c_YWKSKIdbH2BN4gXwp0wEMUnnig"/>
+</div>
+<div class="archive-cell-aspect bg-[#ded8cc] p-2 shadow-inner border border-[#cfc8b9]">
+<img alt="Archive Chino" class="w-full h-full object-cover mix-blend-multiply opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU-3LG81tIsTnEbBDFSXr8-km1GAMPTBniBSTwGbDD_xSNqtfkMCwN2fgRxxo0x9WviKvertNyM4SJcw5EwBhPR_iCJ5ZBdGrAo3T-V9HovuwUWBFhd_yRJBtD7mLTwQRO-o5TueKTxcdFWj4eQ2xTR_WHbm0CDOJ3X0b2ICa7dEqVr2wVYVDb5KioMPqqDKEvW__pIORAKPn1Ncflm3pfT-PoQDaEqW3fsytk7mF7yZXvCguMiZbY3A"/>
+</div>
+<!-- Row 2 -->
+<div class="archive-cell-aspect bg-[#ded8cc] p-2 shadow-inner border border-[#cfc8b9]">
+<img alt="Archive Cargo" class="w-full h-full object-cover mix-blend-multiply opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJSOqPccqqGvLRYstRIoTY0gVo2AZzabnYlFFegX5hxkCSGkQ_bfxlg3u9Y4-KrJt1L5pRDpiQMSj4Jo0q5t_dHs5bVomhlNUGmAe0R_4PphhPRf7ds2HpLp1u8F1wGafs_9Z9-6gk2ZI--sT3rz-mHVjVL3CdWpaeYzOnQTYrmjYBWwxDGiasbjHcDyJSZDsW3CsZ5g4-0rfdPjJFVJZmBqzg53DYdIj1QU05BFiLi7xOHmMiUiqVxg"/>
+</div>
+<div class="archive-cell-aspect bg-[#ded8cc] p-2 shadow-inner border border-[#cfc8b9]">
+<img alt="Archive Military Parka" class="w-full h-full object-cover mix-blend-multiply opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8fvBUXoxxBJ0akh9wAuGZm9jQJwthF0mVPkj1yye_6_4h8TAHyNC0wHuRfVfKpb-MhEiasZeFpcTQ5ir18t8Py-JrhAWMpNMfJuk4x3AX726o0I0se_7EIULJ0xHiROBTAaWAjK7Ogu64d1csPnMoHKlQyIoeWPVezXXyIX7gvW9uRjYUAkAmAt78jghzng82LUe_qegacejPyYdzdZjxN1TOmyD-3aoxi33NlWb1xhEavyfPu1YDQA"/>
+</div>
+<div class="archive-cell-aspect bg-[#ded8cc] p-2 shadow-inner border border-[#cfc8b9]">
+<img alt="Archive Olive Cargo" class="w-full h-full object-cover mix-blend-multiply opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2iJIPYpOxhZ1RVbaAuaFmUZBrNRgbaY0ba2LXvyLDjHBAEyc516HJJ47JdytBKvzT39XxLKeJNqDpY1h9PH3BPYiMePsz0G8JW8UvRYCyDphBawot9vTFuMVjIgDR-9I4ayuR4NPpOPx_m0cFiUeE3A1OtVb2zhA1SEw1uLInaBp0zhlgCczRlQB_IjCatWMNI9dz9QrT0YVa1pg4sqsKWgKTZGyfe-VO-vpUD7lcgjMcmGecYjm1tA"/>
+</div>
+<div class="archive-cell-aspect bg-[#ded8cc] p-2 shadow-inner border border-[#cfc8b9]">
+<img alt="Archive Workwear Pant" class="w-full h-full object-cover mix-blend-multiply opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9-q-lMDO9OFPky-NuHDtidnMHWJUhO9qn_nQGpFeBBfTcq_9UI-A6-qsC9kf2WI7fQcuintF3Bjxg80EyF_GUHrNNAyKjywrb8JPRcVAFLK1XQnSn8IsQKo-N7zyR2GJFEC75fWk-QRfjqtor4Oq0eZjoM7DwbkdOS1-ILcRhf9yBsoQc3Mh5UEwRRPoVpOfBI8zWXIo3iH-SF1L_BppSEfuUx18JLlxtyVxsfOcRRnSqAokYwjMvXQ"/>
+</div>
+<div class="archive-cell-aspect bg-[#ded8cc] p-2 shadow-inner border border-[#cfc8b9]">
+<img alt="Archive Green Trouser" class="w-full h-full object-cover mix-blend-multiply opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLd0nSig6QuZDGoU1f2lUxrKfuoB8YwVVEp5_q4s5ilwLsIMsI5za97IqQ2lPzsH_t2eyb_zKYj0wgWITgDQ8quHGvkVZLz3O9F759eyzsuCTAlKmdL0V5aERy7FvsqGO8vdxPjUU_JNDis4hZgSGEw7hPABmr8MJ1IWo0h_6Y-eNnulAzn9Jx1jHXaRhuRoLPr6qEdK1ZAlImvLU0S_Cql6Fspyiylv2QwfcCztnrs4rFgIafK7Zsxg"/>
+</div>
+<!-- Row 3 -->
+<div class="archive-cell-aspect bg-[#ded8cc] p-2 shadow-inner border border-[#cfc8b9]">
+<img alt="Archive Chino Olive" class="w-full h-full object-cover mix-blend-multiply opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW1AjXoF8JSFGLo0KWlUIXQjWimM579fMVgrSzDI92rJgd5qGMzAGSnVnaMlq3XxlwoIv2Wi-5qlekMzvJ-IWRqkaZxXKw3j_tsCrdGRbka80pJZJ_OSvIwgeJuVhDgyppXdMps32blPBvK0jsRKFqsd5_iUgixSYIwleFzFk8bS967YzWe13MEcSwbPsbguGo-5ztNw9I0nrW7dix9t24sy7i-qnNrNV5lgaRT3lpEoGuwPT7f3ZS0w"/>
+</div>
+<div class="archive-cell-aspect bg-[#ded8cc] p-2 shadow-inner border border-[#cfc8b9]">
+<img alt="Archive Twill Pants" class="w-full h-full object-cover mix-blend-multiply opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChQcDv1tIg-7Wl39vqOWxuS0DpQhS0nWMBctCa8Uz49Gs8JAPVjmsrjauD8fTxUY2DMaQ2G1ByHI99s_YcP6Jr5mO8sLj-h_xh5dW-WN3Z_8X9G45MMW17GnTfOx2MvBxQt5OVNnP3bK6KkukMG4cKKaYpn9ZTICzWQjf3GiRHSZp3oe2iLwdJn4eSKi5JCPVmTEliTQZFxhxR-VIWFJYY1Zw4_2jYqXQ0MLB-WH8b_skQLN26jmTinw"/>
+</div>
+<div class="archive-cell-aspect bg-[#ded8cc] p-2 shadow-inner border border-[#cfc8b9]">
+<img alt="Archive Heavy Gabardine" class="w-full h-full object-cover mix-blend-multiply opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7rRydPHUaPZbyEl24Tor2iaWX_TSoDO2CWUR5rwjSmPSgqwYQXcHnw9XCioNK1DpSp9Wm0kxFLrFGa0E8eAW9Ik7i74zE9jqXcr-xkdybRlXJhmIaHZu2edMbpEyQobCTnh3wdemPyPtffW2GhEuTiquGH1facKoFXvpxL-O7hP3r956DvwQUvmirP5NlszvHWN9H2O6dZ18iFZyQXAUuVRJEpGKkqVxlOn4ZVppCNTRvDi0lJWzoyg"/>
+</div>
+<div class="archive-cell-aspect bg-[#ded8cc] p-2 shadow-inner border border-[#cfc8b9]">
+<img alt="Archive Sand Trouser" class="w-full h-full object-cover mix-blend-multiply opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA1MfsMpC0_njQedT7yfdjnlfPQb-Z785EMmxEaF3mbtZLGmgb8ELAXjtBQfticu0ZZq2iW6Xt4WJa-eA5S8948enDCyO6PCBEVk8171sFEBmuRFSCdMtW-XsykHomyXuC-xEBHI7_JPEY8ixJcLzcrErHeL3LivqHqCN5UHfYFq2GHYzHUJ_283J0U0ZLTGeD-YMHmHmNsq66W58QSVqRasVQ9QgYYlTr7-sG_IwLlqMm3xkTgx1g7w"/>
+</div>
+<div class="archive-cell-aspect bg-[#ded8cc] p-2 shadow-inner border border-[#cfc8b9]">
+<img alt="Archive Cargo Fit" class="w-full h-full object-cover mix-blend-multiply opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaoO3j-trm-tqVFQQNq2y4_4L0dJHpr31Cl_kqmrBvdkiZw2BvjeHMRhQXfmRfhtom4kZ5ykPpn-nv7Hd0w8Rj7-29TEYWi1RQQ_e-Q8b0Us5r24qN8zypehEEjj8Eo0OlDT_9uceCOEf8qeIe96LP0UtqX9uxAEt0PhXmNyXp9qMNeOqvKOyUpO27zy4UK5e4cdRPpTAyzlGBqMcVK77xPuy9Sjo2NiaNPCJ76Dngzftz1BLadvqqwA"/>
+</div>
+</div>
+<!-- Overlaid Cursive Red Signature Wordmark -->
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none z-10 px-4">
+<span class="font-script text-[#e83b24] text-7xl sm:text-9xl md:text-[140px] lg:text-[190px] leading-none drop-shadow-sm rotate-[-4deg] tracking-tight">
+            Mason's
+          </span>
+<span class="font-script text-[#e83b24] text-7xl sm:text-9xl md:text-[140px] lg:text-[190px] leading-none drop-shadow-sm rotate-[-2deg] -mt-6 sm:-mt-12 md:-mt-16 tracking-tight">
+            Archive
+          </span>
+</div>
+<!-- Centered Outline Action Button -->
+<div class="text-center mt-12 relative z-20">
+<a class="inline-block bg-white/90 hover:bg-white text-black border border-black px-8 py-3 text-[11px] font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-sm" href="#archive">
+            EXPLORE ARCHIVE
+          </a>
+</div>
+</div>
+</section>
+<!-- END: ArchiveSection -->
+<!-- BEGIN: HeritageSplitSection -->
+<section class="max-w-[1440px] mx-auto px-6 py-16 border-b border-zinc-200" data-purpose="craftsmanship-heritage" id="our-story">
+<!-- Section Header -->
+<div class="flex items-center justify-between text-[11px] font-semibold tracking-[0.2em] uppercase text-zinc-500 mb-8">
+<div class="flex items-center space-x-1.5">
+<span class="w-1.5 h-1.5 bg-emerald-600 rounded-full inline-block"></span>
+<span class="text-zinc-900">ABOUT US</span>
+</div>
+<span>EST. 1974</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Photography Column: Tailoring steam iron press close-up -->
+<div class="lg:col-span-6 space-y-4">
+<div class="relative overflow-hidden bg-zinc-100 aspect-video md:aspect-[4/3]">
+<img alt="Artisanal pressing of fine fabric in Italian tailoring atelier" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY0Zmh8ve99-QdxuOZQqd3qqrpSDrWqK0p1_8kpGZUMRuNI9XFfpZq71yzSl6O-05rKJAq6_hxcrhLWfYUDBWW-m3nG6kUz1SOax4eoUknVvLeIYXapa9pKI1I_Fe0tRy1TnRQv7CZCrECow0kTjSAQsUZVB9ImhpOl9L7utZS1BqtaIKIYfzmD2jq24-uSsvPB_kGN0RCyYYkLD9A144Qb4K2NcRL5lQzRsypCWNqrri-Tj8fT4zdeQ"/>
+</div>
+</div>
+<!-- Right Editorial Column -->
+<div class="lg:col-span-6 lg:pl-10">
+<p class="text-xs md:text-sm text-zinc-700 leading-relaxed font-light mb-8 max-w-lg">
+            From the renowned tailoring atelier of Vittorio Martini in Carrara to the international Mason's brand: discover how, in 1974, his son Giorgio transformed his father's craftsmanship into an entrepreneurial journey that still today blends artisanal tradition and innovation in the world of fashion.
+          </p>
+<a class="inline-block border border-black hover:bg-black hover:text-white px-6 py-2.5 text-[10px] tracking-[0.2em] uppercase font-bold text-black transition-colors mb-12" href="#about">
+            ABOUT US
+          </a>
+<!-- Stylized handwritten artistic brand quote in coral red -->
+<div class="font-script text-[#e83b24] text-5xl md:text-6xl lg:text-7xl leading-tight pl-2">
+<p>Authentic,</p>
+<p class="ml-6">True,</p>
+<p class="ml-12">Elegant.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeritageSplitSection -->
+<!-- BEGIN: PersonalShopperSection -->
+<section class="max-w-[1440px] mx-auto px-6 py-16 border-b border-zinc-200" data-purpose="personal-shopper-service">
+<!-- Section Header -->
+<div class="flex items-center justify-between text-[11px] font-semibold tracking-[0.2em] uppercase text-zinc-500 mb-8">
+<span class="text-zinc-900">PERSONAL SHOPPER</span>
+<span>FOR YOU</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Left Photography: Elegant boutique interior with folded pants & clothing rails -->
+<div class="lg:col-span-6">
+<div class="overflow-hidden bg-zinc-100 aspect-[4/5] max-h-[580px]">
+<img alt="Mason's boutique flagship store interior shelving display" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWjV2MSa6hdW1oa1GvMV7LX4aW9AQ79-PHrqhvyRTByoNKOqdxrujuxOGXlo8ny315GlmP_9fPC_2HdsZqjh8MdZFtasoW6qteeGNzx0PDy7gIqxAIHHVsJQ_zEND7u7oDw1UKVelwDpCnCBAhjGLqSbuIACNYCKYdp2UCVcKTBgzlKHPvAlb3oAI3jddmTpTq8nAqcKNTi3f-MD0Ju_bAgvGFca4_OAS4qhPaW95_qXjT3W7Dx087zQ"/>
+</div>
+</div>
+<!-- Right Editorial Column -->
+<div class="lg:col-span-6 lg:pl-10">
+<h2 class="text-base md:text-lg font-bold tracking-[0.2em] uppercase text-black mb-4">
+            PERSONAL SHOPPER
+          </h2>
+<p class="text-xs md:text-sm text-zinc-600 leading-relaxed font-light mb-8 max-w-lg">
+            With our Personal Shopper service, you can discover the collections through a dedicated video-call, in Italian or English, receiving tailored advice to help you choose the perfect pieces and optimize your time. Make your purchase immediately or review the selected looks at your own pace and complete the order whenever you prefer.
+          </p>
+<a class="inline-block border border-black hover:bg-black hover:text-white px-7 py-3 text-[10px] tracking-[0.2em] uppercase font-bold text-black transition-colors" href="#whatsapp">
+            BOOK ON WHATSAPP
+          </a>
+</div>
+</div>
+</section>
+<!-- END: PersonalShopperSection -->
+</main>
+<!-- BEGIN: SiteFooter -->
+<footer class="w-full bg-[#fbfbf9] text-zinc-800 pt-16 pb-12 border-t border-zinc-200" data-purpose="main-footer">
+<div class="max-w-[1440px] mx-auto px-6">
+<!-- Top 4 Columns -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-16 border-b border-zinc-200 text-xs">
+<!-- Col 1: Agency & Social -->
+<div>
+<h4 class="text-[11px] font-bold tracking-[0.2em] uppercase text-black mb-4">AGENCY</h4>
+<ul class="space-y-2 text-zinc-600 text-[11px]">
+<li><a class="hover:text-black transition-colors" href="#about">About us</a></li>
+<li><a class="hover:text-black transition-colors" href="#history">History</a></li>
+<li><a class="hover:text-black transition-colors" href="#contacts">Contacts</a></li>
+</ul>
+<!-- Social Icons -->
+<div class="flex items-center space-x-3.5 mt-6 text-zinc-700">
+<!-- Facebook -->
+<a aria-label="Facebook" class="hover:text-black transition-colors" href="#">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
+</a>
+<!-- Instagram -->
+<a aria-label="Instagram" class="hover:text-black transition-colors" href="#">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<!-- Pinterest -->
+<a aria-label="Pinterest" class="hover:text-black transition-colors" href="#">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.291 1.199-.334 1.357-.056.208-.184.253-.385.163-1.325-.615-2.152-2.544-2.152-4.094 0-3.334 2.422-6.396 6.985-6.396 3.668 0 6.518 2.614 6.518 6.108 0 3.644-2.298 6.578-5.487 6.578-1.071 0-2.078-.557-2.423-1.215l-.659 2.511c-.238.916-.882 2.064-1.314 2.766 1.002.309 2.063.477 3.165.477 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"></path></svg>
+</a>
+<!-- TikTok -->
+<a aria-label="TikTok" class="hover:text-black transition-colors" href="#">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.86 4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-.04-4.52z"></path></svg>
+</a>
+</div>
+</div>
+<!-- Col 2: Buying Guide -->
+<div>
+<h4 class="text-[11px] font-bold tracking-[0.2em] uppercase text-black mb-4">BUYING GUIDE</h4>
+<ul class="space-y-2 text-zinc-600 text-[11px]">
+<li><a class="font-semibold text-black hover:underline uppercase tracking-wider text-[10px]" href="#return">REQUEST A RETURN</a></li>
+<li><a class="hover:text-black transition-colors" href="#returns-refunds">Returns &amp; Refunds</a></li>
+<li><a class="hover:text-black transition-colors" href="#shipping">Shipping</a></li>
+<li><a class="hover:text-black transition-colors" href="#payments">Payments</a></li>
+<li><a class="hover:text-black transition-colors" href="#personal-shopper">Personal Shopper</a></li>
+<li><a class="hover:text-black transition-colors" href="#withdrawal">Request for Withdrawal</a></li>
+</ul>
+</div>
+<!-- Col 3: Privacy and Regional Domains -->
+<div>
+<h4 class="text-[11px] font-bold tracking-[0.2em] uppercase text-black mb-4">PRIVACY AND USE</h4>
+<ul class="space-y-2 text-zinc-600 text-[11px]">
+<li><a class="hover:text-black transition-colors" href="#privacy">Privacy Policy</a></li>
+<li><a class="hover:text-black transition-colors" href="#cookie">Cookie Policy</a></li>
+<li><a class="hover:text-black transition-colors" href="#terms">Terms &amp; Conditions</a></li>
+<li><a class="hover:text-black transition-colors" href="#preferences">Privacy Preferences</a></li>
+</ul>
+<div class="mt-4 pt-4 border-t border-zinc-200/80 space-y-1 text-[10px] text-zinc-400">
+<p><a class="hover:text-zinc-700" href="https://de.masons.it">de.masons.it</a></p>
+<p><a class="hover:text-zinc-700" href="https://en.masons.it">en.masons.it</a></p>
+<p><a class="hover:text-zinc-700" href="https://it.masons.it">it.masons.it</a></p>
+<p><a class="text-zinc-700 font-medium" href="https://us.masons.it">us.masons.it</a></p>
+</div>
+</div>
+<!-- Col 4: Newsletter -->
+<div>
+<h4 class="text-[11px] font-bold tracking-[0.2em] uppercase text-black mb-4">NEWSLETTER</h4>
+<p class="text-zinc-500 text-[11px] mb-4">Get 10% off your first order now</p>
+<form class="relative max-w-xs" onsubmit="event.preventDefault();">
+<input class="w-full text-xs bg-white border border-zinc-300 px-3 py-2 pr-10 focus:outline-none focus:border-black placeholder:text-zinc-400" placeholder="Your email address" type="email"/>
+<button aria-label="Subscribe" class="absolute right-0 top-0 bottom-0 px-3 flex items-center justify-center text-zinc-600 hover:text-black" type="submit">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</form>
+</div>
+</div>
+<!-- Bottom Bar: Peace Emblem + Copyright + Payment Icons -->
+<div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-[10px] text-zinc-400">
+<!-- Heritage Round Seal Motif -->
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 border border-black/80 rounded-full flex flex-col items-center justify-center text-[7px] font-bold text-black tracking-tighter leading-tight text-center p-1">
+<span class="block">PEACE</span>
+<span class="block font-serif text-[9px] -my-0.5">⚓</span>
+<span class="block">LOVE</span>
+</div>
+<div>
+<p class="font-bold text-zinc-800 tracking-widest text-[9px]">MASON'S</p>
+<p class="text-[8px] text-zinc-400">EST. 1974 • ITALY</p>
+</div>
+</div>
+<!-- Copyright -->
+<div class="text-center">
+<p>© 2026 Mason's - P.IVA IT00156900458</p>
+</div>
+<!-- Payment Gateways List -->
+<div class="flex items-center space-x-2 text-zinc-600 text-xs">
+<!-- Amex -->
+<span class="border border-zinc-200 bg-white px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">AMEX</span>
+<!-- Apple Pay -->
+<span class="border border-zinc-200 bg-white px-2 py-1 rounded text-[8px] font-bold tracking-wider"> Pay</span>
+<!-- G Pay -->
+<span class="border border-zinc-200 bg-white px-2 py-1 rounded text-[8px] font-bold tracking-wider">G Pay</span>
+<!-- Mastercard -->
+<span class="border border-zinc-200 bg-white px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">MC</span>
+<!-- PayPal -->
+<span class="border border-zinc-200 bg-white px-2 py-1 rounded text-[8px] font-bold tracking-wider">PayPal</span>
+<!-- Shop Pay -->
+<span class="border border-zinc-200 bg-white px-2 py-1 rounded text-[8px] font-bold tracking-wider text-[#5c5bf0]">shopPay</span>
+<!-- Visa -->
+<span class="border border-zinc-200 bg-white px-2 py-1 rounded text-[8px] font-bold uppercase tracking-wider">VISA</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: SiteFooter -->
+</body></html>

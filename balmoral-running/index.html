@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BALMORAL | Fall-Winter 2026</title>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Cormorant Garamond (refined luxury serif) and Inter (technical clean sans) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;family=Inter:wght@300;400;500;600&amp;family=Caveat:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Inter"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            handwriting: ['"Caveat"', 'cursive'],
+          },
+          colors: {
+            brand: {
+              charcoal: '#111111',
+              muted: '#686868',
+              lightGray: '#f5f5f4',
+              sand: '#e8e6e1',
+              border: '#dcd9d2',
+              cobalt: '#1a3eb8',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Typography Styles -->
+<style data-purpose="typography">
+    .font-luxury {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      letter-spacing: 0.08em;
+    }
+    .hero-tracking {
+      letter-spacing: 0.18em;
+    }
+    .nav-tracking {
+      letter-spacing: 0.04em;
+    }
+    .editorial-p {
+      font-size: 0.76rem;
+      line-height: 1.45;
+      letter-spacing: 0.01em;
+    }
+  </style>
+<!-- END: Custom Typography Styles -->
+<!-- BEGIN: UI Utility Styles -->
+<style data-purpose="layout">
+    /* Subtle custom image contrast and smooth transitions */
+    .img-zoom-wrapper {
+      overflow: hidden;
+    }
+    .img-zoom-wrapper img {
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .img-zoom-wrapper:hover img {
+      transform: scale(1.02);
+    }
+    .link-underlined {
+      display: inline-block;
+      position: relative;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 1px;
+    }
+    .lined-paper {
+      background: repeating-linear-gradient(
+        transparent,
+        transparent 28px,
+        #e2ddd5 28px,
+        #e2ddd5 29px
+      );
+    }
+  </style>
+<!-- END: UI Utility Styles -->
+</head>
+<body class="bg-[#fbfbf9] text-[#1a1a1a] font-sans antialiased selection:bg-neutral-800 selection:text-white">
+<!-- BEGIN: MainHeader -->
+<header class="absolute top-0 left-0 right-0 z-50 text-white font-sans text-xs tracking-wider font-normal">
+<div class="w-full px-6 md:px-10 py-5 flex items-center justify-between">
+<!-- Left Navigation -->
+<nav class="flex items-center space-x-6 text-[11px] nav-tracking opacity-95 uppercase md:normal-case font-light">
+<a class="hover:opacity-70 transition-opacity" href="#collection">Collection</a>
+<a class="hover:opacity-70 transition-opacity" href="#tops">Tops</a>
+<a class="hover:opacity-70 transition-opacity" href="#bottoms">Bottoms</a>
+<a class="hover:opacity-70 transition-opacity" href="#accessories">Accessories</a>
+</nav>
+<!-- Center Logo -->
+<div class="absolute left-1/2 -translate-x-1/2 top-4">
+<a class="font-serif text-lg tracking-[0.25em] font-normal uppercase text-white hover:opacity-90 transition-opacity" href="#">
+          BALMORAL
+        </a>
+</div>
+<!-- Right Navigation -->
+<nav class="flex items-center space-x-6 text-[11px] nav-tracking opacity-95 uppercase md:normal-case font-light">
+<a class="hover:opacity-70 transition-opacity" href="#about">The brand</a>
+<a class="hover:opacity-70 transition-opacity" href="#search">Search</a>
+<a class="hover:opacity-70 transition-opacity" href="#login">Login</a>
+<a class="hover:opacity-70 transition-opacity" href="#cart">Cart</a>
+</nav>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="relative h-[94vh] min-h-[640px] w-full bg-neutral-900 overflow-hidden" data-purpose="hero-banner">
+<!-- Atmospheric Winter Urban Alleyway Background -->
+<div class="absolute inset-0">
+<img alt="Balmoral Canadian Winter City Architecture and Atmosphere" class="w-full h-full object-cover object-center filter brightness-[0.78] contrast-[1.08] saturate-[0.85]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoS188KwjY4WryHl8RjPX3xTKpPI5g0aXAolmelDvbZLPPWIMtfY6bG_j8vHzIvWV-toiADFTaW6oyq_DXyYikEf2CUjJttLO6YgEZLefNQno99httH8DeBTvAvyUjBGrHeNJ9Xu0hZl6Oz95buhcEzX_EzkQ5rizVOzhV2h71M0hJMvLLmmVId7B6Y-zq4xLcgzreZHL4oEkVUTxFo3fyG_0kggZvtQQ7F-rJw7DwJqguGZEi3WlLFA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/30"></div>
+</div>
+<!-- Centered Brand Title -->
+<div class="relative h-full flex flex-col justify-between px-6 md:px-10 pb-8 pt-24 max-w-[1920px] mx-auto text-white">
+<div class="my-auto text-center w-full">
+<h1 class="font-serif text-5xl md:text-7xl lg:text-8xl tracking-[0.24em] font-light uppercase select-none drop-shadow-sm">
+          BALMORAL
+        </h1>
+</div>
+<!-- Bottom Hero Content Grid -->
+<div class="w-full grid grid-cols-1 md:grid-cols-12 gap-6 items-end text-white pb-2">
+<!-- New Arrivals Callout -->
+<div class="md:col-span-5 flex items-baseline space-x-3">
+<span class="font-serif text-2xl md:text-3xl font-light tracking-wide">New Arrivals</span>
+<a class="text-[10px] tracking-widest uppercase font-medium underline underline-offset-4 hover:opacity-80 transition-opacity" href="#shop">
+            SHOP FALL 26
+          </a>
+</div>
+<!-- Spacer -->
+<div class="hidden md:block md:col-span-2"></div>
+<!-- Editorial Fall-Winter Description -->
+<div class="md:col-span-5 text-right md:text-left">
+<p class="editorial-p text-white/90 font-light max-w-md ml-auto leading-relaxed text-[11px]">
+            Built for the changing rhythm of the season. Fall 2026 introduces a considered balance of warmth, texture, and movement, bringing together familiar Balmoral silhouettes with new materials and layers designed to carry you through cooler days.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: HeadwearEditorialSplit -->
+<section class="w-full bg-[#fbfbf9]" data-purpose="headwear-feature">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-0 border-b border-[#e2ddd5]">
+<!-- Left Editorial: Portrait Lifestyle in Warm Wood Room -->
+<div class="relative min-h-[640px] lg:h-[820px] bg-neutral-800 text-white flex flex-col justify-end p-8 md:p-14 overflow-hidden">
+<img alt="Model in Balmoral brown sweater, track pants and cobalt blue running cap" class="absolute inset-0 w-full h-full object-cover object-top filter brightness-[0.88] contrast-[1.05]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbgLRcX4yUWrGETqiQO_AWPb4gA4NHCewOlhLs1FA6EoJ2XXUkSU5LTVDE17vrQeYCaOvkAd85pmLkz4I43jTdzFn2t6Vr0fjp__kOiJQkV8nvb_evXOcL91pULdZh9casUarLG3vpuDswl8D5S33WUrdKCzZt4s5QQ3_Ki7DzhHu6eopfYS3klRvtfd1wgi-GtZoUxkAe5X_z3PhnX04kX8h2PFQysFFrLavsz210rqyaIiGeRvPP3Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+<!-- Headwear Editorial Content Overlay -->
+<div class="relative z-10 max-w-md">
+<h2 class="font-serif text-4xl md:text-5xl font-light tracking-wide mb-6">
+            Headwear
+          </h2>
+<div class="space-y-3 text-white/90">
+<p class="text-[11px] font-medium tracking-wider uppercase text-neutral-300">
+              Fall 26 Collection
+            </p>
+<p class="text-[11px] font-light leading-relaxed text-neutral-200">
+              For Fall-Winter 2026, Balmoral presents a range of headwear made to meet the shift in season, insulating where it counts, refined in every detail. From crisp mornings to colder nights, each piece balances warmth and structure with a quiet sense of purpose, shaped equally by performance and daily wear.
+            </p>
+<div class="pt-2">
+<a class="text-[10px] tracking-widest font-semibold uppercase underline underline-offset-4 hover:text-white transition-colors" href="#headwear">
+                SHOP HEADWEAR
+              </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Dual Technical Headwear Products -->
+<div class="grid grid-cols-1 sm:grid-cols-2 bg-[#eae8e3] divide-y sm:divide-y-0 sm:divide-x divide-[#dedad2]">
+<!-- Product 1: Black Nylon Running Cap -->
+<div class="h-[420px] lg:h-full flex flex-col items-center justify-center p-8 bg-[#ece9e4] hover:bg-[#e8e4de] transition-colors group">
+<div class="w-full max-w-[280px] aspect-square flex items-center justify-center img-zoom-wrapper">
+<!-- Simulated Cap Asset using clean technical product framing -->
+<img alt="Balmoral Running technical nylon black unstructured cap" class="w-4/5 h-auto object-contain filter drop-shadow-md brightness-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGKddETb6CHdIA6dxStYjhdK5A3ACJmVS0KgxPO08O_LnAkZQtTh74MHYtDU2gIYwmPONPJydvrUZwNJvF2p6eM3PPUWV6s4YnYh78kewJQKGSlnUXa82lE3x5I3McGQkVK9ls1ijacX8k4NPmZvoY97oqq9VPOPvHn9eHTxZDUdLcezUJV5Yar0DaVlifnB490q_F1GQRAmCfvRh0xcUtPX3_m6QTBQsaOCz1yzVxElGLvk699UnLpg"/>
+</div>
+<div class="text-center mt-6">
+<span class="text-[11px] tracking-wide text-neutral-700 font-medium block">Technical Running Cap</span>
+<span class="text-[10px] text-neutral-500 mt-1 block">Black / Water-resistant</span>
+</div>
+</div>
+<!-- Product 2: Cobalt Blue Track Club Cap -->
+<div class="h-[420px] lg:h-full flex flex-col items-center justify-center p-8 bg-[#eae6e1] hover:bg-[#e6e1db] transition-colors group">
+<div class="w-full max-w-[280px] aspect-square flex items-center justify-center img-zoom-wrapper">
+<img alt="Balmoral Track Club Royal Cobalt Blue 6-panel technical cap" class="w-4/5 h-auto object-contain filter drop-shadow-md saturate-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvSTIyx0zQNIpIfV7lzpT0i6K9JnN6cJN-eR2R3ONxq9871SjIoB-lkO8m4bYAP1-n8rWPYmSkv3VED4Js1tEvrBqnKvHtNB3fR6d060iusEJF-3ZemLNqnKgcjmeBEt3_iZbDBGGl_ilpLBGUuI0GQC2KopMkbJXKw_ULXTb3Zofe1L6l5BdrL3GkV9bQMfdr9S-CXzwtPpQelkxgpqoK-qUvnssgENeeNLNcX90IyxjxUlvyjZ_h6Q"/>
+</div>
+<div class="text-center mt-6">
+<span class="text-[11px] tracking-wide text-neutral-700 font-medium block">Track Club Nylon Cap</span>
+<span class="text-[10px] text-neutral-500 mt-1 block">Cobalt Blue</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeadwearEditorialSplit -->
+<!-- BEGIN: RaceDayAndRunningSection -->
+<section class="w-full bg-[#fbfbf9]" data-purpose="race-day-feature">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-0 border-b border-[#e2ddd5]">
+<!-- Left Column: Split Studio Product Shots (Women's Race Kit) -->
+<div class="grid grid-cols-2 divide-x divide-[#e2ddd5] bg-[#f0eee9]">
+<!-- Studio Shot 1: Front Full Body Tank & Tights -->
+<div class="h-[480px] lg:h-[780px] flex items-center justify-center p-4 overflow-hidden group">
+<img alt="Female athlete runner wearing black technical singlet and half tights" class="w-full h-full object-cover object-center filter grayscale contrast-[1.08] group-hover:scale-[1.02] transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9ixIOCg7qPGd8I0i58yAC9wuViLGWrPBp2AIKKpDxbZmDwJGWBd3KdyjbZ3PwYzdHFn8DSkDDeaL_rL_aQWKWUg62oJJ708CIvg_XNWEln4XvUYgo1_oNB0w9PcHYhyfahfnLd0xYs_5ibd40tx0wsmQOJYrcXtNOwjI0sRyTLCJ9XuFw43gnjgOvbtZKVv0TupFaO26kfFJEtWTEVu_4MJPKSdLxteGhJwHygK1BIERqyXQry3IFMA"/>
+</div>
+<!-- Studio Shot 2: Lower Body Compression Half Tights -->
+<div class="h-[480px] lg:h-[780px] flex items-center justify-center p-4 overflow-hidden group">
+<img alt="Close-up of runner wearing St Ambrose black athletic half tights and white socks" class="w-full h-full object-cover object-center filter grayscale contrast-[1.08] group-hover:scale-[1.02] transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3VaBwZDOqjGGh00q9_n2M9HgCogGrboA3iKsoMmx4qtB5Cmned6_avddZRJdo_3UGIZCGThZYBN1nPxbou_QPqbPQNy_-7kCe8fK4dM9HZS2L8vtKwHDGqqTinMjGPWzLW-4mMsCp4sT6mnYzaiQE-Vn1VFnSslzO4039nQFpGBW2PbuU1VFIn185977-2FVs5Rb72n4wTB89XzhYWk-H7hsw-xwITxz6VrLsfAyHhvVDLPRothQsKA"/>
+</div>
+</div>
+<!-- Right Column: Race Day Architectural Crimson Imagery & Editorial -->
+<div class="relative min-h-[540px] lg:h-[780px] bg-[#9e2a2b] text-white flex flex-col justify-end p-8 md:p-14 overflow-hidden">
+<!-- Architectural sweeping crimson geometry -->
+<img alt="Curvilinear crimson red architectural stadium steps" class="absolute inset-0 w-full h-full object-cover object-center filter saturate-125 contrast-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoVZNDJRsJI21JfkS7XEbfF6D3efqSRnl1eY_mvgGPscMVqvIeHOViPEiXq8clbBkBe_8cjV7-gwBmSNFMFdwJX9Xqavc13eMpksfESIZyhgxrBQZsMWgDRNDmIb2nI3TJ93gRiRR6s6Yu_gxfUmM3gyS7IGhiBRIBxL0xZxfJUKIwtD2OnUh3AiyvkbCg9l9ha7K0iyA_Fa5dcPwJsMT_uWijmwuCtjTP7XfSOt19SOJX0iluE1j5WA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+<!-- Editorial Content -->
+<div class="relative z-10 max-w-lg">
+<h2 class="font-serif text-4xl md:text-5xl font-light tracking-wide mb-6">
+            Race Day
+          </h2>
+<div class="space-y-3">
+<p class="text-[11px] font-light leading-relaxed text-white/90">
+              The Race Day collection brings together performance-driven essentials designed for the moments that count. Featuring the Oakwood collection and St. Ambrose Half Tights, each piece is lightweight, streamlined, and refined for unrestricted movement from the starting line to the finish.
+            </p>
+<div class="pt-2">
+<a class="text-[10px] tracking-widest font-semibold uppercase underline underline-offset-4 text-white hover:text-neutral-200 transition-colors" href="#discover-raceday">
+                DISCOVER
+              </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: RaceDayAndRunningSection -->
+<!-- BEGIN: CottonTshirtsCatalog -->
+<section class="w-full py-10 px-6 md:px-10 border-b border-[#e2ddd5]" data-purpose="product-row-tshirts" id="tops">
+<!-- Row Header -->
+<div class="flex items-center justify-between mb-5">
+<h3 class="text-xs uppercase tracking-wider font-medium text-neutral-800">Cotton T-shirts</h3>
+<a class="text-[10px] tracking-widest uppercase font-semibold underline underline-offset-4 text-neutral-700 hover:text-black" href="#shop-tees">
+        SHOP
+      </a>
+</div>
+<!-- 4-Column Product Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
+<!-- Item 1: White Tee -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-[#f0eeeb] overflow-hidden flex items-center justify-center relative">
+<img alt="Male model in white Balmoral logo cotton t-shirt" class="w-full h-full object-cover object-top filter contrast-[1.02] group-hover:scale-[1.03] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5loXNeimZDnG1fezRDrGsPTK3G_zU-0T_Oqcz_upIQvvieF_tzDGo3Qa9121DkxaCZjdp3CfrKyOON5IbdysPY379rgcODRT3bG5eAt8BCbLqPZz2M6g9_qPSuXmSkfumQIU_PGfb4ZD8B7EgxQYPiR3ocOMFEDVG1RSu9hYfSAV6gtm5eAXTuNA9i85GfPdFFAkJyv2kEwX6x_ca92qykFEgdEqpwQTEARgD6bTZb9Cx1Uz3CHUw5w"/>
+</div>
+<div class="pt-2 flex justify-between text-[11px] text-neutral-800">
+<span class="font-normal">Classic Cotton Tee — White</span>
+<span class="text-neutral-500 font-light">$65</span>
+</div>
+</div>
+<!-- Item 2: Heather Grey Graphic Tee -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-[#f0eeeb] overflow-hidden flex items-center justify-center relative">
+<img alt="Male model in heather grey graphic running t-shirt" class="w-full h-full object-cover object-top filter contrast-[1.02] group-hover:scale-[1.03] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs-eODZxb-Pcdfe-aKjQf_IYlTRsQJGSzqij6IIlOl65KM0xpNtPvfVb0pG9mHT91snSsBjATJMXdhAyhDSEyLFnRt1kufDXmNxZMjMvnjyrTzfP1DiLHp2DuLqXCAQw9e7T3inF7d9B1RyP0g-_mNRrZdwVnXhtrCCheQJmX0X5KxJP9sIIK42JTQUp-jIxBSeV8gJ-Vq0ZRqckLYI8LAmBQw7GLI5okvzjHF1XN_ICytTHsOJVB-_w"/>
+</div>
+<div class="pt-2 flex justify-between text-[11px] text-neutral-800">
+<span class="font-normal">Mileage Club Tee — Grey</span>
+<span class="text-neutral-500 font-light">$68</span>
+</div>
+</div>
+<!-- Item 3: Deep Royal Blue Tee -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-[#f0eeeb] overflow-hidden flex items-center justify-center relative">
+<img alt="Male model wearing deep blue Balmoral running cotton t-shirt" class="w-full h-full object-cover object-top filter contrast-[1.02] group-hover:scale-[1.03] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhXCVnEltwSb-EgfuexFBMPqu00oN30cIWX2-kb8j9qWYoTbJEASPXwEGjNtQLuvNFdBY6A1KGalAAZ10qDurnAxHebVtcALBmd1lUH9Gc0MqFiFara-ghvDZLKFliEdfmCzpYJeJk1NTzuPqNHm3ok-1ZBG6nYAdHNjGv30kX519-XkLk53nhs4ecLxkg-XeshM0FfzUbO9sBn8J7kxTtQn1Pc6YvDsVDW-zx-mZKYEUD1VU919T8ZA"/>
+</div>
+<div class="pt-2 flex justify-between text-[11px] text-neutral-800">
+<span class="font-normal">Balmoral Wordmark Tee — Navy</span>
+<span class="text-neutral-500 font-light">$65</span>
+</div>
+</div>
+<!-- Item 4: Light Heather Grey Minimalist Tee -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-[#f0eeeb] overflow-hidden flex items-center justify-center relative">
+<img alt="Male model in light heather grey studio t-shirt" class="w-full h-full object-cover object-top filter contrast-[1.02] group-hover:scale-[1.03] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf9l7v-YqDKo0Exh4GNdK3FGFgMo4Nzoki1mmxWkhmy685tvBVAGC_IuL2J_UHwm2MFIap6T379tjbiA85an8B14mgqXrK0d4Q0Im5v0NRz0cEB7Nks80zDq8L1relUp80x226DnDdaDBtWd2rkbrjPSvNeVO12Vm_lDMtTmyIVt2W3Q5QeaGG5l8NV6gvEixhjoZVnF10fLItzO9_pxxOO_-l0EH7HeQADXI19Zxpdq9EDeHQT1q_XQ"/>
+</div>
+<div class="pt-2 flex justify-between text-[11px] text-neutral-800">
+<span class="font-normal">Standard Heavyweight Tee — Oatmeal</span>
+<span class="text-neutral-500 font-light">$65</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CottonTshirtsCatalog -->
+<!-- BEGIN: BottomsCatalog -->
+<section class="w-full py-10 px-6 md:px-10 border-b border-[#e2ddd5]" data-purpose="product-row-bottoms" id="bottoms">
+<!-- Row Header -->
+<div class="flex items-center justify-between mb-5">
+<h3 class="text-xs uppercase tracking-wider font-medium text-neutral-800">Bottoms</h3>
+<a class="text-[10px] tracking-widest uppercase font-semibold underline underline-offset-4 text-neutral-700 hover:text-black" href="#shop-bottoms">
+        SHOP
+      </a>
+</div>
+<!-- 4-Column Product Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
+<!-- Item 1: Heather Grey Fleece Sweatpants -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-[#f0eeeb] overflow-hidden flex items-center justify-center relative">
+<img alt="Heather grey heavyweight fleece track sweatpants with trainers" class="w-full h-full object-cover object-bottom filter contrast-[1.02] group-hover:scale-[1.03] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6dm_cvB3VJt3Xy0d6A4xIZzvTFMrgqCmEMEnWrm2AVQY4Ll-8LARA446l-MdaezG0quC_yA0i3ofDQfYslh08k-oHTni2OAT67XME6hQxWWXM4vXmCXVB6X-6SNO7G3rYH6eAMzvZBQim58CkGjAggFHASIDZTpn_3FvHohccA_Di3Vik00gWX2RWriUNL0iHK_0OmvYjYtRuRUFQLcsjpho9eHa5-DdFIX4NTSI1T5rl9ZvyEb-MQQ"/>
+</div>
+<div class="pt-2 flex justify-between text-[11px] text-neutral-800">
+<span class="font-normal">Heavy Fleece Trackpant — Grey</span>
+<span class="text-neutral-500 font-light">$125</span>
+</div>
+</div>
+<!-- Item 2: Black Athletic Half Tights -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-[#f0eeeb] overflow-hidden flex items-center justify-center relative">
+<img alt="St Ambrose compression running half-tights on athlete" class="w-full h-full object-cover object-center filter contrast-[1.02] group-hover:scale-[1.03] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1R9iWA85Rc_47Sxumd54YLFU8bSu-67rzKu7gHyw97y9RmFZVSImMO7ETL3aaJBpigOu5gOederd1IAHo6DNOhUYY6m6Bt_nTpphO_F0x2TEmGZJM5AlSFmJgowbHaoqG6RGEy1Q8YiBrBrMJ-KBKAnVY9jEuXspSrp1avVE3s9rqonvgQ1ZmzLuB-aieATh9P4xusBKD8GcMdgaKPklMF4cjRNWwun2wHY3Os-zwTflKJ1ooW7Dl6Q"/>
+</div>
+<div class="pt-2 flex justify-between text-[11px] text-neutral-800">
+<span class="font-normal">St. Ambrose Half Tights — Black</span>
+<span class="text-neutral-500 font-light">$95</span>
+</div>
+</div>
+<!-- Item 3: Full Length Running Tights -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-[#f0eeeb] overflow-hidden flex items-center justify-center relative">
+<img alt="Slim fit black technical compression running tights" class="w-full h-full object-cover object-bottom filter contrast-[1.02] group-hover:scale-[1.03] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmCsYpCTNFNW5R3xdiniwGdCK6Pj-L5lrsIyTTDgJoQ224Nyp8VnRw9mBtMyMMt27FBuQo4ZenpLIpjvVEPsndy2K1KEuzgqzSOxJd-8brN0yC4dUFAf6BE39IiIuOzazIOSftIjMtK7JZjWETNOszx9s6RvSIWlK7ebQujANMR-wOH6KTVvHlDjq7FR6eQJHAU2tSHrccvF-dHi3fPo5R35nLJleEU1FYiyXi2K95wYhYb5cYfFiU5w"/>
+</div>
+<div class="pt-2 flex justify-between text-[11px] text-neutral-800">
+<span class="font-normal">Oakwood Thermal Tights — Black</span>
+<span class="text-neutral-500 font-light">$118</span>
+</div>
+</div>
+<!-- Item 4: Relaxed Technical Track Pants -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-[#f0eeeb] overflow-hidden flex items-center justify-center relative">
+<img alt="Black technical nylon relaxed warm-up trousers" class="w-full h-full object-cover object-bottom filter contrast-[1.02] group-hover:scale-[1.03] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxTcfgXRT_8RkZMP6029w1nMa_ezIJvcNa7Z5d9pqCbVb7lwic2j8m_VsK3RoxhlatmCQ1VfvSED2vT_mrm5WfigIUvHbMAA74-qP4tiHsZ-yHas2u63Nj6XQ7ghYoTsGr1EJegyVjhACtsKSVyJcehj-S5dRyV69oUmhQNgYdfA2-d0JHhsoOeZ-3RmlqK2H3niXt3RNMOcNxgoPv_LYaRhdwjLeDuRUGwCXMoJ8xMGRVcOzvsoQaGQ"/>
+</div>
+<div class="pt-2 flex justify-between text-[11px] text-neutral-800">
+<span class="font-normal">Pace Technical Pant — Black</span>
+<span class="text-neutral-500 font-light">$130</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: BottomsCatalog -->
+<!-- BEGIN: AboutUsEditorialSplit -->
+<section class="w-full bg-[#fbfbf9]" data-purpose="brand-story" id="about">
+<!-- Top Editorial Header Bar -->
+<div class="px-6 md:px-10 py-8 border-b border-[#e2ddd5] grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+<div class="md:col-span-2">
+<span class="text-xs uppercase tracking-wider font-medium text-neutral-800">About Us</span>
+</div>
+<div class="md:col-span-8 text-center">
+<p class="text-xs md:text-sm font-light text-neutral-700 max-w-xl mx-auto leading-relaxed">
+          Balmoral was founded in Canada to create timeless garments shaped by the country's distinct climate and way of life.
+        </p>
+</div>
+<div class="md:col-span-2 text-right">
+<a class="text-[10px] tracking-widest font-semibold uppercase underline underline-offset-4 text-neutral-800 hover:opacity-70 transition-opacity" href="#discover-brand">
+          DISCOVER
+        </a>
+</div>
+</div>
+<!-- Visual Split 2-Column Showcase -->
+<div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-[#e2ddd5] border-b border-[#e2ddd5]">
+<!-- Left: Folded Apparel Flatlay (Knitwear, layers, beanie) -->
+<div class="relative bg-[#a39f96]/30 aspect-square md:aspect-auto md:h-[620px] flex items-center justify-center p-8 overflow-hidden">
+<img alt="Curated flatlay of Balmoral wool knit sweater, folded cotton layers, and winter knit beanies" class="w-full h-full object-cover object-center filter contrast-[1.05] brightness-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbHFiQaa111ED_cFDU_QZ0OZBbsVH2gK7Ly3SwwBGY2E0vZT-T37y9WJGeqcp1hY2G5rUhBxXYaxzeRuDRxgeuBWpu7i2Lq62O65lLdj9CdqX-WR_B44HgDQt9_PElWOGV_YoNVJjdgnJyFPF0f4eUnPUdKYXAQG1wbofJZqdw0-xicNeqM5CiSJPbtErDwwSwxXPc-QFj7HOE_bwSP7bdvGBwhwKjUBnFjRSesif9XUzYnsP50hixHw"/>
+<div class="absolute bottom-6 left-6 bg-black/40 backdrop-blur-sm px-3 py-1 text-white text-[10px] tracking-widest uppercase">
+          Garment Construction &amp; Heritage
+        </div>
+</div>
+<!-- Right: Moody Film-Grain Runners Inspecting Gear -->
+<div class="relative bg-[#1c1c1c] aspect-square md:aspect-auto md:h-[620px] flex items-center justify-center overflow-hidden">
+<img alt="Two Canadian runners in grey hoodies and caps inspecting race kit in low light" class="w-full h-full object-cover object-center filter contrast-[1.12] brightness-90 saturate-[0.8]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpbvkMXiU29CDsAMbUE2FgEpSq85JjXZ8cfQ8UvRQ5yqoXFCAZqBkgW_nmQ8Xsdjp8EOQ5_cRtDw0FYzXm74u1vIGQ0QimrZItiRd-ERFQQU41SqT3d401ONOUR1B6lOljRMupNPf-O2diUiVt732pdv5ySp_FUTFTicpMIvmX8Qn0AO-zA7-VGzX5vyiTuI946mlhQRMskquXpAchR7oNo23_pe5bDJouNZiGG7ui7u_awGkYCeeGnw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8 text-white">
+<p class="font-serif text-lg tracking-wide font-light">Toronto, Ontario</p>
+<p class="text-[10px] text-neutral-300 font-light tracking-wider uppercase mt-1">Design &amp; Testing Lab</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AboutUsEditorialSplit -->
+<!-- BEGIN: BrandPillarsGrid -->
+<section class="w-full py-12 px-6 md:px-10 border-b border-[#e2ddd5]" data-purpose="brand-pillars">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+<!-- Pillar 1: Shipping & returns -->
+<div class="group cursor-pointer">
+<h4 class="text-xs uppercase tracking-wider font-medium text-neutral-800 mb-3">
+          Shipping &amp; returns
+        </h4>
+<div class="aspect-square bg-[#ece8e2] overflow-hidden mb-3 border border-[#ded9cf]">
+<!-- Cardboard Delivery Boxes Stack -->
+<img alt="Stack of branded kraft paper shipping boxes with packing tape" class="w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-500 filter sepia-[0.1]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATUiJm8wFS-QgGlx0KgSq4g5MfCvsvaY6w8-fyiKpy0RWEC5PuFUQgtFrWz6pEYxzawafiGJOjS-rWNUXp3CGk1bhlncEnLRv4AMaVJpac2idCGgUq-ValaogBC9TJqfDPUs-mI649vZ0B9IPRQdmg95WLyzsGCb6xcfROBw7c2oJOIJth4hpdY35in_GmWQSBgq4ayP-dH6l-9JHcSmVLFZZ0HRbYW-KpvIB_j96ZhapGRjWFsw8DkQ"/>
+</div>
+<p class="text-[11px] text-neutral-600 font-light">
+          Review our shipping and returns information
+        </p>
+</div>
+<!-- Pillar 2: Contact (Lined Notebook Letter) -->
+<div class="group cursor-pointer">
+<h4 class="text-xs uppercase tracking-wider font-medium text-neutral-800 mb-3">
+          Contact
+        </h4>
+<div class="aspect-square bg-[#f5f1eb] p-6 border border-[#ded9cf] flex flex-col justify-between lined-paper group-hover:shadow-sm transition-shadow">
+<!-- Letterhead -->
+<div class="text-center pt-2">
+<span class="font-serif italic text-xs tracking-wider text-neutral-700 block">The Balmoral Company</span>
+<span class="text-[8px] uppercase tracking-widest text-neutral-500 block">Toronto</span>
+</div>
+<!-- Handwritten Email Us text -->
+<div class="my-auto text-center">
+<span class="font-handwriting text-4xl text-neutral-800 block transform -rotate-3 select-none">
+              email us
+            </span>
+</div>
+<!-- Footer URL -->
+<div class="text-center pb-1 border-t border-neutral-300 pt-2">
+<span class="text-[9px] tracking-[0.2em] uppercase font-mono text-neutral-600">
+              WWW.BALMORALRUNNING.COM
+            </span>
+</div>
+</div>
+<p class="text-[11px] text-neutral-600 font-light mt-3">
+          Email our team for all inquiries
+        </p>
+</div>
+<!-- Pillar 3: Lookbook -->
+<div class="group cursor-pointer">
+<h4 class="text-xs uppercase tracking-wider font-medium text-neutral-800 mb-3">
+          Lookbook
+        </h4>
+<div class="aspect-square bg-[#ece8e2] overflow-hidden mb-3 border border-[#ded9cf]">
+<img alt="Male runner in technical outerwear in modern Canadian interior" class="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500 filter contrast-[1.05]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2etLDNqM3BZ4fGnc2bpCPQjdA_IHGt37zDFFZyuj1ix7-2K6m2MMHk-fl_A6vFoG3aJmQWXbWTyHAkj4WhGc8_8wyQvFairOavRpdEsZQGhEvrwGEiM2tDgKt1_LjP6CixCdk2vfU6LEoQi6s_T1DhHmEJzR_eZ6Wj7dHS5eONoivg_D-WfRazL8ChWRTRXTuP4oimeHa7-vn_IskIhD3TaGDDxjYqXtGcVumeuAqNr8qKD6VWdtPXg"/>
+</div>
+<p class="text-[11px] text-neutral-600 font-light">
+          Explore the Fall-Winter 26 Lookbook
+        </p>
+</div>
+<!-- Pillar 4: Press -->
+<div class="group cursor-pointer">
+<h4 class="text-xs uppercase tracking-wider font-medium text-neutral-800 mb-3">
+          Press
+        </h4>
+<div class="aspect-square bg-[#ece8e2] overflow-hidden mb-3 border border-[#ded9cf] p-3 flex items-center justify-center bg-[#f0ede6]">
+<img alt="Open print editorial publication showing running feature spread" class="w-full h-auto object-contain filter contrast-[1.04] group-hover:scale-[1.02] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj1u9HDP84mYwTtRr_DKAftncDKMrUAKYS7Wr4Ddc7j4-mZYklMoWXvGxvVljBHh2bXnvTXuhKYjCT-3Key8WBxAb9XRrVx2cwpBpOQIfV0AZ1Qk5gachY-tHwX34GGzSxTUb3_eHm-qKIPU1cmndx-bBQhO5Lk9GDiQz4BfkeVgfZd9mMtA2ivsZn5OZQBfCTq9Pfs5RgmWj9SinJrCNYn2ah8rQD3-8OYDUrgocX2aMSJ2XYinrXiw"/>
+</div>
+<p class="text-[11px] text-neutral-600 font-light">
+          Discover our selected features and mentions
+        </p>
+</div>
+</div>
+</section>
+<!-- END: BrandPillarsGrid -->
+<!-- BEGIN: SiteFooter -->
+<footer class="w-full bg-[#fbfbf9] pt-14 pb-8 px-6 md:px-10 text-neutral-800 text-[11px]" data-purpose="site-footer">
+<!-- Top Footer Columns -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-16">
+<!-- Nav Links: Left Sub-columns -->
+<div class="md:col-span-7 grid grid-cols-3 gap-6 font-light">
+<!-- Col 1 -->
+<div class="space-y-2.5">
+<div><a class="hover:underline text-neutral-800" href="#contact">Contact Us</a></div>
+<div><a class="hover:underline text-neutral-800" href="#instagram">Instagram</a></div>
+<div><a class="hover:underline text-neutral-800" href="#faqs">FAQs</a></div>
+</div>
+<!-- Col 2 -->
+<div class="space-y-2.5">
+<div><a class="hover:underline text-neutral-800" href="#shipping">Shipping &amp; returns</a></div>
+<div><a class="hover:underline text-neutral-800" href="#returns">Start a return</a></div>
+</div>
+<!-- Col 3 -->
+<div class="space-y-2.5">
+<div><a class="hover:underline text-neutral-800" href="#press">Press</a></div>
+<div><a class="hover:underline text-neutral-800" href="#terms">Terms &amp; policies</a></div>
+</div>
+</div>
+<!-- Right Column: Newsletter Subscription -->
+<div class="md:col-span-5 md:pl-10">
+<form class="w-full max-w-sm ml-auto" onsubmit="event.preventDefault();">
+<label class="block text-[10px] uppercase tracking-widest text-neutral-500 mb-2 font-medium" for="newsletter-email">
+            SUBSCRIBE TO OUR NEWSLETTER
+          </label>
+<div class="relative border-b border-neutral-400 focus-within:border-black transition-colors pb-1">
+<input class="w-full bg-transparent border-none p-0 text-xs text-neutral-800 placeholder:text-neutral-400 focus:ring-0 focus:outline-none font-light" id="newsletter-email" placeholder="Enter your email address here" required="" type="email"/>
+<button aria-label="Subscribe" class="absolute right-0 top-1/2 -translate-y-1/2 text-neutral-600 hover:text-black transition-colors" type="submit">
+<svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Bottom Bar: Legal, Credits & Locale Selectors -->
+<div class="pt-6 border-t border-[#e2ddd5] flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[10px] text-neutral-500 font-light">
+<!-- Copyright -->
+<div>
+<p>Copyright © 2026 Balmoral Running</p>
+</div>
+<!-- Credits -->
+<div>
+<a class="hover:underline tracking-wider uppercase text-neutral-500 hover:text-black" href="#credits">
+          CREDITS
+        </a>
+</div>
+<!-- Language & Country Selectors -->
+<div class="flex items-center space-x-6">
+<!-- Language -->
+<div class="flex items-center space-x-1.5">
+<span class="text-[9px] uppercase tracking-wider text-neutral-400">SELECT LANGUAGE</span>
+<div class="relative inline-block text-neutral-800 font-medium">
+<select class="appearance-none bg-transparent border-none pr-4 pl-0 py-0 text-[10px] font-normal cursor-pointer focus:ring-0">
+<option>English</option>
+<option>Français</option>
+</select>
+<span class="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-[8px]">▾</span>
+</div>
+</div>
+<!-- Country / Currency -->
+<div class="flex items-center space-x-1.5">
+<span class="text-[9px] uppercase tracking-wider text-neutral-400">SELECT COUNTRY</span>
+<div class="relative inline-block text-neutral-800 font-medium">
+<select class="appearance-none bg-transparent border-none pr-4 pl-0 py-0 text-[10px] font-normal cursor-pointer focus:ring-0">
+<option>Canada (CAD $)</option>
+<option>United States (USD $)</option>
+<option>United Kingdom (GBP £)</option>
+<option>India (USD $)</option>
+</select>
+<span class="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-[8px]">▾</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: SiteFooter -->
+<!-- BEGIN: Interactive Behavior Script -->
+<script data-purpose="event-handlers">
+    document.addEventListener('DOMContentLoaded', () => {
+      // Optional subtle header contrast transition on scroll
+      const header = document.querySelector('header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 80) {
+          header.classList.add('bg-neutral-900/90', 'backdrop-blur-md', 'shadow-sm');
+          header.classList.remove('absolute');
+          header.classList.add('fixed');
+        } else {
+          header.classList.remove('bg-neutral-900/90', 'backdrop-blur-md', 'shadow-sm');
+          header.classList.remove('fixed');
+          header.classList.add('absolute');
+        }
+      });
+    });
+  </script>
+<!-- END: Interactive Behavior Script -->
+</body></html>

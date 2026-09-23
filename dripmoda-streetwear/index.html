@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DRIPMODA | Streetwear, Technical Sportswear &amp; Footwear</title>
+<!-- Tailwind CSS v3 CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          },
+          colors: {
+            brandDark: '#121212',
+            brandGray: '#f5f5f5',
+            brandBorder: '#e5e5e5',
+            brandMuted: '#737373',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-typography">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .vertical-lr {
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+    }
+  </style>
+<style data-purpose="ticker-and-effects">
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-white text-neutral-900 overflow-x-hidden antialiased selection:bg-black selection:text-white">
+<!-- BEGIN: StickyFloatingTab -->
+<!-- Vertical sticky promotion tab on left edge -->
+<aside aria-label="Special promotion offer" class="fixed left-0 top-1/2 -translate-y-1/2 z-40 hidden md:flex items-center bg-white border border-neutral-300 shadow-md py-3 px-1.5 cursor-pointer rounded-r-md">
+<div class="flex flex-col items-center gap-2">
+<button aria-label="Close notification" class="text-neutral-500 hover:text-black text-xs pb-1 font-bold">×</button>
+<span class="vertical-lr text-[10px] font-bold tracking-widest text-neutral-800 uppercase whitespace-nowrap">FREE DELIVERY</span>
+</div>
+</aside>
+<!-- END: StickyFloatingTab -->
+<!-- BEGIN: TopAnnouncementTicker -->
+<!-- Top marquee bar with store updates & shipping announcements -->
+<section class="bg-black text-white text-[11px] font-semibold tracking-wider py-2.5 px-4 overflow-hidden border-b border-neutral-800">
+<div class="max-w-[1920px] mx-auto flex items-center justify-between whitespace-nowrap overflow-x-auto no-scrollbar gap-8">
+<div class="flex items-center space-x-6 mx-auto uppercase">
+<span>SHOP IN STORE - LIVERPOOL ONE</span>
+<span class="text-neutral-500">•</span>
+<span>NEXT DAY DELIVERY AVAILABLE</span>
+<span class="text-neutral-500">•</span>
+<span>SHOP IN STORE - LIVERPOOL ONE</span>
+<span class="text-neutral-500">•</span>
+<span>NEXT DAY DELIVERY AVAILABLE</span>
+<span class="text-neutral-500">•</span>
+<span class="hidden lg:inline">SHOP IN STORE - LIVERPOOL ONE</span>
+</div>
+</div>
+</section>
+<!-- END: TopAnnouncementTicker -->
+<!-- BEGIN: MainHeader -->
+<!-- Header with search, brand logo, user utilities, and category navigation -->
+<header class="sticky top-0 z-30 bg-black text-white border-b border-neutral-800 shadow-sm">
+<!-- Top Utility & Brand Row -->
+<div class="max-w-[1720px] mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between">
+<!-- Search Input Pill -->
+<div class="w-1/3 max-w-[280px]">
+<div class="relative flex items-center">
+<svg class="w-4 h-4 text-neutral-400 absolute left-3 pointer-events-none" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<input class="w-full bg-neutral-900/90 text-xs text-white placeholder-neutral-400 rounded-full pl-9 pr-4 py-1.5 border border-neutral-700 focus:outline-none focus:border-white transition-colors" placeholder="Search..." type="text"/>
+</div>
+</div>
+<!-- Center Logo -->
+<div class="w-1/3 flex justify-center text-center">
+<a class="text-2xl sm:text-3xl font-black tracking-tight text-white uppercase hover:opacity-95 transition" href="#">
+          DRIPMODA
+        </a>
+</div>
+<!-- Right Actions: Currency, Account, Wishlist, Cart -->
+<div class="w-1/3 flex items-center justify-end space-x-5 text-sm font-medium">
+<button class="hidden sm:flex items-center space-x-1 text-xs text-neutral-300 hover:text-white transition">
+<span>£ GBP</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Account Profile Icon -->
+<a aria-label="Account" class="text-neutral-300 hover:text-white transition" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</a>
+<!-- Wishlist Icon -->
+<a aria-label="Wishlist" class="text-neutral-300 hover:text-white transition" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</a>
+<!-- Cart Bag Icon -->
+<a aria-label="Cart" class="text-neutral-300 hover:text-white transition" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</a>
+</div>
+</div>
+<!-- Main Navigation Bar -->
+<nav class="border-t border-neutral-800 hidden md:block">
+<div class="max-w-[1720px] mx-auto px-4 flex items-center justify-center space-x-7 py-2.5 text-[11px] font-bold tracking-widest text-neutral-300 uppercase">
+<a class="hover:text-white transition" href="#">MATCHING SETS</a>
+<a class="hover:text-white flex items-center space-x-1 transition" href="#">
+<span>CLOTHING</span>
+<span class="text-[9px]">⌵</span>
+</a>
+<a class="hover:text-white flex items-center space-x-1 transition" href="#">
+<span>FOOTWEAR</span>
+<span class="text-[9px]">⌵</span>
+</a>
+<a class="hover:text-white flex items-center space-x-1 transition" href="#">
+<span>ACCESSORIES</span>
+<span class="text-[9px]">⌵</span>
+</a>
+<a class="hover:text-white flex items-center space-x-1 transition" href="#">
+<span>BRANDS</span>
+<span class="text-[9px]">⌵</span>
+</a>
+<a class="hover:text-white flex items-center space-x-1 transition" href="#">
+<span>JUNIOR</span>
+<span class="text-[9px]">⌵</span>
+</a>
+<a class="hover:text-white flex items-center space-x-1 transition" href="#">
+<span>WOMEN'S</span>
+<span class="text-[9px]">⌵</span>
+</a>
+<a class="hover:text-white flex items-center space-x-1 transition" href="#">
+<span>EXPLORE</span>
+<span class="text-[9px]">⌵</span>
+</a>
+<a class="hover:text-white transition" href="#">GIFT CARDS</a>
+<a class="text-red-500 hover:text-red-400 font-extrabold transition" href="#">SALE</a>
+</div>
+</nav>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<!-- Saucony Omni 9 Editorial Hero Section -->
+<section class="relative bg-neutral-900 text-white min-h-[520px] lg:min-h-[660px] flex items-end pb-16 overflow-hidden">
+<!-- Hero Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Saucony Omni 9 Campaign" class="w-full h-full object-cover object-center brightness-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm59F5Di8JApBAUYxiu7rtENZIzcUV4hAxct1ZnqYPJ_QwBWTyivrzxCFATY_21Kl2QqC0VxRJbYtTTF0MeyHXXVB6ZcysdnovPgSWxZLpUJK0XjBBdjxRRMwuVu--YAu4uqcAZC4ANhDCCzt9EVPlryg-yT9OVP-qhNudw_X8Dw6T9-w86bsiphE-pdGRvfRB6E5xwTfzfQ74QIRHy7fA90CJ30ReJGccRuGvJ4D-JCkQMo-fvjhXkQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+</div>
+<!-- Editorial Callout Content -->
+<div class="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-12 w-full flex flex-col items-start justify-end">
+<h1 class="text-3xl sm:text-5xl font-black uppercase tracking-tight mb-2">SAUCONY OMNI 9</h1>
+<p class="text-xs sm:text-sm font-semibold tracking-widest uppercase text-neutral-200 mb-6">MADE FOR THE EVERYDAY ROTATION</p>
+<a class="inline-block bg-white/20 hover:bg-white text-white hover:text-black backdrop-blur-md border border-white/50 text-xs font-bold uppercase tracking-widest px-8 py-3 rounded-full transition-all duration-200" href="#">
+        SHOP SAUCONY
+      </a>
+</div>
+<!-- Carousel Slide Dots Indicator -->
+<div class="absolute bottom-8 right-8 z-10 flex space-x-2">
+<span class="w-2.5 h-2.5 rounded-full bg-white"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-white/40"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-white/40"></span>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: ShopNewInFootwear -->
+<!-- Product row: Shop New In Footwear -->
+<section class="max-w-[1720px] mx-auto px-4 sm:px-8 py-14">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">Shop New In Footwear</h2>
+<a class="border border-neutral-300 hover:border-black text-[11px] font-bold tracking-widest uppercase px-5 py-2.5 transition" href="#">
+        SHOP FOOTWEAR
+      </a>
+</div>
+<!-- 5 Product Columns Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-5">
+<!-- Product Card 1 -->
+<div class="group flex flex-col">
+<div class="bg-[#f0f0f0] aspect-square relative flex items-center justify-center p-4 overflow-hidden mb-3">
+<img alt="Guide TR GTX Trainer - Fatigue" class="object-contain max-h-[85%] group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGw1shHtxCaw2Smbn5OosuBSYRRur94rRLO5tveXkgW4OXCvkqKESLt_xdpFqRJ7fOe6EHmYkeUSy6q0PY6MfkNVjqOkpg-Xs3gSXfmYblnVSQ2SG4aos1SpJLnZTk-HnLHHI8XI-0MCxSjW0mS3ByJunTQK57hLRW4KFn8X4k7lvgneFyowSSUzKD6Bk8wom2sqVNPQKo6ewMSPF7KqkGywUlEyRsGBDtDqP_lgSd_MeqXRRZQU-61w"/>
+</div>
+<p class="text-[10px] font-extrabold uppercase tracking-wider text-neutral-500 mb-0.5">SAUCONY</p>
+<h3 class="text-xs font-medium text-neutral-900 line-clamp-1 mb-1">Guide TR GTX Trainer - Fatigue</h3>
+<p class="text-xs font-bold text-neutral-900">£160</p>
+</div>
+<!-- Product Card 2 -->
+<div class="group flex flex-col">
+<div class="bg-[#f0f0f0] aspect-square relative flex items-center justify-center p-4 overflow-hidden mb-3">
+<img alt="Progrid Omni 9 Trainer - Carbon / Cadet" class="object-contain max-h-[85%] group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6bHmZ3ZxyQZhvlrtCgbpxhCOMOPlKE70R3aPuzVCv4Q6FjkQ3r-Vqb5xZAqiHEH2hXNuFR4MCE_b4WFm2i_VavYUJhISAoeHkKBo1jOGbq4d4cECa2INdVh33GYzXKE0DuYB0ytxGai4PO9Rp3bUeW7dfdncl_icI_0bcq3JWtNui2lkcv2bOBs3xLILoyBqdmPe7EJT4N7gx2f7g_jyC8sRd8RoNL3RzqFdkZAXlll5nCGcq6v6_yQ"/>
+</div>
+<p class="text-[10px] font-extrabold uppercase tracking-wider text-neutral-500 mb-0.5">SAUCONY</p>
+<h3 class="text-xs font-medium text-neutral-900 line-clamp-1 mb-1">Progrid Omni 9 Trainer - Carbon / Cadet</h3>
+<p class="text-xs font-bold text-neutral-900">£140</p>
+</div>
+<!-- Product Card 3 (With badge) -->
+<div class="group flex flex-col">
+<div class="bg-[#f0f0f0] aspect-square relative flex items-center justify-center p-4 overflow-hidden mb-3">
+<img alt="ProGrid Omni 9 - Microchip" class="object-contain max-h-[85%] group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX7kXWs-GnnG1zTggV0ZiKhue4vjRzUHrv1m3TLFMY4p0rcQFiJZrhqrEUwrtZ4SrkLFz5tUl3mQvI5Uid2WDVSSN4-351hvQ-PvY1ibG3wMcHfvH1jld6cnbMrMb2GXGDgUNX3b7CwIgpOl1wdSh41VDhHjjQDOZTKn60Fa7GrFb98H5_TQE-VKrNe9hcNV-s-DzklL_ascTXaBWmNkBn30kNt-KxM4JrZe8jnnAJK12IL5vTrdiliw"/>
+<span class="absolute bottom-0 inset-x-0 bg-black text-white text-[10px] py-1 text-center font-semibold tracking-tight">
+            18 bought last 48 hours
+          </span>
+</div>
+<p class="text-[10px] font-extrabold uppercase tracking-wider text-neutral-500 mb-0.5">SAUCONY</p>
+<h3 class="text-xs font-medium text-neutral-900 line-clamp-1 mb-1">ProGrid Omni 9 - Microchip</h3>
+<p class="text-xs font-bold text-neutral-900">£150</p>
+</div>
+<!-- Product Card 4 -->
+<div class="group flex flex-col">
+<div class="bg-[#f0f0f0] aspect-square relative flex items-center justify-center p-4 overflow-hidden mb-3">
+<img alt="Grid Legacy Trainer - Windward / White" class="object-contain max-h-[85%] group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb02Ckt4oYo4nGO15Q1JuC6tsYUFQqdqUlrx3e8FMw6FbsEShxQt09nxp2vs77YbCe6iOyEeBhvHvXRp3Hhso0lFAghNWcMQ688Dhb__Rp0WJwZho9dtvCEKwPmcS6tpP3iEnd82i7qCqK84FoTfgqSI5dAX5wf_LxbavA4Aw6oPuIEytqVNT9UQFS07Gji2SxP3jJU63cTN24sDsXT8tea8H7DGyUSi4NZK4jGiQ8II0khUgDCwVUjQ"/>
+</div>
+<p class="text-[10px] font-extrabold uppercase tracking-wider text-neutral-500 mb-0.5">SAUCONY</p>
+<h3 class="text-xs font-medium text-neutral-900 line-clamp-1 mb-1">Grid Legacy Trainer - Windward / White</h3>
+<p class="text-xs font-bold text-neutral-900">£110</p>
+</div>
+<!-- Product Card 5 (With low stock badge) -->
+<div class="group flex flex-col">
+<div class="bg-[#f0f0f0] aspect-square relative flex items-center justify-center p-4 overflow-hidden mb-3">
+<img alt="ProGrid Omni 9 - Black / White" class="object-contain max-h-[85%] group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzThN85e36nNi11d47yPjWJIvQPM7yYCEktrZgR0sWubdQJnPfgMpEwgnEfoxH6rKQJ7jjaGTsqB2EZdqJVB5sh2MPRbrPqhwMBbexNKy_ig2RB1kTir3cQ65lKAOUErYu493lIIac5kbVIQB5Hwkru4ipzCR_NNmYet8wyQTfNb0XPoRQH4wCOkL-Xwa8uG7icIreJoBEU0KLGZoBLMfus4wl2NcP2ycwamuKpxHOndcxr8bKuuI9ww"/>
+<span class="absolute bottom-0 inset-x-0 bg-black text-white text-[10px] py-1 text-center font-semibold tracking-tight">
+            8 in carts — low stock.
+          </span>
+</div>
+<p class="text-[10px] font-extrabold uppercase tracking-wider text-neutral-500 mb-0.5">SAUCONY</p>
+<h3 class="text-xs font-medium text-neutral-900 line-clamp-1 mb-1">ProGrid Omni 9 - Black / White</h3>
+<p class="text-xs font-bold text-neutral-900">£150</p>
+</div>
+</div>
+</section>
+<!-- END: ShopNewInFootwear -->
+<!-- BEGIN: ShopByCategory -->
+<!-- Category Showcase: 7 Vertical Visual Cards -->
+<section class="max-w-[1720px] mx-auto px-4 sm:px-8 py-10">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">Shop by Category</h2>
+<a class="border border-neutral-300 hover:border-black text-[11px] font-bold tracking-widest uppercase px-5 py-2.5 transition" href="#">
+        SHOP ALL
+      </a>
+</div>
+<!-- Category Tiles Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 sm:gap-4">
+<!-- 1: Sets -->
+<a class="group relative aspect-[3/4] overflow-hidden bg-neutral-100 flex flex-col justify-start" href="#">
+<img alt="Matching Sets" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB441Zk1NVlHVbRo1Bg55_GPqohJhEFax-V0-fCiQ00mo_3TRVLmayBzjLgJL5ZCpb-euWLzYO-184Q1fOq0ufAZCy88Bvu5xx_FHs6UiZs7HZQfx0KPmIdxj2cLDvli9YwJ0neX2JxJx9XtiiFNXDvor7qPAH7-Ni7Tji1Iy579nNp0P8EuvCfc52-CMB5gKbo60y8AsRQ0NtlmgjfWDH8CCdgSXgqxQSwJFZMpq__v4RBhCDosI5vUg"/>
+<div class="absolute top-3 left-3">
+<span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-white drop-shadow">SETS</span>
+</div>
+</a>
+<!-- 2: Footwear -->
+<a class="group relative aspect-[3/4] overflow-hidden bg-neutral-100 flex flex-col justify-start" href="#">
+<img alt="Footwear Collection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVVZTFczdrIcyVFwvcrkAhaxkfsrdYStuNInMkHlKXu1RYRwmzoPS_wE1PW6WHD7V94wuEpT9VHXxY4Osj4LxvK4jxIgcOWxh0zKnIIe-7h8EJvIXh8AI46A3cEAxQR1KKt0heTsR1CpppMh2SJCacxy4NAuWrTq4sdLTz3B3PMKruJhHJp-qtGxHa6At70GBtdNSN9E_j2LZ5KT34TgiTV6VTHb_BWuN_YxK5mSK4bFhsQ3A-Jw4Jlg"/>
+<div class="absolute top-3 left-3">
+<span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-white drop-shadow">FOOTWEAR</span>
+</div>
+</a>
+<!-- 3: Jackets -->
+<a class="group relative aspect-[3/4] overflow-hidden bg-neutral-100 flex flex-col justify-start" href="#">
+<img alt="Jackets &amp; Outerwear" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiIm3sW9MFjJYRRutF_9vQQ0YDukFrsQXdEu6r06U6RsrMv4895dJ-Rfe4gW8f_JfzgS6w6e6C9XXfGC8VpzaD944k300j39njGqFrHljlj_UyLczbPNOtoPzC7BpmpdbpBbQ3jpsyRlGxcIKjSLH1C18rBAAWb2mY8gUKkjS02DDmGg16Alh8lYoIQcq-_9HwhP4_-qclyF70tvi55dzhBXsVpXBI05oQTACK79rBponfcfyQPXFgRQ"/>
+<div class="absolute top-3 left-3">
+<span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-white drop-shadow">JACKETS</span>
+</div>
+</a>
+<!-- 4: Pants -->
+<a class="group relative aspect-[3/4] overflow-hidden bg-neutral-100 flex flex-col justify-start" href="#">
+<img alt="Pants &amp; Trousers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtKF1ZNIwxLUFR4qnXB6BYEdKliCD_XQ5NZHSKp_CG7ixVTlKF4HJIDx7g9Ry-Q-acRfrVpA22jv3QtunUcn3_BxKI-Q-9prtgj3yms6dFfoqWH_pSiAPtDqkfPltJ8Zt8m645A-fTfR2EG-SKRxDnBSr7xKyyi1DR_sVPzhJPZq0PRcHQpfvGvMEUX3Ikqn_0dFQJSnYv-J6MS8H8JS7qLkBAPSXsRK1Q9jaV4ILVTe0kg2Jm4cPQHQ"/>
+<div class="absolute top-3 left-3">
+<span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-white drop-shadow">PANTS</span>
+</div>
+</a>
+<!-- 5: T Shirts -->
+<a class="group relative aspect-[3/4] overflow-hidden bg-neutral-100 flex flex-col justify-start" href="#">
+<img alt="T-Shirts &amp; Tops" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOFELi4-mXGq_zqOHvLhfXC2_SfUW-B4k8DyLAH70DDa8qyZlQuIzUjVqZhjbRI8ysmkdO6DETvLLpFEmI8OgkZPWjWTkKj2hoYzJi-QXjC5B0AeabcPE3NLnZVimMsbdj4Rt9bxClCg-3uGysidb2Aw0t3nG3syV9SW40YnQ4N4cbyVLKLuWtVBx_HQo_D6aZkWojQ55QvamiA8v5oBn8F0UnvbLqazeNM_zAzi4yd8lpRgU-dxe7_A"/>
+<div class="absolute top-3 left-3">
+<span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-white drop-shadow">T SHIRTS</span>
+</div>
+</a>
+<!-- 6: Shorts -->
+<a class="group relative aspect-[3/4] overflow-hidden bg-neutral-100 flex flex-col justify-start" href="#">
+<img alt="Athletic &amp; Lifestyle Shorts" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB38K-O7JJBR6_BClnVinSfpL4Yb87DVcKhAs2pIbQAU01lrraIYgzk0sVZmkDYkEBftEqV2C6EgjricSDg3dx7d1iZNWbx9z001JrNHpd6ZdKOvrM-3A00rQv2OeoXCIueEjsCEMry5eX2Erq2k6h4e9x771TpQ46HsxbUtfyuY6l9x-VlDD3Fj4NuC6AWiNeBEJknwKUFhv1jBMPh0tgYYjC184mtaTfFVgP6bmzT-djZ-2AUPYU4WA"/>
+<div class="absolute top-3 left-3">
+<span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-white drop-shadow">SHORTS</span>
+</div>
+</a>
+<!-- 7: Accessories -->
+<a class="group relative aspect-[3/4] overflow-hidden bg-neutral-100 flex flex-col justify-start" href="#">
+<img alt="Technical Accessories" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSnRSHC78itXePaC7EtNvPqZaNngwhY5NvbNJ4NghwTK-Fr6HKwz3sAuYtWca5IFDh-HjqG6UFViecQ0aDaHJ_GSlNkFSn6upa1hvfDk8AaYFTqY6i7ES4HuYpC-Kzr9PBGDvKyC0YGYqTmc3yn6jh4os0P4wdqzZUEEApyIQYOdQeKjJpmfThLLjuJ4O4viRD9Ff0LPyOpyR9-8fW8RcOrZLYx0ubZs48x42TGhe40Ulse8INAEtEvQ"/>
+<div class="absolute top-3 left-3">
+<span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-white drop-shadow">ACCESSORIES</span>
+</div>
+</a>
+</div>
+</section>
+<!-- END: ShopByCategory -->
+<!-- BEGIN: NewInThisWeek -->
+<!-- Product Section: Matching Outfits & Apparel Sets -->
+<section class="max-w-[1720px] mx-auto px-4 sm:px-8 py-12">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">New In This Week</h2>
+<a class="border border-neutral-300 hover:border-black text-[11px] font-bold tracking-widest uppercase px-5 py-2.5 transition" href="#">
+        SHOP SETS
+      </a>
+</div>
+<!-- 5 Matching Sets Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-5">
+<!-- Apparel Card 1: Berghaus -->
+<div class="group flex flex-col">
+<div class="bg-[#5c5c58] aspect-[3/4] relative flex items-center justify-center overflow-hidden mb-3">
+<img alt="Berghaus Wavertree 3 Piece Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc7cOy93KZw1_bdGwxifHCaKAufsbXwz24AgzLbNavsAxiTuC0V0n_R8nbvTIOD2Z3QydNtZNsS0wqG7adGPd3_Z7yCHcRYJFTHtPWVYkB9QWE2lKb1K_45dRq6tsLK86F4PW9gmyNBvb_rdjKK6361CLB11RACkAUiGJ3jvW53_GjBHKELfQENHdVLTHfvw00EutjDaB-_aLuBn85oe6efPtag7yQmFxHeh_KiIXH5wgHlUtEjzou3Q"/>
+</div>
+<p class="text-[10px] font-extrabold uppercase tracking-wider text-neutral-500 mb-0.5">BERGHAUS</p>
+<h3 class="text-xs font-medium text-neutral-900 line-clamp-1 mb-1">Wavertree 3 Piece Set - Quarter Zip / T Shirt / Pant</h3>
+<p class="text-xs font-bold text-neutral-900">£175</p>
+</div>
+<!-- Apparel Card 2: Trailberg -->
+<div class="group flex flex-col">
+<div class="bg-[#5c5c58] aspect-[3/4] relative flex items-center justify-center overflow-hidden mb-3">
+<img alt="Trailberg Triathlon Ultra Slate Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_E1BZNdoWMEwx9loUHVF_xzEa6bWXOpLhGvwvP86zDTf9GV2ovZhlyQzPF88O3UWz-HK0bcCYVK-s-FPsAo38IrU-GqWEeA1RtwxZZIwDSl-rxL_vwXSwtbQwIP8x5D19GTWLH426aOpX96AuK-cDgSUNLStAPSggU5LujLzjLvUR_eaRYIFDQVNxoSxBogz35MhHjzyxupn59fV7l3VCob0TcOKDIBkRaysjEJIOleTamxZcFSHsEQ"/>
+</div>
+<p class="text-[10px] font-extrabold uppercase tracking-wider text-neutral-500 mb-0.5">TRAILBERG</p>
+<h3 class="text-xs font-medium text-neutral-900 line-clamp-1 mb-1">Triathlon Ultra Slate Set - T Shirt / Short</h3>
+<p class="text-xs font-bold text-neutral-900">£78</p>
+</div>
+<!-- Apparel Card 3: Reprimo Aqua -->
+<div class="group flex flex-col">
+<div class="bg-[#5c5c58] aspect-[3/4] relative flex items-center justify-center overflow-hidden mb-3">
+<img alt="Reprimo Flight Aqua 3 Piece Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwpsTwtPARqqf0lG6pyFB1TVxMANykaREDX_ZYvnykKC3JaAA85RbPsBFa4oAHVaguC-KNgbrNV1pGT5rjNDvnRi_964U2fVz58FG6LPI1yjbHiyKkJx_Mwl5t-TIjhetnQX-8pAnLyQPhHrEVSo_UQ45ivfpGh6zPnUaQlkAYBu47M34PYbpnkRpPI24ThutRZIUBPN6j3S1H-afWe8FERzBWs5G5-_emWBwdS3gMpHrz-_FL1jr70w"/>
+</div>
+<p class="text-[10px] font-extrabold uppercase tracking-wider text-neutral-500 mb-0.5">REPRIMO</p>
+<h3 class="text-xs font-medium text-neutral-900 line-clamp-1 mb-1">Flight Aqua 3 Piece Set - Jacket / T Shirt / Short</h3>
+<p class="text-xs font-bold text-neutral-900">£148</p>
+</div>
+<!-- Apparel Card 4: Under Armour -->
+<div class="group flex flex-col">
+<div class="bg-[#5c5c58] aspect-[3/4] relative flex items-center justify-center overflow-hidden mb-3">
+<img alt="Under Armour Textured Timberwolf Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoCwio9FRgR4imiYQpoZvCgGJcfpWiEqFISDG3pvEfOC5OKVIhdZexg9b2O9LQ007U7seUdTf3WruaP6gBaPdSpGKtk8eHvmrX5CLGcr2NDG8QrmDIqoISoW0cz1DH5w_-7rMFEjvluCI9g9c-DEe-6S3cPL4uZa-XVj9vpQqljkm0Ta_uxVSclrLDaoPzSXyhuzYYa4qaDBQoblOvAYB314Ewjn-1MourYKVELDKbKGSfpWmZocqqgQ"/>
+<span class="absolute bottom-0 inset-x-0 bg-black text-white text-[10px] py-1 text-center font-semibold tracking-tight">
+            18 in carts now.
+          </span>
+</div>
+<p class="text-[10px] font-extrabold uppercase tracking-wider text-neutral-500 mb-0.5">UNDER ARMOUR</p>
+<h3 class="text-xs font-medium text-neutral-900 line-clamp-1 mb-1">Textured Timberwolf Set - T Shirt / Shorts</h3>
+<p class="text-xs font-bold text-neutral-900">£62</p>
+</div>
+<!-- Apparel Card 5: Reprimo Mist -->
+<div class="group flex flex-col">
+<div class="bg-[#5c5c58] aspect-[3/4] relative flex items-center justify-center overflow-hidden mb-3">
+<img alt="Reprimo Vortex Mist 3 Piece Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUoIwrFXoE6gPCWyNJZkrxDvpBBJ3U36q4T0uCLX1iSjNow2VyUDP8Hrbw4RvOeaDwj8auyWpe35Aefshqpft6HZSPApfSgUC8O6MaKjjKvwuZZxfjEE2vdX0wvk7DeNnKZ0p5cSuyxD0vkpbOIEZDsjs2z0A6BTMGcBePmNrAhIE1I0E3HVqwQGUziTDXBsJUtSzbvmCWeCZtCjdqWUiZ-Wyohbl7XIRO8lNEWcyETKVyQG15Ea_Nfg"/>
+</div>
+<p class="text-[10px] font-extrabold uppercase tracking-wider text-neutral-500 mb-0.5">REPRIMO</p>
+<h3 class="text-xs font-medium text-neutral-900 line-clamp-1 mb-1">Vortex Mist 3 Piece Set - Quarter Zip / T / Short</h3>
+<p class="text-xs font-bold text-neutral-900">£133</p>
+</div>
+</div>
+</section>
+<!-- END: NewInThisWeek -->
+<!-- BEGIN: BrandLogosBar -->
+<!-- Two-row Brand Grid / Partner Logos -->
+<section class="max-w-[1720px] mx-auto px-4 sm:px-8 py-10 border-t border-neutral-200">
+<div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+<!-- Row 1 -->
+<div class="bg-neutral-100 hover:bg-neutral-200 transition h-20 flex items-center justify-center px-4 rounded-sm">
+<span class="font-black text-lg tracking-tighter uppercase italic text-neutral-900">saucony</span>
+</div>
+<div class="bg-neutral-100 hover:bg-neutral-200 transition h-20 flex items-center justify-center px-4 rounded-sm">
+<span class="font-extrabold text-sm tracking-wider uppercase text-neutral-900">TRAILBERG</span>
+</div>
+<div class="bg-neutral-100 hover:bg-neutral-200 transition h-20 flex items-center justify-center px-4 rounded-sm">
+<span class="font-black text-base tracking-widest uppercase italic text-neutral-900">SALOMON</span>
+</div>
+<div class="bg-neutral-100 hover:bg-neutral-200 transition h-20 flex items-center justify-center px-4 rounded-sm">
+<span class="font-bold text-sm tracking-widest uppercase text-neutral-900">berghaus</span>
+</div>
+<div class="bg-neutral-100 hover:bg-neutral-200 transition h-20 flex items-center justify-center px-4 rounded-sm">
+<span class="font-black text-sm tracking-widest uppercase text-neutral-900">REPRIMO</span>
+</div>
+<div class="bg-neutral-100 hover:bg-neutral-200 transition h-20 flex items-center justify-center px-4 rounded-sm">
+<span class="font-black text-sm tracking-widest uppercase text-neutral-900">OAKLEY</span>
+</div>
+<div class="bg-neutral-100 hover:bg-neutral-200 transition h-20 flex items-center justify-center px-4 rounded-sm">
+<span class="font-extrabold text-sm tracking-widest uppercase text-neutral-900">MERRELL</span>
+</div>
+<!-- Row 2 -->
+<div class="bg-neutral-100 hover:bg-neutral-200 transition h-20 flex items-center justify-center px-4 rounded-sm">
+<span class="font-black text-lg tracking-tighter uppercase italic text-neutral-900">saucony</span>
+</div>
+<div class="bg-neutral-100 hover:bg-neutral-200 transition h-20 flex items-center justify-center px-4 rounded-sm">
+<span class="font-extrabold text-sm tracking-wider uppercase text-neutral-900">TRAILBERG</span>
+</div>
+<div class="bg-neutral-100 hover:bg-neutral-200 transition h-20 flex items-center justify-center px-4 rounded-sm">
+<span class="font-black text-base tracking-widest uppercase italic text-neutral-900">SALOMON</span>
+</div>
+<div class="bg-neutral-100 hover:bg-neutral-200 transition h-20 flex items-center justify-center px-4 rounded-sm">
+<span class="font-bold text-sm tracking-widest uppercase text-neutral-900">berghaus</span>
+</div>
+<div class="bg-neutral-100 hover:bg-neutral-200 transition h-20 flex items-center justify-center px-4 rounded-sm">
+<span class="font-black text-sm tracking-widest uppercase text-neutral-900">REPRIMO</span>
+</div>
+<div class="bg-neutral-100 hover:bg-neutral-200 transition h-20 flex items-center justify-center px-4 rounded-sm">
+<span class="font-black text-sm tracking-widest uppercase text-neutral-900">OAKLEY</span>
+</div>
+<div class="bg-neutral-100 hover:bg-neutral-200 transition h-20 flex items-center justify-center px-4 rounded-sm">
+<span class="font-extrabold text-sm tracking-widest uppercase text-neutral-900">MERRELL</span>
+</div>
+</div>
+</section>
+<!-- END: BrandLogosBar -->
+<!-- BEGIN: ValuePropositionFeatures -->
+<!-- 3-Column USP Icon Strip -->
+<section class="border-y border-neutral-200 py-10 bg-white">
+<div class="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center flex-shrink-0">
+<svg class="w-5 h-5 text-neutral-900" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h4 class="text-xs font-extrabold uppercase tracking-wider text-neutral-900">Built for convenience</h4>
+<p class="text-xs text-neutral-500 mt-0.5">Next day delivery available</p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center flex-shrink-0">
+<svg class="w-5 h-5 text-neutral-900" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h4 class="text-xs font-extrabold uppercase tracking-wider text-neutral-900">Curated outfits</h4>
+<p class="text-xs text-neutral-500 mt-0.5">Matching sets, footwear, and accessories for complete looks</p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center flex-shrink-0">
+<svg class="w-5 h-5 text-neutral-900" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h4 class="text-xs font-extrabold uppercase tracking-wider text-neutral-900">Regularly refreshed</h4>
+<p class="text-xs text-neutral-500 mt-0.5">New season pieces landing weekly</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ValuePropositionFeatures -->
+<!-- BEGIN: EditorialCampaignBanner -->
+<!-- Split Editorial Campaign: PECKHAM RYE OUTERWEAR -->
+<section class="max-w-[1720px] mx-auto px-4 sm:px-8 py-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+<!-- Left Campaign Column with Overlay Copy -->
+<div class="lg:col-span-8 relative min-h-[500px] lg:min-h-[640px] flex items-center bg-neutral-100 overflow-hidden">
+<img alt="Peckham Rye Outerwear" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCklkRmow6IOcSV0tYrNxEXH9qN28aJ6jLQxxmc0kFOpr0LEhlihm1-nyllSD41VmX6f60PXy4SOGxhBaHw9yKlOqGcb7vaAMYC7sUmHZuNuTTSgppHyOkebWau8buBWSjKz2h6pts2nXK5kSDR5dCK3HJhGBK-28AQFE2VKjzY39oAdoM0MiNRyZlT-YuxyJghISwQKjnPbg_iCdWrChGyRnH07Ff-8Rv1jic4nqhs-WOrF7zpFRVZ4Q"/>
+<div class="absolute inset-0 bg-neutral-900/20"></div>
+<!-- Overlaid text block -->
+<div class="relative z-10 max-w-lg p-8 sm:p-14 text-white">
+<h3 class="text-3xl sm:text-4xl font-extrabold tracking-tight uppercase leading-tight mb-4">
+            PECKHAM RYE OUTER<span class="font-normal">WEAR</span>
+</h3>
+<p class="text-xs sm:text-sm text-neutral-100 font-medium leading-relaxed mb-8 max-w-md">
+            Designed with versatility in mind, reversible outerwear delivers two distinct looks in one adaptable layer.
+          </p>
+<a class="inline-block bg-white/20 hover:bg-white text-white hover:text-black border border-white/60 text-[11px] font-bold tracking-widest uppercase px-6 py-3 rounded-full backdrop-blur-md transition" href="#">
+            SHOP PECKHAM RYE
+          </a>
+</div>
+</div>
+<!-- Right Editorial Portrait Model Column -->
+<div class="lg:col-span-4 min-h-[480px] lg:min-h-[640px] bg-neutral-100 overflow-hidden relative">
+<img alt="Peckham Rye Reversible Jacket Portrait" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFhNQFp7v4U1b_aiFrKjHrhf0LYdfd2R_keqONONv8yvoJ-CxDsE9qTo84T6W4z4b30vnJqzaKz69KKiXV3lv0X7U0-f097maqWxmjuC0mfJhSuz75Fi-_SB_laqRJy-Eib2zgvpTcDlzrn72E-p8DJPa-gMnshjOgeuMuRVEmoQO4a0GZsy6nqyQ9_14SBYcpZvnDqO9-ulX1G6RdOyAk4t8B0WFlXM5n0U-w-YGTrB6J_oNO0iON5Q"/>
+</div>
+</div>
+</section>
+<!-- END: EditorialCampaignBanner -->
+<!-- BEGIN: StoryCampaignVisuals -->
+<!-- Full-Width Dynamic Streetwear & Performance Stories -->
+<section class="max-w-[1720px] mx-auto px-4 sm:px-8 space-y-6 pb-16">
+<!-- Story 1: Back Runner in Trailberg Tee against metal architectural backdrop -->
+<div class="w-full aspect-[16/9] lg:aspect-[21/9] max-h-[720px] overflow-hidden bg-neutral-200">
+<img alt="Trailberg Running Athletic Apparel Campaign" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtNR9VP4emQiqLEQbYsUGjfCLPxMivFhHEnSLvIY1lEuGAb4CWFExh8vrknlz6h6VHdBoTLOlOhSHu1wWUv1XiLVWe912M_F26t0nBBKYMPDnEb8xKGbFppIwEmGUGT-66Www4EHSRw-x2V0d4zSp5CbdhmFR46EQuo-0W--Lz3ryOLKvB9K3S8fDpAlAW84tT70LT5TuZ12JvDYIWGp_Qpo5yZhGh3T_Md1s_I-ca9zyxuMR1meEXTA"/>
+</div>
+<!-- Story 2: Motion Blur Runners on Road -->
+<div class="w-full aspect-[16/9] lg:aspect-[21/9] max-h-[640px] overflow-hidden bg-neutral-900">
+<img alt="Urban Speed Running Footwear Campaign" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuApzZt3Z0VX1AnmeOqjHmPQGcO--EiRKp6-iDq9oaqggIh5gj3XkPZ98LUhQMJOiwXgN_3MaoD9dlMxTTzqNjfT4rYXVV4WVXWdYt-PjDzmflRrMDhoQp1k2368_TIM5KABCZggl5CcNXp9Bb1V_SVzvs3ScKJHO5nZMKB6mASzEljBACxCdRKiujE8m7VZih7BDTZfoDm23C9QRk_g9SQB5WBRDCwSMDcLwQubdmRy0dPBBeQjOikQ"/>
+</div>
+</section>
+<!-- END: StoryCampaignVisuals -->
+<!-- BEGIN: MainFooter -->
+<!-- Streetwear Dark Theme Footer -->
+<footer class="bg-black text-white pt-16 pb-12 border-t border-neutral-900">
+<div class="max-w-[1720px] mx-auto px-6 sm:px-12">
+<!-- Main Footer Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-16 border-b border-neutral-800">
+<!-- Newsletter Subscription Column (Spans 2 columns on lg) -->
+<div class="lg:col-span-2 space-y-4">
+<h4 class="text-xl font-bold tracking-tight uppercase">Newsletter</h4>
+<p class="text-xs text-neutral-400 max-w-sm">Sign up for latest news and releases.</p>
+<form class="flex items-center max-w-md pt-2" onsubmit="event.preventDefault();">
+<div class="relative w-full flex items-center">
+<input class="w-full bg-transparent border-b border-neutral-700 focus:border-white py-2 pr-28 text-xs text-white placeholder-neutral-500 focus:outline-none transition-colors" placeholder="Email Address" required="" type="email"/>
+<button class="absolute right-0 bg-white text-black hover:bg-neutral-200 text-[10px] font-bold uppercase tracking-wider px-4 py-1.5 rounded-full transition" type="submit">
+                Subscribe
+              </button>
+</div>
+</form>
+<div class="pt-6">
+<p class="text-xs text-neutral-400">
+              Connect: <a class="font-bold text-white hover:underline" href="#">Instagram</a>
+</p>
+</div>
+</div>
+<!-- Shop Column -->
+<div class="space-y-3">
+<h5 class="text-xs font-extrabold uppercase tracking-widest text-neutral-200">SHOP</h5>
+<ul class="space-y-2 text-xs text-neutral-400">
+<li><a class="hover:text-white transition" href="#">Clothing</a></li>
+<li><a class="hover:text-white transition" href="#">Footwear</a></li>
+<li><a class="hover:text-white transition" href="#">Accessories</a></li>
+<li><a class="hover:text-white transition" href="#">Women's</a></li>
+<li><a class="hover:text-white transition" href="#">Gift Cards</a></li>
+</ul>
+</div>
+<!-- Explore Column -->
+<div class="space-y-3">
+<h5 class="text-xs font-extrabold uppercase tracking-widest text-neutral-200">EXPLORE</h5>
+<ul class="space-y-2 text-xs text-neutral-400">
+<li><a class="hover:text-white transition" href="#">About Us</a></li>
+<li><a class="hover:text-white transition" href="#">Blog</a></li>
+<li><a class="hover:text-white transition" href="#">Store Locator</a></li>
+</ul>
+</div>
+<!-- Customer Care Column -->
+<div class="space-y-3">
+<h5 class="text-xs font-extrabold uppercase tracking-widest text-neutral-200">CUSTOMER CARE</h5>
+<ul class="space-y-2 text-xs text-neutral-400">
+<li><a class="hover:text-white transition" href="#">Start A Return</a></li>
+<li><a class="hover:text-white transition" href="#">Contact Us</a></li>
+<li><a class="hover:text-white transition" href="#">Shipping Policy</a></li>
+<li><a class="hover:text-white transition" href="#">Return Policy</a></li>
+<li><a class="hover:text-white transition" href="#">FAQs</a></li>
+<li><a class="hover:text-white transition" href="#">Delivery Information</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Sub-Footer: Legal, Copyright & Payment Icons -->
+<div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-[11px] text-neutral-400">
+<!-- Legal & Agency Credits -->
+<div class="flex flex-wrap items-center gap-4">
+<a class="hover:text-white underline underline-offset-2" href="#">Term &amp; Conditions</a>
+<a class="hover:text-white underline underline-offset-2" href="#">Privacy Policy</a>
+<span class="text-neutral-600">|</span>
+<span>© 2026 Website by WIRO | Shopify Plus Agency</span>
+</div>
+<!-- Currency Selector -->
+<div>
+<button class="flex items-center space-x-1 hover:text-white transition text-xs font-semibold">
+<span>🇬🇧 £ GBP</span>
+<span class="text-[9px]">⌵</span>
+</button>
+</div>
+<!-- Payment Badges / Icons -->
+<div class="flex flex-wrap items-center gap-1.5">
+<!-- Apple Pay -->
+<div class="bg-neutral-900 border border-neutral-800 rounded px-2 py-1 text-[9px] font-bold text-white">
+            Pay
+          </div>
+<!-- Google Pay -->
+<div class="bg-neutral-900 border border-neutral-800 rounded px-2 py-1 text-[9px] font-bold text-neutral-300">
+            G Pay
+          </div>
+<!-- PayPal -->
+<div class="bg-neutral-900 border border-neutral-800 rounded px-2 py-1 text-[9px] font-bold text-blue-400">
+            PayPal
+          </div>
+<!-- Shop Pay -->
+<div class="bg-[#5a31f4] rounded px-2 py-1 text-[9px] font-extrabold text-white">
+            shop Pay
+          </div>
+<!-- Klarna -->
+<div class="bg-[#ffb3c7] rounded px-2 py-1 text-[9px] font-bold text-black">
+            Klarna.
+          </div>
+<!-- Visa -->
+<div class="bg-neutral-900 border border-neutral-800 rounded px-2 py-1 text-[9px] font-bold text-white">
+            VISA
+          </div>
+<!-- Mastercard -->
+<div class="bg-neutral-900 border border-neutral-800 rounded px-2 py-1 text-[9px] font-bold text-orange-400">
+            ●●
+          </div>
+<!-- Maestro -->
+<div class="bg-neutral-900 border border-neutral-800 rounded px-2 py-1 text-[9px] font-bold text-red-500">
+            Maestro
+          </div>
+<!-- Amex -->
+<div class="bg-[#007bc1] rounded px-2 py-1 text-[9px] font-bold text-white">
+            AMEX
+          </div>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+</body></html>

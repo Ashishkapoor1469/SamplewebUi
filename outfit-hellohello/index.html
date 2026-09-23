@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OUTFIT® — by ++hellohello</title>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#EBE5D8',
+              red: '#FF1E00',
+              cardBg: '#E2DCD0',
+              dark: '#111111'
+            }
+          },
+          fontFamily: {
+            sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- Typography & Layout Styles -->
+<style data-purpose="custom-typography">
+    @import url('https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@800;900&family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      background-color: #ECE5D8;
+      color: #FF1E00;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-heavy {
+      font-family: 'Cabinet Grotesk', -apple-system, BlinkMacSystemFont, "Impact", sans-serif;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+    }
+
+    .font-swiss {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    /* Seamless scaling for giant hero wordmark */
+    .hero-title {
+      font-size: clamp(4.5rem, 20vw, 24rem);
+      line-height: 0.82;
+      letter-spacing: -0.045em;
+    }
+  </style>
+</head>
+<body class="selection:bg-red-600 selection:text-white min-h-screen text-[#FF1E00]">
+<!-- BEGIN: TopNavigation -->
+<header class="w-full px-4 sm:px-6 md:px-8 pt-4 pb-2">
+<nav class="flex justify-between items-center text-sm font-semibold tracking-tight">
+<!-- Left brand symbol -->
+<a aria-label="Home" class="text-2xl font-bold tracking-tighter hover:opacity-75 transition-opacity" href="#">
+        ++
+      </a>
+<!-- Right header links and color dots -->
+<div class="flex items-center space-x-6 sm:space-x-8">
+<a class="underline underline-offset-4 hover:opacity-70 transition-opacity" href="#shop">Shop</a>
+<a class="hover:opacity-70 transition-opacity" href="#bag">Bag (0)</a>
+<!-- Swatch toggles / mode indicator dots -->
+<div aria-hidden="true" class="flex items-center space-x-1.5">
+<span class="w-3.5 h-3.5 rounded-full bg-black inline-block"></span>
+<span class="w-3.5 h-3.5 rounded-full border border-[#FF1E00] bg-transparent inline-block"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#FF1E00] inline-block"></span>
+</div>
+</div>
+</nav>
+</header>
+<!-- END: TopNavigation -->
+<!-- BEGIN: GiantHeroWordmark -->
+<section class="w-full px-4 sm:px-6 md:px-8 mt-2 select-none overflow-hidden">
+<div class="flex items-baseline justify-between border-b-[2px] border-[#FF1E00] pb-2">
+<h1 class="hero-title font-heavy font-black uppercase m-0 leading-none">
+        OUTFIT
+      </h1>
+<span class="font-heavy text-4xl sm:text-7xl md:text-8xl lg:text-9xl ml-1 self-end mb-2 sm:mb-6">
+        ®
+      </span>
+</div>
+</section>
+<!-- END: GiantHeroWordmark -->
+<!-- BEGIN: MetadataSubheader -->
+<section class="w-full px-4 sm:px-6 md:px-8 py-4 text-[11px] sm:text-[12px] font-medium leading-tight">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+<!-- Col 1: Label -->
+<div class="md:col-span-2 uppercase font-bold tracking-wider">
+        OUTFIT
+      </div>
+<!-- Col 2: Brand Manifesto / Mission -->
+<div class="md:col-span-5 pr-4">
+<span class="font-bold tracking-wide">WHY</span>
+<p class="mt-1 font-semibold leading-snug">
+          Created by the ++hellohello team, this store and signature collection celebrates our collective creativity and passion for apparel. Carefully designed.
+        </p>
+</div>
+<!-- Col 3: Secondary Links -->
+<div class="md:col-span-3 space-y-1">
+<div>
+<a class="font-bold uppercase tracking-wider hover:underline" href="#">VISIT ++ WEBSITE</a>
+</div>
+<div class="pt-2">
+<a class="font-bold uppercase tracking-wider hover:underline" href="#">SHIPPING &amp; RETURNS</a>
+</div>
+</div>
+<!-- Col 4: Year / Copyright -->
+<div class="md:col-span-2 md:text-right font-bold">
+        © 2026
+      </div>
+</div>
+</section>
+<!-- END: MetadataSubheader -->
+<!-- BEGIN: ProductCatalog -->
+<main class="w-full px-4 sm:px-6 md:px-8 pt-6 pb-20 space-y-16 sm:space-y-24" id="shop">
+<!-- ROW 1: 4-Column Grid -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-5" data-purpose="product-row-1">
+<!-- Product 1 -->
+<article class="group cursor-pointer flex flex-col">
+<div class="w-full aspect-[4/5] bg-[#d9d3c5] overflow-hidden flex items-center justify-center relative">
+<img alt="Off by Design t-shirt back view" class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdX4QcZkrVSb-feUhjGzB7HFALRGuHpiSQuFM6AxIaJFGvqkUG0b2tinb0MdZY6JDDPJz9vXKdnY1Jcljihu4voG0at1oKalVgkx1e0lYZwNhbRb7UCCI8OxiTew1KaORpetkb_R7G-OD8FOQFzob-PvtNYWGHzBAU1KXSpBM0gorAfPWfd16f6SvNBBlJiZnjmaYET7ps1R3Kl5a-y1j9iBx96N8eEcSYKPlXHXTA1ZmM11ONznOADg"/>
+<div class="absolute inset-0 bg-black/5"></div>
+<!-- Editorial Detail Mocking text on shirt -->
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/90 text-xs font-mono tracking-wider">
+            ; time™ (off)
+          </div>
+</div>
+<div class="mt-3 flex justify-between items-start text-xs sm:text-[13px] font-bold">
+<div>
+<h2 class="text-sm font-bold tracking-tight">Off by Design</h2>
+<div class="flex items-center gap-1 mt-1 text-[10px] tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF1E00]"></span>
+<span>APPAREL</span>
+</div>
+</div>
+<span>$36.50</span>
+</div>
+</article>
+<!-- Product 2 -->
+<article class="group cursor-pointer flex flex-col">
+<div class="w-full aspect-[4/5] bg-[#d9d3c5] overflow-hidden flex items-center justify-center relative">
+<img alt="Kerned Confidence Cap" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG6zYPMS4d2YHFrhbOG9KSciaD6HI0pOmPR1difkXmGe7R4UK55CoWmTs6e1HJC-w6UHOeNizjVnLLw9qj2NmJv3_Q3Kdzja7GOE_v_fEXSMi8oK1rJAOdCAzLGcnnB3cLnk0izV3VomCY7e0lZVCpCdXzqG6P0FBwAFVeSwvpz107zfhO0VybQb4nBn1R_QF1o7fV4ByZP8_fKzUvnYEaZmmQiQRW5V7lIKQMA91RoyoC3Zwlis9Rkg"/>
+<!-- Embroidered emblem overlay -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<span class="text-white text-lg font-black tracking-tighter drop-shadow-md">++</span>
+</div>
+</div>
+<div class="mt-3 flex justify-between items-start text-xs sm:text-[13px] font-bold">
+<div>
+<h2 class="text-sm font-bold tracking-tight">Kerned Confidence</h2>
+<div class="flex items-center gap-1 mt-1 text-[10px] tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF1E00]"></span>
+<span>APPAREL</span>
+</div>
+</div>
+<span>$25.00</span>
+</div>
+</article>
+<!-- Product 3 -->
+<article class="group cursor-pointer flex flex-col">
+<div class="w-full aspect-[4/5] bg-[#d9d3c5] overflow-hidden flex items-center justify-center relative">
+<img alt="Specimen No. HH01 Sweatshirt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPq7OUV4ycSrWHeDpoD1fSlRsKeTnPswr0mQz3C4SJao6JhiD86VyV9y3Ez312ilYJfCRHET-exe_5UNQt8QfuVlSnzQHFLL-nT8ahj_LJlXdP3QTPUaMQfoDQjTjcrqGT-N9XCt9hn_-Dtjo8rzDduGtciLX9wGNMsg6fCZvaORpGf9wrJ1dVXP8FS_PaUobZJfGN8H7Yvy35L3IYRH4TWPctsqI8IPXcCMmWZUXwBhuord-CuzzFUQ"/>
+<!-- Red woven patch badge -->
+<div class="absolute top-1/3 right-8 bg-[#FF1E00] text-black px-2 py-1 text-[9px] font-black uppercase">
+            ++ HH01
+          </div>
+</div>
+<div class="mt-3 flex justify-between items-start text-xs sm:text-[13px] font-bold">
+<div>
+<h2 class="text-sm font-bold tracking-tight">Specimen No. HH01</h2>
+<div class="flex items-center gap-1 mt-1 text-[10px] tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF1E00]"></span>
+<span>APPAREL</span>
+</div>
+</div>
+<span>$30.00</span>
+</div>
+</article>
+<!-- Product 4 -->
+<article class="group cursor-pointer flex flex-col">
+<div class="w-full aspect-[4/5] bg-[#d9d3c5] overflow-hidden flex items-center justify-center relative">
+<img alt="Grid System Go Backpack" class="w-full h-full object-cover grayscale contrast-110 group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy1zeFQ-O11ikJoXAfG9jXxNqBoclFVW0xrNumH9uQIQnCgP_TFFc-k99zwxBDIlK6CdAXViaRSCe16hf-KDtsLgi4WDRcyCTVg5-5CL1KIZCGLFJQzHP6hAipNVNFFd1lYsXjckOJo6Y1clOqrW0qhDBZL7VHTbmP70mW75NKhgmXRyOCORgSOBheSBxkUh1An4dXir4f5tZ3YLbbCJDG7GwmofJLnpApfqTlKm99GZB_TsP-f41Lmg"/>
+<div class="absolute bottom-6 right-6 bg-white text-black px-1.5 py-0.5 font-black text-xs">
+            ++
+          </div>
+</div>
+<div class="mt-3 flex justify-between items-start text-xs sm:text-[13px] font-bold">
+<div>
+<h2 class="text-sm font-bold tracking-tight">Grid System Go</h2>
+<div class="flex items-center gap-1 mt-1 text-[10px] tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF1E00]"></span>
+<span>APPAREL</span>
+</div>
+</div>
+<span>$30.00</span>
+</div>
+</article>
+</section>
+<!-- ROW 2: Asymmetric Layout (Two items stacked left, giant hero item right) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start" data-purpose="product-row-2">
+<!-- Left side stacked items -->
+<div class="lg:col-span-5 flex flex-col gap-10">
+<!-- Left Item 1: Neutral Grotesk Tote -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-start">
+<article class="group cursor-pointer">
+<div class="aspect-[4/5] bg-[#ded8cb] overflow-hidden relative">
+<img alt="Neutral Grotesk Tote" class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDutfg1eWDqcyrBzPl7e6_pSSi2uu0yM-5zkt4bNBA1hIBrJ_NQF4Bzp_B0-5nyI4cnr25j05I8UI2lfTKoCIvHIWK9WFGUvWL7GarrMtVLGu_OOgWoR34NBfjZtMQ6xauzQvF_wq-igfBa7hM-w0VtBSoxGDxISFNMLvhF8DG4dN1vGwqDryRMlsUVcgD4hI6TWiN_UEj8xfgg6RZUC3BNrFNVZoEpb9Td63VW2Na0PFXgs3zMB3aRdA"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+<span class="text-white font-heavy text-2xl tracking-tighter uppercase drop-shadow">Say Hello</span>
+<span class="text-white/80 text-[10px] font-mono mt-1">++ hellohello</span>
+</div>
+</div>
+<div class="mt-2.5 flex justify-between items-start text-xs font-bold">
+<div>
+<h2>Neutral Grotesk</h2>
+<div class="flex items-center gap-1 mt-0.5 text-[10px] uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF1E00]"></span>
+<span>APPAREL</span>
+</div>
+</div>
+<span>$30.00</span>
+</div>
+</article>
+<!-- Left Item 2: Red Dot Not Award Beanie -->
+<article class="group cursor-pointer">
+<div class="aspect-[4/5] bg-[#ded8cb] overflow-hidden relative">
+<img alt="Red Dot Not Award Beanie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1cOaJkVj79SGgzqj6Z2LaRf78wQFlWoAq9C9oW0RldjaC6tjrZFHvkNx3sQK8Pr6lzQbmij3sBMy4FPfoTnl2tV2_Ao8gViu5qgsIqaDNiIh3j_jcwIqIhCJOFfvrCQy-mvuYM0LnCN2ITPNpF4RLy50cgJ8vhgVLPDFp4dntxqrT6MJRm87_-sHDykRBupQxciNB6w7GP9oLA7WphbMSlXXZYqvQbRhhUezOsWnuvt8L5Zd0QOHDhQ"/>
+</div>
+<div class="mt-2.5 flex justify-between items-start text-xs font-bold">
+<div>
+<h2>Red Dot Not Award</h2>
+<div class="flex items-center gap-1 mt-0.5 text-[10px] uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF1E00]"></span>
+<span>APPAREL</span>
+</div>
+</div>
+<span>$20.00</span>
+</div>
+</article>
+</div>
+</div>
+<!-- Right side: Giant Hero Product (Gridlocked Foil Bag) -->
+<div class="lg:col-span-7">
+<article class="group cursor-pointer flex flex-col">
+<div class="w-full aspect-[5/6] sm:aspect-[4/4.5] bg-[#d9d3c5] overflow-hidden relative shadow-inner">
+<img alt="Gridlocked Metallic Tote" class="w-full h-full object-cover mix-blend-multiply opacity-90 contrast-125 group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj-xJVm65vBumco-xI56tUfLoQW00MZpNnBUrB13_vZitjtzKjNwb98Jn3OjnESxaV1bCOGCggTBvLdvPeySerLnf1POi0SZM-SW-XkKJYRLgcLNX9wHGrTcmw3aTP0T3wRTiJevKW2wJHx-sYStROT5qrUaHYXYYvAO2wdCXPoslFvzWHkgXCRwba32BrE0V2eVB5cd63ds4y7_7gMUN3veNsJqi0P04FF4tNkAVD55hF12HUrv1E0w"/>
+<!-- Metallic bag typographic artwork overlay mimicking reference -->
+<div class="absolute inset-0 flex flex-col items-center justify-center p-8 pointer-events-none">
+<div class="w-3/5 sm:w-1/2 p-6 border border-black/20 bg-white/10 backdrop-blur-xs text-black space-y-1">
+<p class="font-heavy text-2xl sm:text-3xl leading-none uppercase">Contrast</p>
+<p class="font-heavy text-2xl sm:text-3xl leading-none uppercase">Grid</p>
+<p class="font-heavy text-2xl sm:text-3xl leading-none uppercase">Typeface</p>
+<p class="font-heavy text-2xl sm:text-3xl leading-none uppercase">Spacing</p>
+</div>
+</div>
+<!-- Red hangtag accent -->
+<div class="absolute top-1/4 right-1/4 bg-[#FF1E00] text-black w-6 h-12 flex items-center justify-center shadow-lg">
+<span class="font-bold text-[10px] transform -rotate-90">++</span>
+</div>
+</div>
+<div class="mt-3 flex justify-between items-start text-sm font-bold">
+<div>
+<h2 class="text-base font-bold tracking-tight">Gridlocked</h2>
+<div class="flex items-center gap-1 mt-1 text-[10px] tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF1E00]"></span>
+<span>APPAREL</span>
+</div>
+</div>
+<span class="text-sm font-bold">$25.00</span>
+</div>
+</article>
+</div>
+</section>
+<!-- ROW 3: 3 Column Graphic Tees & Tote -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-8 max-w-5xl" data-purpose="product-row-3">
+<!-- Product: Hello Week 001 -->
+<article class="group cursor-pointer flex flex-col">
+<div class="w-full aspect-[4/5] bg-[#ded8cb] overflow-hidden relative">
+<img alt="Hello Week 001 White Tee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHhmDsgEPnOATJT_8Z3RJXB57eDdysT_tVVf9xfazuIrX5NOS1K0j8Bd7PTw8yx5VCxMI6sbnpIyqSweEzzg-77zylR-04cJN-p3lI6RJ-X1wu_93kwJaZ9u_lUNAJjRH3etI65S5LeMJ22tM0_jVrcODGB8GQfqYkMmYxtMCUPDLzzJ64d_ohaAcMZYVY0GK5q5P92zhTp6rDqZTLDjZn5bBWN3XpyXH0W9BtMH_YMa8wdLAUK-l_2Q"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<span class="font-heavy text-xl uppercase tracking-tighter text-black border-2 border-black px-2 py-1">HELLO WEEK</span>
+</div>
+</div>
+<div class="mt-3 flex justify-between items-start text-xs sm:text-[13px] font-bold">
+<div>
+<h2 class="text-sm font-bold tracking-tight">Hello Week 001</h2>
+<div class="flex items-center gap-1 mt-1 text-[10px] tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF1E00]"></span>
+<span>APPAREL</span>
+</div>
+</div>
+<span>$30.00</span>
+</div>
+</article>
+<!-- Product: Hello Week 002 -->
+<article class="group cursor-pointer flex flex-col">
+<div class="w-full aspect-[4/5] bg-[#ded8cb] overflow-hidden relative">
+<img alt="Hello Week 002 Graphic Tee back" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDbVuH44gFmNeNw4NP2AzZER8ZCDhmzR67S4ATyJ3A_SR5fg5gkEPyU-N8xgshUq2OtFmec9STO7t0-1ypVUhmMi0_3Qx6isP9Iwv4YMLELg-C217rMAMpE0JmWaFBXtxp66akJgeLUpqwmq3zaxbpzl_nlvaFXV4dzkWVem58mg31xIJCrjjyseS5tT_KyGdGOTwjjyMxMCJYK2BjJwZe-FcNg43xEC1QfrM315C4GPjNn7u8mDIVKw"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="text-center text-white">
+<p class="font-heavy text-xl tracking-tighter">HELLO WEEK</p>
+<p class="text-[8px] font-mono tracking-widest uppercase">SUMMER EDITION 2026</p>
+</div>
+</div>
+</div>
+<div class="mt-3 flex justify-between items-start text-xs sm:text-[13px] font-bold">
+<div>
+<h2 class="text-sm font-bold tracking-tight">Hello Week 002</h2>
+<div class="flex items-center gap-1 mt-1 text-[10px] tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF1E00]"></span>
+<span>APPAREL</span>
+</div>
+</div>
+<span>$30.00</span>
+</div>
+</article>
+<!-- Product: Monochrome Manifest -->
+<article class="group cursor-pointer flex flex-col">
+<div class="w-full aspect-[4/5] bg-[#ded8cb] overflow-hidden relative">
+<img alt="Monochrome Manifest Black Bag" class="w-full h-full object-cover brightness-75 group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0gknEbOISdqxUwO4uQelR3iqhEaQplFGpQGMie21l25T7AYIsYatqzGvbUsmYkoE-bdlLWzHvUvaXL5J-NoUT-jsxbWZ7I6sBtndif6bd2cuGCF5fby-xI2RMDmK6tul_OS51yz_ySpeWCKy4nfmA5jJ8JPFDOKWDEUKcW4Q4lNkrMCIuZEypUhFLG7_1P4V1YQpbKhUMHrVn_mTS1329m6bYOxDRZhB0PwEas-Tk0m9CI0DftnWV-g"/>
+</div>
+<div class="mt-3 flex justify-between items-start text-xs sm:text-[13px] font-bold">
+<div>
+<h2 class="text-sm font-bold tracking-tight">Monochrome Manifest</h2>
+<div class="flex items-center gap-1 mt-1 text-[10px] tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF1E00]"></span>
+<span>APPAREL</span>
+</div>
+</div>
+<span>$30.00</span>
+</div>
+</article>
+</section>
+<!-- ROW 4: Large Asymmetric Split (Large model tote on left, accessories on right) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start" data-purpose="product-row-4">
+<!-- Left: Positive Space Large Tote Shot -->
+<div class="lg:col-span-6">
+<article class="group cursor-pointer flex flex-col">
+<div class="w-full aspect-[4/5] bg-[#d9d3c5] overflow-hidden relative">
+<img alt="Positive Space Canvas Bag" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBikIpDlTOhCfCfp2Fx_XaTapyhWoT-NJFA_5oKzOX6tbkl1EQ9ZexlB-vEdv-b5PU6TWVdg-d4vumJu3dG0ileQUkaC0ie7wnyjFXol3orSSl3w4eBlT0qmjwrWkUisuKess3DebOC8tkWfWVOKjsdM79ydb1JHAbtAwQmgZX0CNNcsc0JewECv27SgNifqHpHMKWNBnDppZFVznRVZDn_8DfI3dRghQmNnETFI68LRUlon7LwkUyhEQ"/>
+<!-- Bag Graphic Badge Mockup -->
+<div class="absolute bottom-12 right-12 bg-white p-6 shadow-2xl flex flex-col items-center">
+<span class="text-black font-black text-6xl leading-none mb-1">+</span>
+<span class="text-[9px] font-bold text-black uppercase tracking-wider">++ hellohello</span>
+</div>
+</div>
+<div class="mt-3 flex justify-between items-start text-sm font-bold">
+<div>
+<h2 class="text-base font-bold tracking-tight">Positive Space</h2>
+<div class="flex items-center gap-1 mt-1 text-[10px] tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF1E00]"></span>
+<span>APPAREL</span>
+</div>
+</div>
+<span class="text-sm font-bold">$30.00</span>
+</div>
+</article>
+</div>
+<!-- Right: Whitespace Matters & Command + K -->
+<div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6 pt-0 lg:pt-16">
+<!-- Whitespace Matters Tee -->
+<article class="group cursor-pointer flex flex-col">
+<div class="w-full aspect-[4/5] bg-[#ded8cb] overflow-hidden relative">
+<img alt="Whitespace Matters Tee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaweO4ak9tNczDE2X1gdWsfG7MvgDfA_HRsBgS_G-okj0k9WMzFXgnAL4ZHIaTTdC9GG-3CVrhbsjMa3TT1phy99ta0YcfgReiLZNk2VLq7IJQbAnITM5Wm5edW5CyWU-oaxRYfWbswGKWFctje7RGmH9idv5P0RlHgY5euIcoVPceN_NyEJLOkxzmTzLWQ24ejw18HA7IlPkZ9MhjbGliMHUeKg9Fj9xDX0nDIGtvVODt4HTsP7hp_Q"/>
+<div class="absolute bottom-8 right-6 text-black font-black text-xl">
+              ++
+            </div>
+</div>
+<div class="mt-3 flex justify-between items-start text-xs sm:text-[13px] font-bold">
+<div>
+<h2 class="text-sm font-bold tracking-tight">Whitespace Matters</h2>
+<div class="flex items-center gap-1 mt-1 text-[10px] tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF1E00]"></span>
+<span>APPAREL</span>
+</div>
+</div>
+<span>$33.00</span>
+</div>
+</article>
+<!-- Command + K Key Fob -->
+<article class="group cursor-pointer flex flex-col">
+<div class="w-full aspect-[4/5] bg-[#ded8cb] overflow-hidden relative flex items-center justify-center">
+<img alt="Command + K keychain strap" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzx6n28Ktmx80J8Xwj4mG8660W8jxOEplqat_NQukmeCqjwNFtv_Ef6sH9v5H-1T-m7zpVYRvgEqVGYTLjO--E0f87wmSll2l3xwmhg2xLq7gtgXns_FFStMHst5zCulsZsdhH747Fj1hL0bFqlpMl4X2wKsS0jmBu3wHOoNecM32hwfKttumhGweCi0Q5q44v2szBtfBjlBNPt7UvpedEZ5QAKFnbXTjno-6Klad0xeoU4ymInmph9Q"/>
+<!-- Webbing strap mockup overlay -->
+<div class="absolute inset-y-8 w-20 bg-neutral-900 border border-neutral-800 rounded-sm shadow-2xl flex flex-col items-center justify-between py-4 text-white">
+<div class="w-8 h-8 rounded-full border-2 border-neutral-400"></div>
+<div class="bg-[#FF1E00] px-1 py-0.5 text-[8px] font-black tracking-tighter">++</div>
+<span class="transform -rotate-90 text-xs font-mono font-bold tracking-widest text-neutral-400">HELLO</span>
+</div>
+</div>
+<div class="mt-3 flex justify-between items-start text-xs sm:text-[13px] font-bold">
+<div>
+<h2 class="text-sm font-bold tracking-tight">Command + K</h2>
+<div class="flex items-center gap-1 mt-1 text-[10px] tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF1E00]"></span>
+<span>APPAREL</span>
+</div>
+</div>
+<span>$15.00</span>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- END: ProductCatalog -->
+<!-- BEGIN: BoldStatementBanner -->
+<section class="w-full border-t-[3px] border-b-[3px] border-[#FF1E00] px-4 sm:px-6 md:px-8 py-10 sm:py-16 overflow-hidden">
+<div class="flex flex-col lg:flex-row justify-between lg:items-center gap-8">
+<!-- Left Statement Typography -->
+<div class="max-w-4xl">
+<h2 class="font-heavy text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight leading-[0.9] uppercase">
+          Made to be worn.<br/>
+          Or judged. Or both.
+        </h2>
+</div>
+<!-- Right Emblem ©26 -->
+<div class="shrink-0 flex items-center justify-start lg:justify-end">
+<div class="font-heavy text-7xl sm:text-9xl md:text-[11rem] lg:text-[13rem] leading-none tracking-tighter select-none">
+          ©26
+        </div>
+</div>
+</div>
+</section>
+<!-- END: BoldStatementBanner -->
+<!-- BEGIN: SiteFooter -->
+<footer class="w-full px-4 sm:px-6 md:px-8 pt-12 pb-16 space-y-12">
+<!-- Editorial paragraph blurb -->
+<div class="max-w-xl">
+<p class="text-base sm:text-lg font-medium leading-snug">
+        Created by the ++hellohello team, this store and signature collection celebrates our collective creativity and passion for apparel. Carefully designed.
+      </p>
+</div>
+<!-- Fine dividing rule -->
+<div class="w-full border-b border-[#FF1E00]"></div>
+<!-- Footer Multi-Column Grid -->
+<div class="grid grid-cols-2 md:grid-cols-6 gap-8 text-xs sm:text-[13px] font-semibold leading-relaxed">
+<!-- Col 1: Studio Name & Copyright -->
+<div class="col-span-2 sm:col-span-1 space-y-1">
+<p class="font-bold">++ hellohello</p>
+<p class="text-xs opacity-90">All rights reserved © 2026</p>
+</div>
+<!-- Col 2: Studio Address -->
+<div class="space-y-0.5">
+<p>Libertad 2529</p>
+<p>Office 102</p>
+<p>Montevideo, Uruguay</p>
+</div>
+<!-- Col 3: Legal Policy -->
+<div>
+<a class="hover:underline" href="#">Privacy Policy</a>
+</div>
+<!-- Col 4: Social Channels -->
+<div class="space-y-1">
+<div><a class="hover:underline" href="#">Dribbble</a></div>
+<div><a class="hover:underline" href="#">Instagram</a></div>
+<div><a class="hover:underline" href="#">LinkedIn</a></div>
+<div><a class="hover:underline" href="#">Twitter (X)</a></div>
+</div>
+<!-- Col 5: Company Links -->
+<div class="space-y-1">
+<div><a class="hover:underline" href="#">Work</a></div>
+<div><a class="hover:underline" href="#">Services</a></div>
+<div><a class="hover:underline" href="#">About</a></div>
+<div><a class="hover:underline" href="#">Careers</a></div>
+</div>
+<!-- Col 6: CTA / Contact -->
+<div>
+<a class="hover:underline font-bold" href="mailto:hello@hellohello.is">Let's talk</a>
+</div>
+</div>
+</footer>
+<!-- END: SiteFooter -->
+<!-- Interactivity Script -->
+<script data-purpose="cart-toast-interaction">
+    document.addEventListener('DOMContentLoaded', () => {
+      const productCards = document.querySelectorAll('article');
+      productCards.forEach(card => {
+        card.addEventListener('click', () => {
+          const title = card.querySelector('h2')?.innerText || 'Product';
+          console.log(`[OUTFIT®] Selected: ${title}`);
+        });
+      });
+    });
+  </script>
+</body></html>
