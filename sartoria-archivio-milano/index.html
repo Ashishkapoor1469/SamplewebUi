@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-background":"#1b1c19","tertiary":"#000000","error-container":"#ffdad6","on-tertiary-container":"#af784c","on-error":"#ffffff","surface-container-lowest":"#ffffff","tertiary-fixed":"#ffdcc4","on-secondary":"#ffffff","on-primary-fixed":"#1c1b18","surface-container-highest":"#e3e3de","on-error-container":"#93000a","on-tertiary-fixed-variant":"#683c16","on-surface-variant":"#494740","on-primary":"#ffffff","surface-dim":"#dbdad5","secondary":"#5d604d","surface-container":"#efeee9","on-primary-fixed-variant":"#484743","on-secondary-fixed-variant":"#454837","secondary-container":"#dddfc7","on-tertiary-fixed":"#2f1500","primary-container":"#1c1b18","secondary-fixed-dim":"#c6c8b1","on-surface":"#1b1c19","tertiary-container":"#2f1500","surface-container-high":"#e9e8e3","tertiary-fixed-dim":"#f9b988","surface-variant":"#e3e3de","on-secondary-container":"#60634f","on-secondary-fixed":"#1a1d0e","surface-bright":"#faf9f4","background":"#faf9f4","on-tertiary":"#ffffff","inverse-on-surface":"#f2f1ec","outline":"#7a776f","surface-tint":"#605e5a","inverse-primary":"#cac6c1","inverse-surface":"#30312e","primary-fixed-dim":"#cac6c1","error":"#ba1a1a","on-primary-container":"#86837f","surface-container-low":"#f5f4ef","surface":"#faf9f4","secondary-fixed":"#e2e4cc","outline-variant":"#cac6bd","primary-fixed":"#e6e2dd","primary":"#000000"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-md":"1rem","space-3xl":"6rem","margin-desktop":"4rem","gutter-desktop":"2rem","gutter-mobile":"0.75rem","space-lg":"1.5rem","margin-mobile":"1rem","space-sm":"0.5rem","space-2xl":"4rem","margin":"2rem","gutter":"1.5rem","space-xs":"0.25rem","space-xl":"2.5rem"},fontFamily:{"headline-md":["Bodoni Moda"],"body-md":["Newsreader"],"display-hero-mobile":["Bodoni Moda"],"body-lg":["Newsreader"],"title-editorial":["Newsreader"],"label-caps":["JetBrains Mono"],"display-hero":["Bodoni Moda"],"headline-lg":["Bodoni Moda"],"body-sm":["Newsreader"],"headline-lg-mobile":["Bodoni Moda"],"headline-sm":["Bodoni Moda"],"caption-archival":["JetBrains Mono"],"label-code":["JetBrains Mono"]},fontSize:{"headline-md":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.01em","fontWeight":"400"}],"body-md":["1rem",{"lineHeight":"1.65rem","fontWeight":"400"}],"display-hero-mobile":["2.75rem",{"lineHeight":"3.25rem","letterSpacing":"-0.02em","fontWeight":"400"}],"body-lg":["1.125rem",{"lineHeight":"1.85rem","fontWeight":"400"}],"title-editorial":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"label-caps":["0.6875rem",{"lineHeight":"1rem","letterSpacing":"0.14em","fontWeight":"500"}],"display-hero":["5rem",{"lineHeight":"5.5rem","letterSpacing":"-0.03em","fontWeight":"400"}],"headline-lg":["3rem",{"lineHeight":"3.5rem","letterSpacing":"-0.02em","fontWeight":"400"}],"body-sm":["0.875rem",{"lineHeight":"1.45rem","fontWeight":"400"}],"headline-lg-mobile":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-sm":["1.375rem",{"lineHeight":"1.875rem","letterSpacing":"0em","fontWeight":"500"}],"caption-archival":["0.625rem",{"lineHeight":"0.875rem","letterSpacing":"0.08em","fontWeight":"400"}],"label-code":["0.8125rem",{"lineHeight":"1.25rem","letterSpacing":"0.06em","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface/95 backdrop-blur-md"><div class="h-8 bg-primary-container text-on-primary-container flex items-center justify-between px-margin-desktop"><div class="flex items-center gap-space-md font-caption-archival text-caption-archival uppercase tracking-widest text-on-primary-container/80"><span>COMPLIMENTARY WORLDWIDE CLIMATE-NEUTRAL DISPATCH OVER €300</span><span>•</span><span>MILAN ATELIER APPOINTMENTS NOW OPEN</span><span>•</span><span>CURRENCY: EUR (€) / USD ($)</span></div><div class="flex items-center gap-space-sm font-caption-archival text-caption-archival uppercase tracking-wider text-on-primary-container"><span class="material-symbols-outlined text-[14px]">support_agent</span><span>PRIVATE CLIENT CONCIERGE</span></div></div><div class="h-20 w-full px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm" data-path="collections" href="#"><img alt="Sartoria &amp; Archivio Milano Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WFR08R26ct_NTHlSr5H3MDo194kFanubcymIjxNeJG9yTUPPKn1vrhBitMgd-Wq0n9UBinZt_LWrSMc1a_xNsaDkRwpqEvcgyyHM7C1KNdpLADbiB7Xx-UqJKda1tMLHN4QF9fRMaqgLi3ruj5S6kVX3hXtPpEGp3nINVgSVi04uMTCHOk_BTrS-0hVXlzcEY67lfaHk6isjOalLCsxfk8lMD1N7uuG1Tv9SG2fGSJpLOG799TlWsC4qpG"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface leading-none">Sartoria &amp; Archivio</span><span class="font-caption-archival text-caption-archival uppercase tracking-[0.25em] text-on-surface-variant leading-none mt-1">Milano • 1968</span></div></a></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="bg-primary-container text-on-primary font-semibold"><a aria-current="page" class="uppercase transition-colors py-1 bg-primary-container text-on-primary font-semibold" data-path="collections" href="#">COLLECTIONS</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="archivio-historicum" href="#">ARCHIVIO HISTORICUM</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="the-milano-fit-matrix" href="#">THE MILANO FIT MATRIX</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="bespoke-atelier" href="#">BESPOKE ATELIER</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="fabric-provenance" href="#">FABRIC PROVENANCE</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="journal" href="#">JOURNAL</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center bg-surface-container-low px-3 py-1.5 gap-space-sm text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">search</span><span class="font-caption-archival text-caption-archival uppercase tracking-wider">Atelier Search</span><kbd class="font-label-caps text-[9px] bg-surface-container-highest text-on-surface-variant px-1.5 py-0.5">⌘K</kbd></div><div class="flex items-center gap-space-sm"><button aria-label="Saved Archive Wishlist" class="p-1.5 text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">bookmark</span></button><button aria-label="Shopping Folio" class="p-1.5 text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1.5"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="font-caption-archival text-caption-archival uppercase bg-secondary text-on-secondary px-1.5 py-0.2">[2] €1,840</span></button></div><div class="flex items-center gap-space-sm pl-space-sm bg-surface-container-low py-1 px-2.5"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdYYej2cvTOO0TAnjXDwO7U8upKMjyJBjKNdQH3dSCpenUGSGuOfurXT5IMjWw1c2ZAFnmC2rkTKtnqOhB3YVoYc3pInnZ2hj3CkktGJlnjpSCmJ3BcG8q0rPBWtfL5048LTqmNgF5u2c8I8i9JnGBmz4-34gO5npYZ_AQqSLly9kcb2cw3KHgC-fsa2F7y0TJLlLS_uxaXARiYMaOasVcK7lEXaX4VK0DGpugqEfhD9e4ez4SRus27A"/><div class="hidden lg:flex flex-col text-left"><span class="font-label-caps text-label-caps uppercase text-on-surface leading-tight">Sig. Cav. Rossi</span><span class="font-caption-archival text-caption-archival uppercase tracking-wider text-secondary leading-none">Maestro Tier</span></div></div></div></div><div class="h-10 w-full px-margin-desktop bg-surface-container-low flex items-center justify-between overflow-x-auto"><div class="flex items-center gap-space-md"><span class="font-caption-archival text-caption-archival uppercase text-secondary font-medium tracking-widest flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">filter_alt</span>REGISTRY FILTER:</span><div class="flex items-center gap-space-sm"><a class="font-caption-archival text-caption-archival uppercase bg-surface-container text-on-surface px-2.5 py-1 hover:bg-secondary hover:text-on-secondary transition-colors" data-path="autumn-winter-26" href="#">AUTUMN/WINTER '26</a><a class="font-caption-archival text-caption-archival uppercase bg-surface-container text-on-surface px-2.5 py-1 hover:bg-secondary hover:text-on-secondary transition-colors" data-path="military-chinos-cargos" href="#">MILITARY CHINOS &amp; CARGOS</a><a class="font-caption-archival text-caption-archival uppercase bg-surface-container text-on-surface px-2.5 py-1 hover:bg-secondary hover:text-on-secondary transition-colors" data-path="double-faced-cashmere" href="#">DOUBLE-FACED CASHMERE</a><a class="font-caption-archival text-caption-archival uppercase bg-surface-container text-on-surface px-2.5 py-1 hover:bg-secondary hover:text-on-secondary transition-colors" data-path="unstructured-blazers" href="#">UNSTRUCTURED BLAZERS</a><a class="font-caption-archival text-caption-archival uppercase bg-surface-container text-on-surface px-2.5 py-1 hover:bg-secondary hover:text-on-secondary transition-colors" data-path="technical-gabardine" href="#">TECHNICAL GABARDINE</a><a class="font-caption-archival text-caption-archival uppercase bg-surface-container text-on-surface px-2.5 py-1 hover:bg-secondary hover:text-on-secondary transition-colors" data-path="archival-accessories" href="#">ARCHIVAL ACCESSORIES</a></div></div><div class="hidden 2xl:flex items-center font-caption-archival text-caption-archival uppercase text-on-surface-variant gap-space-xs"><span>SPECIMEN LOC: VIA GESÙ 12, MILANO</span><span>[LOT NO. 26-IT/L]</span></div></div></header><main class="w-full pt-[9.5rem] bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- SECTION 1: HERO CAMPAIGN MONOGRAPH -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-space-xl md:py-space-2xl bg-surface relative">
+<div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<!-- Left Column: Editorial Monograph Dossier -->
+<div class="lg:col-span-5 flex flex-col justify-between space-y-space-lg">
+<div>
+<!-- Archival Monograph Header -->
+<div class="flex items-center gap-space-sm font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em] mb-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary inline-block"></span>
+<span>MONOGRAPH NO. 26 // FW ARCHIVE</span>
+<span class="text-outline-variant">•</span>
+<span class="text-on-surface-variant font-medium">COLLEZIONE MILANO MMXXVI</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-none mb-space-md">
+            Utilitarian Precision,<br/><span class="italic font-normal">Sartorial Grace.</span>
+</h1>
+<p class="font-title-editorial text-title-editorial text-on-surface-variant italic mb-space-md leading-relaxed">
+            “Archival military workwear silhouette refined with Biella virgin wool, stretch gabardine, and hand-carved buffalo horn buttons.”
+          </p>
+<!-- Tailor Attribution Plate -->
+<div class="bg-surface-container-low p-space-md mb-space-lg flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">draw</span>
+<div class="flex flex-col">
+<span class="font-label-code text-label-code text-on-surface font-medium">Marco Bellini</span>
+<span class="font-caption-archival text-caption-archival uppercase text-on-surface-variant">Master Tailor, Via Gesù Atelier, Milano</span>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary bg-surface-container px-2 py-1 uppercase">Doc. Ref #09418</span>
+</div>
+<!-- CTAs -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm mb-space-xl">
+<a class="bg-primary text-on-primary font-label-caps text-label-caps px-space-lg py-3.5 text-center uppercase tracking-widest hover:bg-secondary transition-colors shadow-md" href="#matrix">
+              EXPLORE THE FW26 MONOGRAPH
+            </a>
+<a class="bg-surface-container-low text-on-surface font-label-caps text-label-caps px-space-lg py-3.5 text-center uppercase tracking-widest hover:bg-surface-container transition-colors" href="#concierge">
+              BOOK ATELIER FITTING [ → ]
+            </a>
+</div>
+</div>
+<!-- Ensemble Coordinates In View (Quick Add Mini-Tray) -->
+<div class="bg-surface-container p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase text-on-surface tracking-wider font-semibold">ENSEMBLE COORDINATES IN VIEW [PLATE 01]</span>
+<span class="font-caption-archival text-caption-archival uppercase text-secondary">3 ITEMS REGISTERED</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Mini Item 1 -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-2 hover:bg-surface transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<img class="w-12 h-14 object-cover flex-shrink-0" data-alt="Close up architectural tailoring photograph of Harris field chore jacket in deep olive cashmere wool with horn buttons resting on concrete plinth in natural museum light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI5xZynsV_SYBuITMq6SkuhYqaa-tRkFuDDevux_4aqDsaotj2PtGdHoVaRAt-RYGR2hoSS03XLLsCs3zVirUOkRprIVe3ovtGPX3vKlwJ5e1SNac72sS_EOxxqxhVWxj0CvjNturRUUDhh7nj_kVqkUqK6Lq9hcWzrcoIn22D1_Wa-jjDiOOtl04bNPX1O7tTqGMuz91Y0cvf4f7MCApUWtNTDQG_TKgxQ7LvHS61akIfIOja9Y7Ewg"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-sm text-on-surface truncate">Harris Field Chore Jacket</span>
+<span class="font-caption-archival text-caption-archival text-on-surface-variant uppercase">MOD. 04-MIL / BIELLA 380 GSM</span>
+</div>
+</div>
+<div class="flex items-center gap-3 ml-2 flex-shrink-0">
+<span class="font-label-code text-label-code text-on-surface font-semibold">€420</span>
+<button class="font-label-caps text-label-caps bg-primary text-on-primary px-2.5 py-1.5 hover:bg-secondary transition-colors uppercase" onclick="this.innerText='ADDED [✓]'; setTimeout(() =&gt; this.innerText='QUICK ADD', 2000)">QUICK ADD</button>
+</div>
+</div>
+<!-- Mini Item 2 -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-2 hover:bg-surface transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<img class="w-12 h-14 object-cover flex-shrink-0" data-alt="High luxury studio macro shot of folded military trousers in heavy stone gabardine showcasing tailored waistband and crisp front pleat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK2JgO8uwH6EZMQwpGpgTGD5uZHz_blAEqEDtu8EW8Ixn-jJ6audWb5GiT0RCYzuMDfdLwSkyYk7r51RZtGKWaYlkzadNdRHKPPF-GQmaJa0PE-17SLWXSXX4ajbl8SIOJrIlBUKYHVOjilpVVp25snCTuahv0FQ5C4RY93kAkOhYnrI1ULEtl78iiSxJ78am1zCyuKriZ0-5L3UVz5nuolHwf45DthLr9cb8O8RvrUuw7eVo5lLNANQ"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-sm text-on-surface truncate">Milano Tapered Trouser</span>
+<span class="font-caption-archival text-caption-archival text-on-surface-variant uppercase">MOD. TR-74 / PRATO COMBED COTTON</span>
+</div>
+</div>
+<div class="flex items-center gap-3 ml-2 flex-shrink-0">
+<span class="font-label-code text-label-code text-on-surface font-semibold">€380</span>
+<button class="font-label-caps text-label-caps bg-primary text-on-primary px-2.5 py-1.5 hover:bg-secondary transition-colors uppercase" onclick="this.innerText='ADDED [✓]'; setTimeout(() =&gt; this.innerText='QUICK ADD', 2000)">QUICK ADD</button>
+</div>
+</div>
+<!-- Mini Item 3 -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-2 hover:bg-surface transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<img class="w-12 h-14 object-cover flex-shrink-0" data-alt="Still life photograph of cream silk and organic cotton roll-neck knitwear folded neatly on walnut atelier cutting table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAU7l3oaBq0ynlGAlJ6dxyxvO3kgrGaAk53d-VmkAapogh0jX3n_mI4NV6cSZl40yCOVJ_JIBU0P44GVWNfmrxvI4P5PlDzzwHtIRp5-mgFHGjfWJrrG6HLWhCtJaCX-dpi8fqZCNeYsOkjWD-T7Ckl6wm-t_3D7nCylRiwsaXVx0JkffDlfYOLtlZ_MCfioX7xnI_M1JfB6qdm9SLSAN3D702jk2QGOv1JddDoGFVGfma6mu_nJUEjw"/>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-sm text-on-surface truncate">Biella Micro-Gauge Rollneck</span>
+<span class="font-caption-archival text-caption-archival text-on-surface-variant uppercase">SPEC. RN-02 / SUPER 160S CASHMERE</span>
+</div>
+</div>
+<div class="flex items-center gap-3 ml-2 flex-shrink-0">
+<span class="font-label-code text-label-code text-on-surface font-semibold">€195</span>
+<button class="font-label-caps text-label-caps bg-primary text-on-primary px-2.5 py-1.5 hover:bg-secondary transition-colors uppercase" onclick="this.innerText='ADDED [✓]'; setTimeout(() =&gt; this.innerText='QUICK ADD', 2000)">QUICK ADD</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Full Campaign Visual & Specimen Tagging -->
+<div class="lg:col-span-7 flex flex-col">
+<div class="relative w-full overflow-hidden bg-surface-container-high group shadow-xl">
+<img class="w-full h-[640px] object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]" data-alt="High-fashion Italian editorial photograph shot on 35mm film at modernist Villa Necchi Campiglio in Milan. An elegant and sharp model wearing an unstructured military-sartorial tailored jacket and relaxed pleated trousers standing beside geometric stone columns in soft golden hour light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFy4up2vZKP1_StsQeu-EH5KRleygAx08BSCmiG6Wfy5BUB4sjnoUnE2Vd6t_7HE6jZXFBfRreKshjjkBlxo0BAQnh-C9GLQxRsKlxnqnhVBYMdiF6K_DnqJj_jz431OMhX6Gv2QzYAsnwFy4Qhac3fwATPXQt8OA4Cq4LcJjfrR689Eu0PMWWA5RUGH38XOdlnfGB5XHFlC55SyBJeJhZ7jQD0xd_icfKy_B7jQdDJd5Jj5JD-3o3Zw"/>
+<!-- Archival Film Margin Details -->
+<div class="absolute top-4 left-4 bg-primary/80 backdrop-blur-md px-3 py-1.5 text-on-primary font-caption-archival text-caption-archival uppercase tracking-wider">
+            Plate 01 // Shot on 35mm at Villa Necchi Campiglio, Milano
+          </div>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/90 px-3 py-1 font-label-code text-label-code text-on-surface font-medium">
+            EXP: 10/2026 // ISO 200
+          </div>
+<!-- Garment Hotspot 1 (Jacket) -->
+<div class="absolute top-[38%] left-[45%] group/spot cursor-pointer">
+<span class="relative flex h-6 w-6">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-6 w-6 bg-primary text-on-primary items-center justify-center font-caption-archival text-[10px] font-bold">1</span>
+</span>
+<div class="hidden group-hover/spot:flex absolute left-8 -top-3 flex-col bg-surface-container-lowest p-3 min-w-[220px] shadow-xl z-20">
+<span class="font-label-caps text-label-caps uppercase text-secondary">ARCHIVAL OUTERWEAR</span>
+<span class="font-headline-sm text-sm text-on-surface font-medium">Harris Chore Cut Spec</span>
+<span class="font-label-code text-xs text-on-surface-variant">€420 • Heavyweight 380 GSM</span>
+<span class="font-caption-archival text-[9px] uppercase text-on-surface-variant mt-1">Biella Virgin Cashmere / Horn Buttons</span>
+</div>
+</div>
+<!-- Garment Hotspot 2 (Trousers) -->
+<div class="absolute bottom-[28%] left-[52%] group/spot cursor-pointer">
+<span class="relative flex h-6 w-6">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-6 w-6 bg-primary text-on-primary items-center justify-center font-caption-archival text-[10px] font-bold">2</span>
+</span>
+<div class="hidden group-hover/spot:flex absolute left-8 -top-3 flex-col bg-surface-container-lowest p-3 min-w-[220px] shadow-xl z-20">
+<span class="font-label-caps text-label-caps uppercase text-secondary">ARCHIVAL BOTTOMS</span>
+<span class="font-headline-sm text-sm text-on-surface font-medium">Milano Tapered Cut</span>
+<span class="font-label-code text-xs text-on-surface-variant">€380 • 18cm Tapered Hem</span>
+<span class="font-caption-archival text-[9px] uppercase text-on-surface-variant mt-1">Extended Sartorial Tab Closure</span>
+</div>
+</div>
+<!-- Bottom Visual Barcode & Provenance Strip -->
+<div class="absolute bottom-0 inset-x-0 bg-primary/95 text-on-primary px-space-md py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-space-md font-caption-archival text-caption-archival uppercase">
+<span>CANVAS REGISTRY: IT-CAM-26-01</span>
+<span class="hidden sm:inline">WARP/WEFT: 2/2 TWILL</span>
+<span>DYE LOT: VEGETAL VERDE</span>
+</div>
+<div class="font-caption-archival text-caption-archival text-on-primary-container">
+              SERIES: AUTUNNO/INVERNO
+            </div>
+</div>
+</div>
+<!-- Archival Spec Meta Row Underneath -->
+<div class="grid grid-cols-3 gap-2 mt-2 font-caption-archival text-caption-archival uppercase text-on-surface-variant text-center">
+<div class="bg-surface-container-low py-2">ORIGIN: ATELIER VIA GESÙ</div>
+<div class="bg-surface-container-low py-2">FABRIC: LANIFICIO CERRUTI 1881</div>
+<div class="bg-surface-container-low py-2">STITCH DENSITY: 8 PER CM</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: 'THE MILANO FIT MATRIX' INTERACTIVE SILHOUETTE SELECTOR -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-space-3xl bg-surface-container-low" id="matrix">
+<div class="w-full max-w-7xl mx-auto">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-[0.2em] block mb-2">ARCHITECTURAL CUT SYSTEM</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface leading-tight">The Milano Fit Matrix</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md italic">
+          Every silhouette is drafted from anatomical measurements taken at our Milanese laboratory, balancing military pocket volume with razor-clean trouser lines.
+        </p>
+</div>
+<!-- Fit Matrix Tabs -->
+<div class="flex items-center gap-2 overflow-x-auto pb-space-sm mb-space-lg" id="matrix-tab-bar">
+<button class="font-label-caps text-label-caps uppercase px-space-md py-3 bg-primary text-on-primary whitespace-nowrap transition-all shadow-sm" id="tab-milano" onclick="switchFit('milano')">
+          MILANO TAPERED (SLIM SARTORIAL)
+        </button>
+<button class="font-label-caps text-label-caps uppercase px-space-md py-3 bg-surface-container-highest text-on-surface whitespace-nowrap hover:bg-secondary-container transition-all" id="tab-torino" onclick="switchFit('torino')">
+          TORINO ARCHIVAL (RELAXED CHINO)
+        </button>
+<button class="font-label-caps text-label-caps uppercase px-space-md py-3 bg-surface-container-highest text-on-surface whitespace-nowrap hover:bg-secondary-container transition-all" id="tab-venezia" onclick="switchFit('venezia')">
+          VENEZIA CARGO (UTILITY PLEATED)
+        </button>
+<button class="font-label-caps text-label-caps uppercase px-space-md py-3 bg-surface-container-highest text-on-surface whitespace-nowrap hover:bg-secondary-container transition-all" id="tab-roma" onclick="switchFit('roma')">
+          ROMA CIGARETTE (FORMAL TROUSER)
+        </button>
+</div>
+<!-- Fit Interactive Display Board -->
+<div class="bg-surface-container-lowest p-space-lg md:p-space-xl shadow-md grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Left: Technical Vector / Architectural Cut Sheet Wireframe -->
+<div class="lg:col-span-4 bg-surface-container-low p-space-lg flex flex-col justify-between h-full min-h-[460px]">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-caption-archival text-caption-archival uppercase text-secondary">ARCHITECTURAL SCHEMATIC</span>
+<span class="font-caption-archival text-caption-archival uppercase text-on-surface-variant font-mono" id="fit-schematic-id">SPEC-DWG // 04-MIL</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2" id="fit-name">Milano Tapered</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6" id="fit-desc">
+              Engineered with a high rise, gently softened seat room, and a surgical taper starting at the mid-knee down to a sharp 18cm bottom hem.
+            </p>
+</div>
+<!-- Technical Silhouette Illustration Chart SVG (inline) -->
+<div class="py-space-md flex items-center justify-center">
+<svg class="w-48 h-56 text-primary" fill="none" id="fit-svg" viewbox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
+<!-- Grid Archival Lines -->
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.1" x1="10" x2="190" y1="20" y2="20"></line>
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.1" x1="10" x2="190" y1="120" y2="120"></line>
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.1" x1="10" x2="190" y1="220" y2="220"></line>
+<!-- Tapered Silhouette -->
+<path d="M 60,30 L 45,90 L 52,150 L 68,260 L 96,260 L 98,120 Z" fill="currentColor" fill-opacity="0.08" id="fit-path-left" stroke="currentColor" stroke-width="1.75"></path>
+<path d="M 140,30 L 155,90 L 148,150 L 132,260 L 104,260 L 102,120 Z" fill="currentColor" fill-opacity="0.08" id="fit-path-right" stroke="currentColor" stroke-width="1.75"></path>
+<!-- Sartorial Waistband Extension -->
+<rect fill="none" height="8" stroke="currentColor" stroke-width="1.5" width="84" x="58" y="24"></rect>
+<!-- Measurement Guides -->
+<circle cx="68" cy="260" fill="currentColor" r="3"></circle>
+<circle cx="132" cy="260" fill="currentColor" r="3"></circle>
+<line stroke="currentColor" stroke-width="1" x1="68" x2="132" y1="268" y2="268"></line>
+<text fill="currentColor" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="100" y="278">18.0 CM HEM</text>
+</svg>
+</div>
+<div class="flex items-center justify-between pt-4 bg-surface-container px-3 py-2">
+<span class="font-caption-archival text-caption-archival text-on-surface-variant uppercase">Drop: 7 Tailored</span>
+<span class="font-caption-archival text-caption-archival text-secondary font-bold uppercase">MILANESE CUT CERTIFIED</span>
+</div>
+</div>
+<!-- Middle: Metric Specimen Breakdown Table -->
+<div class="lg:col-span-4 flex flex-col justify-between h-full space-y-space-md">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-caps text-label-caps uppercase text-on-surface tracking-wider">PRECISE METRICS REGISTER</span>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-0.5">
+<button class="font-caption-archival text-[10px] uppercase font-bold text-on-surface" id="btn-unit-cm" onclick="toggleUnits('cm')">CM</button>
+<span class="text-on-surface-variant text-[10px]">/</span>
+<button class="font-caption-archival text-[10px] uppercase text-on-surface-variant" id="btn-unit-in" onclick="toggleUnits('in')">IN</button>
+</div>
+</div>
+<!-- Dense Specimen Table -->
+<div class="space-y-1.5 font-label-code text-label-code">
+<div class="flex items-center justify-between p-2.5 bg-surface-container-low">
+<span class="text-on-surface-variant font-caption-archival uppercase">Front Rise (Waist to Crotch)</span>
+<span class="font-semibold text-on-surface" id="metric-rise">29.5 CM (11.6")</span>
+</div>
+<div class="flex items-center justify-between p-2.5 bg-surface-container-low">
+<span class="text-on-surface-variant font-caption-archival uppercase">Thigh Width at Fork</span>
+<span class="font-semibold text-on-surface" id="metric-thigh">32.0 CM (12.6")</span>
+</div>
+<div class="flex items-center justify-between p-2.5 bg-surface-container-low">
+<span class="text-on-surface-variant font-caption-archival uppercase">Knee Circumference</span>
+<span class="font-semibold text-on-surface" id="metric-knee">23.5 CM (9.25")</span>
+</div>
+<div class="flex items-center justify-between p-2.5 bg-surface-container-low">
+<span class="text-on-surface-variant font-caption-archival uppercase">Bottom Leg Opening / Hem</span>
+<span class="font-semibold text-on-surface" id="metric-hem">18.0 CM (7.08")</span>
+</div>
+<div class="flex items-center justify-between p-2.5 bg-surface-container-low">
+<span class="text-on-surface-variant font-caption-archival uppercase">Finished Inseam Length</span>
+<span class="font-semibold text-on-surface" id="metric-inseam">84.0 CM (33.0")</span>
+</div>
+</div>
+<!-- Fabric Weave & Material Badge -->
+<div class="mt-space-md p-space-md bg-surface-container">
+<span class="font-caption-archival text-caption-archival uppercase text-secondary block mb-1">FABRIC WEAVE DENSITY &amp; COMPOSITION</span>
+<p class="font-headline-sm text-sm text-on-surface font-medium mb-2" id="metric-fabric">
+                340g/m² Heavyweight Moleskin Cotton &amp; Virgin Wool Stretch
+              </p>
+<div class="flex items-center gap-space-sm font-caption-archival text-caption-archival uppercase text-on-surface-variant">
+<span>Mill: Tessitura Di Quaregna, Biella</span>
+<span>•</span>
+<span>Weave: 3/1 Cavalry Serge</span>
+</div>
+</div>
+</div>
+<!-- Tailoring Consultation CTA -->
+<div class="pt-space-sm">
+<button class="w-full bg-surface-container-highest hover:bg-secondary hover:text-on-secondary text-on-surface font-label-caps text-label-caps py-3.5 px-space-md uppercase tracking-wider transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px]">straighten</span>
+<span>REQUEST TAILORING CONSULTATION FOR THIS CUT</span>
+</button>
+</div>
+</div>
+<!-- Right: Curated Look Preview Image -->
+<div class="lg:col-span-4 relative overflow-hidden bg-surface-container h-full min-h-[460px]">
+<img class="w-full h-full object-cover" data-alt="Full length editorial model styling the Milano Tapered silhouette trouser paired with dark leather monkstraps and unlined cashmere blazer against warm stone gallery wall in Milan atelier" id="fit-model-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv2Zr6g_lg5pNFPFYciqi8IIbFKSEARqEbqcRT0ibA54eB8EoiurINX2je7N3NBrkonFTAyntn3To0m91DbuzVABHz4ef3DIk1BuYJVrjh7AZaMVHiLNC5J14AGnVwX-OrWB4uWp8xBq6lP3TZ5m5dDqdWalZlVetRJmfEvK5ftqhyB2aRaIuJopDpSpLi1pUaSBG9ItEq3l5pTOYRfTxW9tzcF_aLV4-WBQN0VwnYKhTj1wMbcaxlLw"/>
+<div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent p-space-md text-on-primary flex flex-col justify-end">
+<span class="font-caption-archival text-caption-archival uppercase text-tertiary-fixed">MODEL LOOK SPECIMEN</span>
+<span class="font-headline-sm text-sm text-on-primary" id="fit-model-meta">Sig. Lorenzo (188cm) wearing IT 50</span>
+<span class="font-caption-archival text-[10px] text-on-primary-container uppercase">Finished with 4.5cm External Turn-up Cuff</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: ARCHIVAL CAPSULE LOOKS & CURATED EDITIONS (EDITORIAL TILES) -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-space-3xl bg-surface">
+<div class="w-full max-w-7xl mx-auto">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-[0.2em] block mb-2">FW26 REGISTRY EDITIONS</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface leading-tight">Curated Archival Garments</h2>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-caption-archival text-caption-archival uppercase text-on-surface-variant">CATALOG ENTRIES: 4 OF 18 DISPLAYED</span>
+<a class="font-label-caps text-label-caps uppercase text-on-surface hover:text-secondary transition-colors underline" href="#">VIEW ALL CATALOG ENTRIES [ → ]</a>
+</div>
+</div>
+<!-- Asymmetrical 4-Card Editorial Product Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop">
+<!-- CARD 1: Harris Field Chore Jacket -->
+<div class="flex flex-col bg-surface-container-low group shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/5] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Harris field chore jacket in rich raw olive cashmere blend tailored garment flat lay on neutral limestone surface with horn buttons and utility flap chest pockets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuColbi-0--INCkXax2gcoRkqZX3fZ-DsH4SHzxUGN0dnogT-puxoya1k1TbRKdWF2WxoAHJl2a8F3M5fRCpGJaHHrgvD6o1ifbnlRhwsUxH4t4-y8nRpn54ndBm8Cn5Jqhyuq2TcwSZN9FLIyjCHuszF-R_uodSCZRwyvUaDgtlhU1UMQO6jMA8sHZ5cmC6IAuFbotBS4JW_pTfN8Tml2DXNYJd4pudrIdSB82_yyBBeq7UIHexAvT4nQ"/>
+<!-- Swatch Zoom Pip on hover -->
+<div class="absolute top-3 right-3 bg-surface-container-lowest/90 p-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-on-surface">zoom_in</span>
+</div>
+<!-- Mill badge -->
+<div class="absolute bottom-3 left-3 bg-primary/85 text-on-primary font-caption-archival text-caption-archival uppercase px-2 py-1">
+              BIELLA MILL REF. #842
+            </div>
+<!-- Wishlist Button -->
+<button aria-label="Bookmark" class="absolute top-3 left-3 bg-surface-container-lowest/90 hover:bg-surface-container-lowest p-1.5 text-on-surface transition-colors" onclick="this.classList.toggle('text-secondary')">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-caption-archival text-caption-archival uppercase text-secondary">MOD. CH-26 // JACKET</span>
+<span class="font-label-code text-label-code text-on-surface font-semibold">€680</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Harris Field Chore Jacket</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm italic">
+                Garment-dyed virgin cashmere blend with bellows storm pockets and unlined soft shoulder architecture.
+              </p>
+<!-- Color Swatch Dots -->
+<div class="flex items-center gap-2 mb-space-md">
+<span class="font-caption-archival text-[9px] uppercase text-on-surface-variant">COLORWAYS:</span>
+<button class="w-3.5 h-3.5 rounded-full bg-[#4B5320] ring-1 ring-offset-1 ring-primary" title="Raw Olive"></button>
+<button class="w-3.5 h-3.5 rounded-full bg-[#C2B280]" title="Desert Sand"></button>
+<button class="w-3.5 h-3.5 rounded-full bg-[#2B1B17]" title="Espresso"></button>
+</div>
+</div>
+<!-- Quick Sizing Bar -->
+<div>
+<div class="flex items-center justify-between font-caption-archival text-caption-archival text-on-surface-variant mb-1 uppercase">
+<span>SELECT ITALIAN SIZE:</span>
+<span class="text-secondary font-bold">READY TO DISPATCH</span>
+</div>
+<div class="grid grid-cols-5 gap-1 font-label-code text-xs text-center">
+<button class="py-1 bg-surface-container hover:bg-primary hover:text-on-primary transition-colors">46</button>
+<button class="py-1 bg-surface-container hover:bg-primary hover:text-on-primary transition-colors">48</button>
+<button class="py-1 bg-surface-container hover:bg-primary hover:text-on-primary transition-colors font-bold">50</button>
+<button class="py-1 bg-surface-container hover:bg-primary hover:text-on-primary transition-colors">52</button>
+<button class="py-1 bg-surface-container hover:bg-primary hover:text-on-primary transition-colors">54</button>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 2: Milano Extra-Slim Pant -->
+<div class="flex flex-col bg-surface-container-low group shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/5] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Milano extra slim trouser in dense heavyweight stretch gabardine in deep charcoal dark espresso, detailed shot focusing on clean extended tab waistband and belt loops" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRvzJvtAwOW97kk9uc9WZLKjfm2ZD6TsO1qS9x8cX6UrN-xNN35cUf9YYDiB9zIDAvkztBZX8FfOzNKs4rYWOYKmL6RrQZ73ebRRvyeJ1DrfQB2zoImDRAezUpCguk_UHTtYxLdJvwWdnAAYun0U2cvJ5GlPOwnrClVH9keSBTWC6UqLd1XRCg-5iNQlNdh9TiRQhr0RJSmDXu_-Ffi8s7mR1p_3hGp7UqNT5PFwLZN_bwDkZ7ecKMbQ"/>
+<div class="absolute bottom-3 left-3 bg-primary/85 text-on-primary font-caption-archival text-caption-archival uppercase px-2 py-1">
+              PRATO COMBED GABARDINE
+            </div>
+<button aria-label="Bookmark" class="absolute top-3 left-3 bg-surface-container-lowest/90 hover:bg-surface-container-lowest p-1.5 text-on-surface transition-colors" onclick="this.classList.toggle('text-secondary')">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-caption-archival text-caption-archival uppercase text-secondary">MOD. TR-77 // SLIM TROUSER</span>
+<span class="font-label-code text-label-code text-on-surface font-semibold">€340</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Milano Extra-Slim Pant</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm italic">
+                Heavyweight 410g stretch cotton-gabardine with interior curtain waistband and authentic horn extension tab.
+              </p>
+<div class="flex items-center gap-2 mb-space-md font-caption-archival text-[10px] uppercase text-on-surface-variant">
+<span class="bg-surface-container px-2 py-0.5">FIT: DROP 7 TAILORED</span>
+<span class="bg-surface-container px-2 py-0.5">HEM: 17.5 CM</span>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between font-caption-archival text-caption-archival text-on-surface-variant mb-1 uppercase">
+<span>SELECT ITALIAN SIZE:</span>
+<span class="text-secondary font-bold">2 UNITS IN STOCK</span>
+</div>
+<div class="grid grid-cols-5 gap-1 font-label-code text-xs text-center">
+<button class="py-1 bg-surface-container hover:bg-primary hover:text-on-primary transition-colors">46</button>
+<button class="py-1 bg-surface-container hover:bg-primary hover:text-on-primary transition-colors font-bold">48</button>
+<button class="py-1 bg-surface-container hover:bg-primary hover:text-on-primary transition-colors">50</button>
+<button class="py-1 bg-surface-container hover:bg-primary hover:text-on-primary transition-colors">52</button>
+<button class="py-1 bg-surface-container hover:bg-primary hover:text-on-primary transition-colors text-on-surface-variant/40 line-through cursor-not-allowed">54</button>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 3: Doppiopetto Officer Coat -->
+<div class="flex flex-col bg-surface-container-low group shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/5] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Doppiopetto double breasted officer greatcoat in natural undyed oat double-face wool, sharp peaks lapels tailored on mannequin in Milan atelier workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWx_I8rpNgAprdzm4bjbtZrVEvRzaG6fxn9WneZbP28MD3f3uyQFCPQqpdCiHkDfNWlll2aoSJZnalxMzlLYdVCkuuSyzP46okry8nfXpz26QaeIv-pNHS38U3x-7iaetrYZpY2yddcwIGCg44BdAZ5rjnnkIwJAbl4xlM2BcUzIYdXV8BZih9hcQaBScoD3jC2YncB6k5_aDMzuiMOoPgrwJJm7XsGj4txqVJYUt2HW_0uzFNk5MoMQ"/>
+<div class="absolute bottom-3 left-3 bg-primary/85 text-on-primary font-caption-archival text-caption-archival uppercase px-2 py-1">
+              HAND-FINISHED IN CARRARA
+            </div>
+<button aria-label="Bookmark" class="absolute top-3 left-3 bg-surface-container-lowest/90 hover:bg-surface-container-lowest p-1.5 text-on-surface transition-colors" onclick="this.classList.toggle('text-secondary')">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-caption-archival text-caption-archival uppercase text-secondary">MOD. CT-88 // GREATCOAT</span>
+<span class="font-label-code text-label-code text-on-surface font-semibold">€920</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Doppiopetto Officer Coat</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm italic">
+                Undyed double-face pure fleece wool with hand-finished split seams, deep welt storm pockets, and military martingala.
+              </p>
+<div class="flex items-center gap-2 mb-space-md font-caption-archival text-[10px] uppercase text-on-surface-variant">
+<span class="bg-surface-container px-2 py-0.5">WEIGHT: 620 GSM</span>
+<span class="bg-surface-container px-2 py-0.5">ORIGIN: CARRARA ATELIER</span>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between font-caption-archival text-caption-archival text-on-surface-variant mb-1 uppercase">
+<span>SELECT ITALIAN SIZE:</span>
+<span class="text-secondary font-bold">LIMITED COMMISSION</span>
+</div>
+<div class="grid grid-cols-5 gap-1 font-label-code text-xs text-center">
+<button class="py-1 bg-surface-container hover:bg-primary hover:text-on-primary transition-colors">46</button>
+<button class="py-1 bg-surface-container hover:bg-primary hover:text-on-primary transition-colors">48</button>
+<button class="py-1 bg-surface-container hover:bg-primary hover:text-on-primary transition-colors">50</button>
+<button class="py-1 bg-surface-container hover:bg-primary hover:text-on-primary transition-colors font-bold">52</button>
+<button class="py-1 bg-surface-container hover:bg-primary hover:text-on-primary transition-colors">54</button>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 4: Archival Modular Canvas Weekender -->
+<div class="flex flex-col bg-surface-container-low group shadow-sm hover:shadow-md transition-shadow">
+<div class="relative w-full aspect-[4/5] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Luxury archival weekender travel bag in heavy military olive duck canvas and vegetable-tanned bridle leather with solid hand-cast brass hardware photographed on weathered parquet floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeKPHFF-FDK6vKBQJap7PogemwKDgV1X8zYskClhlAsDkfBfkR7JR_lGRKq6cQtceicyUOV9GS5lNMGUkSY6yMoo2V5kJzHSVhudvLgJoFavZF9uGjismsUQLb9lc0avguS-TuMZlyOXhJWT9vQnTL2JTyT6gsotk_MPPgVyFtLBpQ0VqsMzdNUUaRjzMOgoOU3-TaRD0Gyh1zJWUnxDWDp502_NDkJjcTBzHXL3AiZ1orio4ZRF29Cg"/>
+<div class="absolute bottom-3 left-3 bg-primary/85 text-on-primary font-caption-archival text-caption-archival uppercase px-2 py-1">
+              SANTA CROCE BRIDLE LEATHER
+            </div>
+<button aria-label="Bookmark" class="absolute top-3 left-3 bg-surface-container-lowest/90 hover:bg-surface-container-lowest p-1.5 text-on-surface transition-colors" onclick="this.classList.toggle('text-secondary')">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-caption-archival text-caption-archival uppercase text-secondary">ACC-09 // LEATHER GOODS</span>
+<span class="font-label-code text-label-code text-on-surface font-semibold">€490</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Modular Canvas Weekender</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-space-sm italic">
+                Military duck canvas lined with waterproof paraffin wax, saddle-stitched Tuscan bridle leather handles, and hand-cast solid brass.
+              </p>
+<div class="flex items-center gap-2 mb-space-md font-caption-archival text-[10px] uppercase text-on-surface-variant">
+<span class="bg-surface-container px-2 py-0.5">CAPACITY: 42 LITRES</span>
+<span class="bg-surface-container px-2 py-0.5">HARDWARE: SOLID BRASS</span>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between font-caption-archival text-caption-archival text-on-surface-variant mb-1 uppercase">
+<span>SPECIFICATION:</span>
+<span class="text-secondary font-bold">INDIVIDUALLY NUMBERED</span>
+</div>
+<button class="w-full py-2 bg-primary text-on-primary font-label-caps text-label-caps uppercase hover:bg-secondary transition-colors" onclick="this.innerText='ACQUIRED FOR DISPATCH [✓]'; setTimeout(() =&gt; this.innerText='ADD TO ARCHIVE FOLIO', 2000)">
+                ADD TO ARCHIVE FOLIO
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: 'ARCHIVIO HISTORICUM' — THE 1974 RETROSPECTIVE -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-space-3xl bg-surface-container-high relative">
+<div class="w-full max-w-7xl mx-auto">
+<!-- Archival Museum Header -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-end mb-space-2xl">
+<div class="lg:col-span-8">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-[0.25em] block mb-2">ARCHIVIO HISTORICUM // MUSEUM CODEX</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface leading-none">The 1974 Retrospective</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm max-w-2xl italic">
+            Over fifty-two years of continuous tailoring evolution preserved under humidity-regulated vault conditions at Via Gesù 12.
+          </p>
+</div>
+<div class="lg:col-span-4 flex justify-start lg:justify-end">
+<a class="bg-primary text-on-primary font-label-caps text-label-caps px-space-lg py-3.5 uppercase tracking-wider hover:bg-secondary transition-colors shadow-md" href="#">
+            EXPLORE THE VIRTUAL ARCHIVE MUSEUM
+          </a>
+</div>
+</div>
+<!-- Historical Artifacts 3-Column Mosaic -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop mb-space-2xl">
+<!-- Artifact 1: Original Sketches -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col">
+<div class="aspect-square bg-surface-container overflow-hidden mb-space-md relative">
+<img class="w-full h-full object-cover" data-alt="Vintage sepia architectural tailoring pattern sketch from 1974 with Italian handwritten tailor chalk notations and measurement calcs on parchment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8XfVKt45ycHzgHKzeTpclhwyGlmARdO0ED4TU0QMis6z5mRuPjahpbP5cJH8NtWbqXkgHSv9TXNvbCRNn-212Ji1XHnAKRpvdWsTaZ-CCbR-n2b-9tt_wjTfRH6eQZXbjkPHVDy9A3_kiTDIRb1sEX4gATwAN8qaIZlma76zfQ2gJtQlpQO3rF6W8iJMO2043cxUUWUTsubW9Unxrvy0qL1DI2wd_wksYc8RNODLqhA_nH4UiCYcyKg"/>
+<div class="absolute top-2 left-2 bg-primary/80 text-on-primary font-caption-archival text-[9px] uppercase px-2 py-0.5">
+              LEDGER DOC #01 // 1974
+            </div>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-secondary mb-1">FOUNDATIONAL PATTERN</span>
+<h4 class="font-headline-sm text-sm text-on-surface mb-2 font-medium">The Original 1974 Tuscan Chino Draft</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-relaxed">
+            First commissioned for military reserve officers in Florence, featuring the continuous waistcurtain designed to resist buckle fatigue.
+          </p>
+</div>
+<!-- Artifact 2: Original Fabric Ledgers -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col">
+<div class="aspect-square bg-surface-container overflow-hidden mb-space-md relative">
+<img class="w-full h-full object-cover" data-alt="Antique cloth sample swatch book from Biella mills dated 1988 with preserved wool swatches in military green and charcoal pinned with brass tacks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKD0pEURHMH4V_8r5WsJ8I6Tes8hlJnvAI8tSjacjEYeft0rhWVkGre4jy6Z_-tYsMnfqyRAIJ86Q3c3yjE7FBdrckzarHg8cf69BqIr0SUmw4lEDTXttlw-3OA6gVPtWjm-Njzfgcv9RYCXqrazbaDqH6DXBvtqJRFFDaqCwS4SPahv5aimQSoCciIhsEt_Lk1U7oWC9b8kEua7KJc9QTvKrnZ66Ti9Tn0X5DVGGX96TIynkEPr1dYQ"/>
+<div class="absolute top-2 left-2 bg-primary/80 text-on-primary font-caption-archival text-[9px] uppercase px-2 py-0.5">
+              MILL RECORD // 1988
+            </div>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-secondary mb-1">TEXTILE CONSERVATION</span>
+<h4 class="font-headline-sm text-sm text-on-surface mb-2 font-medium">Archival Gabardine Weaver’s Ledger</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-relaxed">
+            Preserved yarn specimens demonstrating the transition from rigid 100% carded military canvas to supple combed worsted yarn.
+          </p>
+</div>
+<!-- Artifact 3: Preserved Vintage Garment -->
+<div class="bg-surface-container-lowest p-space-md shadow-sm flex flex-col">
+<div class="aspect-square bg-surface-container overflow-hidden mb-space-md relative">
+<img class="w-full h-full object-cover" data-alt="Museum conservation photography of 1970s tailored military chino on archival padded display mount under soft museum lighting with white conservation glove" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgFhuFw6l_ASIwNaEk86i5p2CRcSeuSTPkr0cBND_TOdxZX_H8mdXMLsrd_K-WKHrgNwBS3Jwc90nylvteB0ucU6kQ2v04Ij3b5I3NJ9Aov_GNFDnWZ1LFd1mzoisPgv9Ra47BJzupfP_44G4EQ415U2OES3cETHCPgZrZkxhWO81Q77rpYnc730J-BirwnRC5aHS_VmJ1sbjz-I7RzIfaiBUrVWRrgZfGhB3RCNuBuxJOq4w_bHv5Zg"/>
+<div class="absolute top-2 left-2 bg-primary/80 text-on-primary font-caption-archival text-[9px] uppercase px-2 py-0.5">
+              SPECIMEN IT-74-001
+            </div>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-secondary mb-1">PHYSICAL SPECIMEN</span>
+<h4 class="font-headline-sm text-sm text-on-surface mb-2 font-medium">Model 01 Surviving First Run Trousers</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-relaxed">
+            Inspected biannually in our Milan vault. Realized in unwashed 14oz Tuscan cotton twill with authentic bone buttons and saddle stitch.
+          </p>
+</div>
+</div>
+<!-- Interactive Timeline Slider Component -->
+<div class="bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-caps text-label-caps uppercase text-on-surface tracking-wider">HISTORICAL EPOCH TIMELINE</span>
+<span class="font-caption-archival text-caption-archival uppercase text-secondary">CHRONOLOGY: 1974 — 2026</span>
+</div>
+<!-- Timeline Buttons Bar -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 mb-space-md">
+<button class="text-left p-space-sm bg-primary text-on-primary transition-all" id="epoch-btn-0" onclick="setEpoch(0)">
+<span class="font-caption-archival text-[10px] block opacity-80 uppercase">EPOCH I // 1974</span>
+<span class="font-headline-sm text-xs block font-medium">The First Tuscan Chino</span>
+</button>
+<button class="text-left p-space-sm bg-surface-container text-on-surface hover:bg-surface-container-highest transition-all" id="epoch-btn-1" onclick="setEpoch(1)">
+<span class="font-caption-archival text-[10px] block text-on-surface-variant uppercase">EPOCH II // 1988</span>
+<span class="font-headline-sm text-xs block font-medium">Technical Gabardine Genesis</span>
+</button>
+<button class="text-left p-space-sm bg-surface-container text-on-surface hover:bg-surface-container-highest transition-all" id="epoch-btn-2" onclick="setEpoch(2)">
+<span class="font-caption-archival text-[10px] block text-on-surface-variant uppercase">EPOCH III // 2005</span>
+<span class="font-headline-sm text-xs block font-medium">Deconstructed Solaro Suiting</span>
+</button>
+<button class="text-left p-space-sm bg-surface-container text-on-surface hover:bg-surface-container-highest transition-all" id="epoch-btn-3" onclick="setEpoch(3)">
+<span class="font-caption-archival text-[10px] block text-on-surface-variant uppercase">EPOCH IV // 2026</span>
+<span class="font-headline-sm text-xs block font-medium">Circular Regenerated Cashmere</span>
+</button>
+</div>
+<!-- Epoch Dynamic Info Panel -->
+<div class="bg-surface-container-low p-space-md flex flex-col md:flex-row items-center justify-between gap-space-md" id="epoch-display">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-secondary text-[28px]">history_edu</span>
+<div>
+<span class="font-headline-sm text-base text-on-surface block font-medium" id="epoch-title">1974: The First Tuscan Chino &amp; Atelier Inception</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant italic" id="epoch-desc">
+                Crafted for officer leisure at the historic Via Gesù atelier, combining British military cotton drill with Florentine tailoring drape.
+              </span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<span class="font-caption-archival text-caption-archival uppercase bg-surface-container px-2.5 py-1 text-on-surface" id="epoch-vault-code">VAULT REF: ARC-1974-A</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: 'THE ATELIER CRAFTSMANSHIP & CLIENT SERVICE' -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-space-3xl bg-surface" id="concierge">
+<div class="w-full max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop">
+<!-- Left: High-Touch Client Services Dossier -->
+<div class="lg:col-span-7 flex flex-col justify-between space-y-space-xl">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-[0.25em] block mb-2">PRIVILEGED CARE &amp; SERVICE</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface leading-tight mb-space-md">The Atelier Craftsmanship Guild</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl italic mb-space-lg">
+              Tailoring is a continuous dialogue, not an ephemeral transaction. Every client is assigned a dedicated Milanese master clothier for customized sizing records and life-cycle garment maintenance.
+            </p>
+<!-- Service Feature Cards (no borders, tonal backgrounds) -->
+<div class="space-y-space-md">
+<!-- Service 1: WhatsApp Direct Concierge -->
+<div class="bg-surface-container-low p-space-md flex items-start gap-space-md shadow-sm">
+<div class="p-2.5 bg-surface-container text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">chat</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between mb-1">
+<h4 class="font-headline-sm text-base text-on-surface font-medium">Private Stylist &amp; Virtual Fitting</h4>
+<!-- Live Availability Indicator -->
+<div class="flex items-center gap-1.5 font-caption-archival text-caption-archival uppercase text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse inline-block"></span>
+<span>3 MASTER CLOTHIERS ONLINE</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic mb-space-sm leading-relaxed">
+                    Direct communication via secure Milan desk WhatsApp protocol. Submit your dimensions, posture portraits, or garment coordination queries.
+                  </p>
+<a class="font-label-caps text-label-caps uppercase text-primary hover:text-secondary inline-flex items-center gap-1 transition-colors" href="https://wa.me/#" target="_blank">
+<span>CONNECT WITH VIA GESÙ DESK</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 2: Traceable Provenance Guarantee -->
+<div class="bg-surface-container-low p-space-md flex items-start gap-space-md shadow-sm">
+<div class="p-2.5 bg-surface-container text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col flex-1">
+<h4 class="font-headline-sm text-base text-on-surface font-medium mb-1">Traceable Provenance Guarantee</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic mb-2 leading-relaxed">
+                    100% certified Italian fabric mills in Biella, Prato, and Carrara. Delivered in plastic-free archival boxes crafted from FSC Italian cellulose paper.
+                  </p>
+<div class="flex flex-wrap items-center gap-2 font-caption-archival text-caption-archival uppercase text-on-surface-variant">
+<span class="bg-surface-container px-2 py-0.5">LIFETIME MENDING MANIFESTO</span>
+<span class="bg-surface-container px-2 py-0.5">FREE FLAGSHIP ADJUSTMENTS</span>
+<span class="bg-surface-container px-2 py-0.5">BIOMORPHIC ZERO-SYNTHETICS</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Quote -->
+<div class="p-space-md bg-surface-container text-on-surface flex items-center justify-between">
+<span class="font-body-sm text-body-sm italic">“A suit that does not outlive its owner’s first decade is not tailoring—it is mere fabric.”</span>
+<span class="font-caption-archival text-caption-archival uppercase text-secondary font-bold">1968 STATUTE</span>
+</div>
+</div>
+<!-- Right: Book Private Salon Appointment Booking Module -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-lg md:p-space-xl shadow-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">PRIVATE ATELIER PROTOCOL</span>
+<span class="font-caption-archival text-caption-archival uppercase text-on-surface-variant font-mono">REG-CAL-2026</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Book Private Salon Appointment</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg italic">
+              Reserve an exclusive one-hour fitting consultation with espresso service and personalized cut-sheet drafting.
+            </p>
+<form class="space-y-space-md" onsubmit="event.preventDefault(); document.getElementById('booking-confirmation').classList.remove('hidden');">
+<!-- Atelier Selector -->
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">SELECT SALON LOCATION</label>
+<select class="w-full bg-surface-container-low text-on-surface font-label-code text-label-code p-3 focus:outline-none focus:bg-surface-container">
+<option value="milano">Milano // Via Gesù 12 (Main Flagship Atelier)</option>
+<option value="roma">Roma // Via Condotti 48 (Salone Sartoriale)</option>
+<option value="newyork">New York // Madison Ave 650 (Private Client Suite)</option>
+</select>
+</div>
+<!-- Client Identification -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">HONORIFIC &amp; NAME</label>
+<input class="w-full bg-surface-container-low text-on-surface font-label-code text-label-code p-3 focus:outline-none focus:bg-surface-container" placeholder="Sig. / Sig.ra Cognome" required="" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">DIGITAL DISPATCH / EMAIL</label>
+<input class="w-full bg-surface-container-low text-on-surface font-label-code text-label-code p-3 focus:outline-none focus:bg-surface-container" placeholder="client@patrician.it" required="" type="email"/>
+</div>
+</div>
+<!-- Fitting Date & Time Selection -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">CALENDAR DATE</label>
+<input class="w-full bg-surface-container-low text-on-surface font-label-code text-label-code p-3 focus:outline-none focus:bg-surface-container" type="date" value="2026-10-24"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">PREFERRED TIME SLOT</label>
+<select class="w-full bg-surface-container-low text-on-surface font-label-code text-label-code p-3 focus:outline-none focus:bg-surface-container">
+<option>10:30 — Mattina Privata</option>
+<option>14:00 — Pomeriggio Sartoriale</option>
+<option>17:00 — Aperitivo &amp; Drape Review</option>
+</select>
+</div>
+</div>
+<!-- Service Type Checkbox Chips -->
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant mb-1.5">INTENDED FOCUS</label>
+<div class="flex flex-wrap gap-2">
+<label class="flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1.5 cursor-pointer hover:bg-surface-container">
+<input checked="" class="accent-primary" type="checkbox"/>
+<span class="font-caption-archival text-caption-archival uppercase text-on-surface">FW26 Capsule Fittings</span>
+</label>
+<label class="flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1.5 cursor-pointer hover:bg-surface-container">
+<input class="accent-primary" type="checkbox"/>
+<span class="font-caption-archival text-caption-archival uppercase text-on-surface">Bespoke Trouser Drape</span>
+</label>
+<label class="flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1.5 cursor-pointer hover:bg-surface-container">
+<input class="accent-primary" type="checkbox"/>
+<span class="font-caption-archival text-caption-archival uppercase text-on-surface">Mending &amp; Alteration</span>
+</label>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-caps text-label-caps py-4 uppercase tracking-widest hover:bg-secondary transition-colors mt-space-md shadow-md" type="submit">
+                CONFIRM ATELIER RESERVATION
+              </button>
+</form>
+<div class="hidden mt-space-md p-space-md bg-secondary-container text-on-secondary-container" id="booking-confirmation">
+<span class="font-label-caps text-label-caps uppercase font-bold block mb-1">CONCIERGE RESERVATION REGISTERED [✓]</span>
+<p class="font-body-sm text-body-sm italic">
+                Our Head Concierge will dispatch confirmation via encrypted message to your communication channel within two hours.
+              </p>
+</div>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between font-caption-archival text-caption-archival uppercase text-on-surface-variant">
+<span>DISCRETION GUARANTEED</span>
+<span>PRIVATE CAR VALET INCLUDED</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Client-side Interactive Behaviors -->
+<script>
+  // Fit Matrix Dynamic Data Store
+  const fitMatrixData = {
+    milano: {
+      name: "Milano Tapered",
+      schematic: "SPEC-DWG // 04-MIL",
+      desc: "Engineered with a high rise, gently softened seat room, and a surgical taper starting at the mid-knee down to a sharp 18cm bottom hem.",
+      rise: { cm: "29.5 CM", in: "11.6 IN" },
+      thigh: { cm: "32.0 CM", in: "12.6 IN" },
+      knee: { cm: "23.5 CM", in: "9.25 IN" },
+      hem: { cm: "18.0 CM", in: "7.08 IN" },
+      inseam: { cm: "84.0 CM", in: "33.0 IN" },
+      fabric: "340g/m² Heavyweight Moleskin Cotton & Virgin Wool Stretch",
+      modelImgPrompt: "Milano Tapered silhouette trouser paired with dark leather monkstraps and unlined cashmere blazer",
+      modelMeta: "Sig. Lorenzo (188cm) wearing IT 50",
+      svgHemText: "18.0 CM HEM",
+      pathLeft: "M 60,30 L 45,90 L 52,150 L 68,260 L 96,260 L 98,120 Z",
+      pathRight: "M 140,30 L 155,90 L 148,150 L 132,260 L 104,260 L 102,120 Z"
+    },
+    torino: {
+      name: "Torino Archival",
+      schematic: "SPEC-DWG // 02-TOR",
+      desc: "A relaxed, straight-leg military cut directly referencing 1940s Italian officer service trousers with continuous rise and generous hem clearance.",
+      rise: { cm: "31.0 CM", in: "12.2 IN" },
+      thigh: { cm: "34.5 CM", in: "13.6 IN" },
+      knee: { cm: "26.0 CM", in: "10.2 IN" },
+      hem: { cm: "22.0 CM", in: "8.66 IN" },
+      inseam: { cm: "85.0 CM", in: "33.5 IN" },
+      fabric: "380g/m² Heavyweight Combed Cotton Canvas & Hemp",
+      modelImgPrompt: "Torino Archival relaxed chino trouser with double front pleats and chunky oxfords standing in sunlit courtyard",
+      modelMeta: "Sig. Matteo (184cm) wearing IT 48",
+      svgHemText: "22.0 CM HEM",
+      pathLeft: "M 58,30 L 40,90 L 44,150 L 58,260 L 96,260 L 98,120 Z",
+      pathRight: "M 142,30 L 160,90 L 156,150 L 142,260 L 104,260 L 102,120 Z"
+    },
+    venezia: {
+      name: "Venezia Cargo",
+      schematic: "SPEC-DWG // 08-VEN",
+      desc: "Architectural dual-pleated utility silhouette incorporating recessed cargo bellows pockets that lie completely flat when empty.",
+      rise: { cm: "30.5 CM", in: "12.0 IN" },
+      thigh: { cm: "35.0 CM", in: "13.8 IN" },
+      knee: { cm: "25.0 CM", in: "9.84 IN" },
+      hem: { cm: "19.5 CM", in: "7.68 IN" },
+      inseam: { cm: "83.5 CM", in: "32.8 IN" },
+      fabric: "410g/m² High-Tensile Water-Repellent Technical Gabardine",
+      modelImgPrompt: "Venezia cargo utility trouser with refined tailored pocket pleats and desert boots on historic stone steps",
+      modelMeta: "Sig. Andrea (186cm) wearing IT 50",
+      svgHemText: "19.5 CM HEM",
+      pathLeft: "M 59,30 L 42,90 L 48,150 L 64,260 L 96,260 L 98,120 Z",
+      pathRight: "M 141,30 L 158,90 L 152,150 L 136,260 L 104,260 L 102,120 Z"
+    },
+    roma: {
+      name: "Roma Cigarette",
+      schematic: "SPEC-DWG // 01-ROM",
+      desc: "Ultra-formal flat-front trouser cut slim along the calf with a minimal break over dress shoes, designed for dinner jackets and business suits.",
+      rise: { cm: "28.0 CM", in: "11.0 IN" },
+      thigh: { cm: "30.5 CM", in: "12.0 IN" },
+      knee: { cm: "22.0 CM", in: "8.66 IN" },
+      hem: { cm: "17.0 CM", in: "6.69 IN" },
+      inseam: { cm: "86.0 CM", in: "33.8 IN" },
+      fabric: "290g/m² Biella Super 160s Four-Season Virgin Worsted Wool",
+      modelImgPrompt: "Roma cigarette sharp formal trouser with pristine crease and evening oxfords standing in modernist marble foyer",
+      modelMeta: "Sig. Valerio (189cm) wearing IT 50",
+      svgHemText: "17.0 CM HEM",
+      pathLeft: "M 62,30 L 48,90 L 54,150 L 72,260 L 96,260 L 98,120 Z",
+      pathRight: "M 138,30 L 152,90 L 146,150 L 128,260 L 104,260 L 102,120 Z"
+    }
+  };
+
+  let activeFitKey = 'milano';
+  let currentUnit = 'cm';
+
+  function switchFit(fitKey) {
+    activeFitKey = fitKey;
+    const data = fitMatrixData[fitKey];
+
+    // Reset Tabs
+    ['milano', 'torino', 'venezia', 'roma'].forEach(k => {
+      const tab = document.getElementById(`tab-${k}`);
+      if (k === fitKey) {
+        tab.className = "font-label-caps text-label-caps uppercase px-space-md py-3 bg-primary text-on-primary whitespace-nowrap transition-all shadow-sm";
+      } else {
+        tab.className = "font-label-caps text-label-caps uppercase px-space-md py-3 bg-surface-container-highest text-on-surface whitespace-nowrap hover:bg-secondary-container transition-all";
+      }
+    });
+
+    // Populate Data
+    document.getElementById('fit-name').innerText = data.name;
+    document.getElementById('fit-schematic-id').innerText = data.schematic;
+    document.getElementById('fit-desc').innerText = data.desc;
+    document.getElementById('metric-fabric').innerText = data.fabric;
+    document.getElementById('fit-model-meta').innerText = data.modelMeta;
+
+    // SVG paths
+    document.getElementById('fit-path-left').setAttribute('d', data.pathLeft);
+    document.getElementById('fit-path-right').setAttribute('d', data.pathRight);
+
+    updateMetricsDisplay();
+  }
+
+  function toggleUnits(unit) {
+    currentUnit = unit;
+    const btnCm = document.getElementById('btn-unit-cm');
+    const btnIn = document.getElementById('btn-unit-in');
+
+    if (unit === 'cm') {
+      btnCm.classList.add('font-bold', 'text-on-surface');
+      btnCm.classList.remove('text-on-surface-variant');
+      btnIn.classList.remove('font-bold', 'text-on-surface');
+      btnIn.classList.add('text-on-surface-variant');
+    } else {
+      btnIn.classList.add('font-bold', 'text-on-surface');
+      btnIn.classList.remove('text-on-surface-variant');
+      btnCm.classList.remove('font-bold', 'text-on-surface');
+      btnCm.classList.add('text-on-surface-variant');
+    }
+
+    updateMetricsDisplay();
+  }
+
+  function updateMetricsDisplay() {
+    const data = fitMatrixData[activeFitKey];
+    const u = currentUnit;
+    document.getElementById('metric-rise').innerText = `${data.rise[u]} (${data.rise[u === 'cm' ? 'in' : 'cm']})`;
+    document.getElementById('metric-thigh').innerText = `${data.thigh[u]} (${data.thigh[u === 'cm' ? 'in' : 'cm']})`;
+    document.getElementById('metric-knee').innerText = `${data.knee[u]} (${data.knee[u === 'cm' ? 'in' : 'cm']})`;
+    document.getElementById('metric-hem').innerText = `${data.hem[u]} (${data.hem[u === 'cm' ? 'in' : 'cm']})`;
+    document.getElementById('metric-inseam').innerText = `${data.inseam[u]} (${data.inseam[u === 'cm' ? 'in' : 'cm']})`;
+  }
+
+  // Archivio Historicum Epoch Data
+  const epochData = [
+    {
+      title: "1974: The First Tuscan Chino & Atelier Inception",
+      desc: "Crafted for officer leisure at the historic Via Gesù atelier, combining British military cotton drill with Florentine tailoring drape.",
+      vault: "VAULT REF: ARC-1974-A"
+    },
+    {
+      title: "1988: Introduction of Technical Gabardine",
+      desc: "Pioneered micro-polyester warp yarns encased in Biella wool wefts, providing waterproof performance for Alpine diplomacy without losing classic hand-feel.",
+      vault: "VAULT REF: ARC-1988-B"
+    },
+    {
+      title: "2005: Deconstructed Solaro Suiting",
+      desc: "Eliminated interior shoulder pads, haircloth chests, and synthetics to yield featherlight jackets reflecting summer infrared light with distinctive iridescence.",
+      vault: "VAULT REF: ARC-2005-SOL"
+    },
+    {
+      title: "2026: Circular Regenerated Cashmere",
+      desc: "Mechanical non-chemical shredding of heritage garments from past decades blended with GOTS-certified organic virgin fibers in Prato.",
+      vault: "VAULT REF: ARC-2026-ECO"
+    }
+  ];
+
+  function setEpoch(index) {
+    for (let i = 0; i < 4; i++) {
+      const btn = document.getElementById(`epoch-btn-${i}`);
+      if (i === index) {
+        btn.className = "text-left p-space-sm bg-primary text-on-primary transition-all";
+      } else {
+        btn.className = "text-left p-space-sm bg-surface-container text-on-surface hover:bg-surface-container-highest transition-all";
+      }
+    }
+    const data = epochData[index];
+    document.getElementById('epoch-title').innerText = data.title;
+    document.getElementById('epoch-desc').innerText = data.desc;
+    document.getElementById('epoch-vault-code').innerText = data.vault;
+  }
+</script></main><footer class="w-full bg-surface-container-high py-space-3xl mt-space-3xl"><div class="w-full px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-desktop"><div class="lg:col-span-4 flex flex-col"><div class="flex items-center gap-space-sm mb-space-md"><img alt="Sartoria &amp; Archivio Milano Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WFR08R26ct_NTHlSr5H3MDo194kFanubcymIjxNeJG9yTUPPKn1vrhBitMgd-Wq0n9UBinZt_LWrSMc1a_xNsaDkRwpqEvcgyyHM7C1KNdpLADbiB7Xx-UqJKda1tMLHN4QF9fRMaqgLi3ruj5S6kVX3hXtPpEGp3nINVgSVi04uMTCHOk_BTrS-0hVXlzcEY67lfaHk6isjOalLCsxfk8lMD1N7uuG1Tv9SG2fGSJpLOG799TlWsC4qpG"/><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface">Sartoria &amp; Archivio Milano</span></div><p class="font-body-md text-body-md text-on-surface-variant italic mb-space-lg leading-relaxed">Founded in Via Gesù in 1968, Sartoria &amp; Archivio Milano synthesizes traditional bespoke Milanese shoulder construction with rigorous Italian military textile conservation. Every piece is an inspected catalog entry, crafted without compromise for enduring permanence.</p><div class="flex flex-col gap-space-xs font-caption-archival text-caption-archival text-on-surface-variant uppercase"><span>Atelier: Via Gesù 12, Quadrilatero della Moda, 20121 Milano</span><span>Technical Mill Laboratory: Biella &amp; Prato, Italia</span><span>Conservation ID: IT-ATEL-MIL-009418</span></div></div><div class="lg:col-span-3 flex flex-col"><span class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface mb-space-md">ARCHIVE REGISTRY &amp; CLIENT SERVICE</span><ul class="flex flex-col gap-space-sm font-label-code text-label-code"><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a href="#">Private Atelier Fittings</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a href="#">Garment Provenance Authentication</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a href="#">Archival Conservation &amp; Care</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a href="#">Bespoke Cut Sheet Spec Request</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a href="#">Climate-Neutral Dispatch Registry</a></li><li class="text-on-surface-variant hover:text-on-surface transition-colors"><a href="#">Complimentary Mending Manifesto</a></li></ul></div><div class="lg:col-span-2 flex flex-col"><span class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface mb-space-md">MATERIAL CREDENTIALS</span><ul class="flex flex-col gap-space-sm font-caption-archival text-caption-archival uppercase text-on-surface-variant"><li>100% Biella Super 160s Worsted</li><li>Prato Milled Recycled Cashmere</li><li>Certified Organic Hemp-Cotton Gabardine</li><li>Hand-Carved Buffalo Horn Buttons</li><li>Pure Bemberg Cupro Linings</li><li>Zero Synthetic Outer Polymers</li></ul></div><div class="lg:col-span-3 flex flex-col"><span class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface mb-space-md">THE ATELIER DISPATCH DOSSIER</span><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Subscribe to receive seasonal cloth allocations, private collection release codes, and monographs on textile historiography.</p><form class="flex flex-col gap-space-sm" onsubmit="event.preventDefault();"><div class="flex items-center bg-surface-container-lowest px-3 py-2.5"><input class="w-full bg-transparent font-label-code text-label-code text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none" placeholder="client.identity@domain.com" type="email"/><button class="font-label-caps text-label-caps uppercase bg-primary text-on-primary px-3 py-1.5 hover:bg-secondary hover:text-on-secondary transition-colors" type="submit">REGISTER</button></div><span class="font-caption-archival text-caption-archival uppercase text-on-surface-variant/70">STRICT CONFIDENTIALITY GUARANTEED. ZERO COMMERCIAL THIRD-PARTY SHARING.</span></form></div></div><div class="w-full px-margin-desktop mt-space-2xl pt-space-lg flex flex-col md:flex-row items-center justify-between text-on-surface-variant gap-space-md"><div class="font-caption-archival text-caption-archival uppercase tracking-wider">© 1968–2026 SARTORIA &amp; ARCHIVIO MILANO S.R.L. TUTTI I DIRITTI RISERVATI.</div><div class="flex items-center gap-space-lg font-caption-archival text-caption-archival uppercase tracking-wider"><a class="hover:text-on-surface transition-colors" href="#">Archival Codex</a><a class="hover:text-on-surface transition-colors" href="#">Privacy Protocol</a><a class="hover:text-on-surface transition-colors" href="#">Terms of Bespoke Commission</a><a class="hover:text-on-surface transition-colors" href="#">Legal Notice</a></div></div></footer></body></html>
